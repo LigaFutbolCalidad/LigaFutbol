@@ -5,6 +5,11 @@ __author__ = 'Grupo 7'
 
 #Funciones del menu manual
 def administrar_jugadores():
+    """
+    Metodo administrar_jugadores
+
+    Muestra un menu con todas las opciones para administrar un jugador en el registro
+    """
     loop = False
     while not loop:
         print ("=" * 20)
@@ -35,6 +40,11 @@ def administrar_jugadores():
 
 
 def administrar_entrenadores():
+    """
+    Metodo administrar_entrenadores
+
+    Muestra un menu con todas las opciones para administrar un entrenador en el registro
+    """
     loop = False
     while not loop:
         print ("=" * 20)
@@ -65,6 +75,11 @@ def administrar_entrenadores():
 
 
 def administrar_estadios():
+    """
+    Metodo administrar_estadios
+
+    Muestra un menu con todas las opciones para administrar un estadio en el registro
+    """
     loop = False
     while not loop:
         print ("=" * 20)
@@ -95,6 +110,11 @@ def administrar_estadios():
 
 
 def administrar_equipos():
+    """
+    Metodo administrar_equipos
+
+    Muestra un menu con todas las opciones para administrar un equipo en el registro
+    """
     loop = False
     while not loop:
         print ("=" * 20)
@@ -125,6 +145,11 @@ def administrar_equipos():
 
 
 def administrar_ligas():
+    """
+    Metodo administrar_ligas
+
+    Muestra un menu con todas las opciones para administrar las ligas en el registro
+    """
     loop = False
     while not loop:
         print ("=" * 20)
@@ -163,6 +188,13 @@ def administrar_ligas():
 
 
 def administrar_liga(liga):
+    """
+    Metodo administrar_liga
+
+    Muestra un menu con todas las opciones para administrar una liga en el registro
+    :param liga: Una liga
+    :type liga: Liga
+    """
     loop1 = False
     while not loop1:
         print ("=" * 20)
@@ -231,6 +263,13 @@ def administrar_liga(liga):
 
 
 def pichichi_equipo_liga(e):
+    """
+    Metodo pichichi_equipo_liga
+
+    Metodo que devuelve el pichichi de un equipo de una liga del registro
+    :param e: Un equipo
+    :type e: Equipo
+    """
     j = e.pichichi_equipo()
     if j is not None:
         j.mostrar_jugador()
