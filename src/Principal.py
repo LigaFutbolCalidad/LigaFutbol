@@ -2,8 +2,244 @@ from src.Registro import *
 
 __author__ = 'Grupo 7'
 
+
+#Funciones del menu manual
+def administrar_jugadores():
+    loop = False
+    while not loop:
+        print ("=" * 20)
+        print ("ADMINISTRAR JUGADORES")
+        print ("Que desea hacer: ")
+        print ("1 - Crear un jugador")
+        print ("2 - Modificar un jugador")
+        print ("3 - Eliminar un jugador")
+        print ("4 - Consultar un jugador")
+        print ("5 - Ver todos los jugadores creados")
+        print ("0 - Volver")
+        opc1 = input("Opcion: ")
+        if opc1 == 1:
+            r.crear_jugador()
+        elif opc1 == 2:
+            r.modificar_jugador()
+        elif opc1 == 3:
+            r.eliminar_jugador()
+        elif opc1 == 4:
+            r.consultar_jugador()
+        elif opc1 == 5:
+            r.listar_jugadores()
+        elif opc1 == 0:
+            loop = True
+            break
+        else:
+            print ("Opcion incorrecta")
+
+
+def administrar_entrenadores():
+    loop = False
+    while not loop:
+        print ("=" * 20)
+        print ("ADMINISTRAR ENTRENADORES")
+        print ("Que desea hacer: ")
+        print ("1 - Crear entrenador")
+        print ("2 - Modificar entrenador")
+        print ("3 - Eliminar entrenador")
+        print ("4 - Consultar entrenador")
+        print ("5 - Ver todos los entrenadores creados")
+        print ("0 - Volver")
+        opc1 = input("Opcion: ")
+        if opc1 == 1:
+            r.crear_entrenador()
+        elif opc1 == 2:
+            r.modificar_entrenador()
+        elif opc1 == 3:
+            r.eliminar_entrenador()
+        elif opc1 == 4:
+            r.consultar_entrenador()
+        elif opc1 == 5:
+            r.listar_entrenadores()
+        elif opc1 == 0:
+            loop = True
+            break
+        else:
+            print ("Opcion incorrecta")
+
+
+def administrar_estadios():
+    loop = False
+    while not loop:
+        print ("=" * 20)
+        print ("ADMINISTRAR ESTADIOS")
+        print ("Que desea hacer: ")
+        print ("1 - Crear estadio")
+        print ("2 - Modificar estadio")
+        print ("3 - Eliminar estadio")
+        print ("4 - Consultar estadio")
+        print ("5 - Ver todos los estadios creados")
+        print ("0 - Volver")
+        opc1 = input("Opcion: ")
+        if opc1 == 1:
+            r.crear_estadio()
+        elif opc1 == 2:
+            r.modificar_estadio()
+        elif opc1 == 3:
+            r.eliminar_estadio()
+        elif opc1 == 4:
+            r.consultar_estadio()
+        elif opc1 == 5:
+            r.listar_estadios()
+        elif opc1 == 0:
+            loop = True
+            break
+        else:
+            print ("Opcion incorrecta")
+
+
+def administrar_equipos():
+    loop = False
+    while not loop:
+        print ("=" * 20)
+        print ("ADMINISTRAR EQUIPOS")
+        print ("Que desea hacer: ")
+        print ("1 - Crear un equipo")
+        print ("2 - Modificar un equipo")
+        print ("3 - Eliminar un equipo")
+        print ("4 - Consultar un equipo")
+        print ("5 - Ver todos los equipos creados")
+        print ("0 - Volver")
+        opc1 = input("Opcion: ")
+        if opc1 == 1:
+            r.crear_equipo()
+        elif opc1 == 2:
+            r.modificar_equipo()
+        elif opc1 == 3:
+            r.eliminar_equipo()
+        elif opc1 == 4:
+            r.consultar_equipo()
+        elif opc1 == 5:
+            r.listar_equipos()
+        elif opc1 == 0:
+            loop = True
+            break
+        else:
+            print ("Opcion incorrecta")
+
+
+def administrar_ligas():
+    loop = False
+    while not loop:
+        print ("=" * 20)
+        print ("ADMINISTRAR LIGAS")
+        print ("Que desea hacer: ")
+        print ("1 - Crear liga")
+        print ("2 - Modificar liga")
+        print ("3 - Eliminar liga")
+        print ("4 - Consultar liga")
+        print ("5 - Ver todas las ligas creadas")
+        print ("6 - Administrar una liga")
+        print ("0 - Volver")
+        opc1 = input("Opcion: ")
+        if opc1 == 1:
+            r.crear_liga()
+        elif opc1 == 2:
+            r.modificar_liga()
+        elif opc1 == 3:
+            r.eliminar_liga()
+        elif opc1 == 4:
+            r.consultar_liga()
+        elif opc1 == 5:
+            r.listar_ligas()
+        elif opc1 == 6:
+            liga = raw_input("Introduzca el nombre de la liga a administrar: ")
+            l = r.existe_liga(liga)
+            if l is None:
+                print ("La liga no existe")
+            else:
+                administrar_liga(liga)
+        elif opc1 == 0:
+            loop = True
+            break
+        else:
+            print ("Opcion incorrecta")
+
+
+def administrar_liga(liga):
+    loop1 = False
+    while not loop1:
+        print ("=" * 20)
+        print ("ADMINISTRAR LIGA: " + liga)
+        print ("Que desea hacer: ")
+        print ("1 - Aniadir un equipo a la liga")
+        print ("2 - Ver equipos de la liga")
+        print ("3 - Consultar un equipo de la liga")
+        print ("4 - Ver partidos de la liga")
+        print ("5 - Consultar calendario de la liga")
+        print ("6 - Consultar clasificacion de la liga")
+        print ("7 - Consultar un partido de la liga")
+        print ("8 - Jugar un partido de la liga")
+        print ("9 - Consultar mejor estadio de la liga")
+        print ("10 - Consultar pichichi de la liga")
+        print ("11 - Consultar pichichi de un equipo de la liga")
+        print ("0 - Volver")
+        opc2 = input("Opcion: ")
+        if opc2 == 1:
+            equipo = raw_input("Introduzca el nombre del equipo que desea aniadir a la liga: ")
+            e = r.existe_equipo(equipo)
+            if e is None:
+                print ("El equipo no existe (debe ser creado antes)")
+            else:
+                l.aniadir_equipo(e)
+        elif opc2 == 2:
+            l.listar_equipos()
+        elif opc2 == 3:
+            equipo = raw_input("Introduzca el nombre del equipo a consultar")
+            e = l.existe_equipo(equipo)
+            if e is None:
+                print ("El equipo no esta en la liga")
+            else:
+                l.consultar_equipo(e)
+        elif opc2 == 4:
+            l.listar_partidos()
+        elif opc2 == 5:
+            l.consultar_calendario()
+        elif opc2 == 6:
+            l.consultar_clasificacion()
+        elif opc2 == 7:
+            jornada = input("Introduzca la jornada del partido a consultar: ")
+            p = l.existePartido(jornada)
+            if p is None:
+                print ("La jornada no coincide con ninguna de la liga")
+            else:
+                l.consultar_partido(p)
+        elif opc2 == 8:
+            l.jugar_partido()
+        elif opc2 == 9:
+            l.consultar_mejor_estadio()
+        elif opc2 == 10:
+            l.pichichi_liga()
+        elif opc2 == 11:
+            equipo = raw_input("Introduzca el nombre del equipo a consultar el pichichi: ")
+            e = l.existeEquipo(equipo)
+            if e is None:
+                print ("El equipo no esta en la liga")
+            else:
+                pichichi_equipo_liga(e)
+        elif opc2 == 0:
+            loop1 = True
+            break
+        else:
+            print ("Opcion incorrecta")
+
+
+def pichichi_equipo_liga(e):
+    j = e.pichichi_equipo()
+    if j is not None:
+        j.mostrar_jugador()
+    else:
+        print ("El equipo no tiene pichichi aun.")
+
+
 r=Registro()
-print "CARGANDO DATOS..."
+print ("CARGANDO DATOS...")
 #JUGADORES
 j1 = Jugador("Leo","Messi","1234M","23/02/1980","Argentina",5,"delantero")
 j2 = Jugador("Luis","Suarez","1234S","11/08/1985","Uruguay",12,"delantero")
@@ -91,253 +327,47 @@ l.aniadir_equipo(eq3)
 l.aniadir_equipo(eq4)
 r.aniadir_liga(l)
 
-print "\nLos datos se han cargado, como desea probar la aplicacion?"
-print "1 - AUTO"
-print "0 - MANUAL"
+print ("\nLos datos se han cargado, como desea probar la aplicacion?")
+print ("1 - AUTO")
+print ("0 - MANUAL")
 auto = input("Eliga: ")
 if auto == 1:
     l.jugar_partidos_auto()
-    print "\nPARTIDOS:\n"
+    print ("\nPARTIDOS:\n")
     l.listar_partidos()
     l.consultar_clasificacion()
-    print "\nPICHICHI LIGA:\n"
+    print ("\nPICHICHI LIGA:\n")
     l.pichichi_liga()
-    print "\nPICHICHI EQUIPOS:\n"
+    print ("\nPICHICHI EQUIPOS:\n")
     l.listar_pichichis_equipos()
 elif auto == 0:
     #MENU
     salir=False
     while not salir:
-        print "=" * 20
-        print "MENU PRINCIPAL"
-        print "Que desea hacer: "
-        print "1 - Administrar jugadores"
-        print "2 - Administrar entrenadores"
-        print "3 - Administrar estadios"
-        print "4 - Administrar equipos"
-        print "5 - Administrar ligas"
-        print "0 - Salir"
+        print ("=" * 20)
+        print ("MENU PRINCIPAL")
+        print ("Que desea hacer: ")
+        print ("1 - Administrar jugadores")
+        print ("2 - Administrar entrenadores")
+        print ("3 - Administrar estadios")
+        print ("4 - Administrar equipos")
+        print ("5 - Administrar ligas")
+        print ("0 - Salir")
         opc = input("Opcion: ")
         if opc == 1:
-            loop = False
-            while not loop:
-                print "=" * 20
-                print "ADMINISTRAR JUGADORES"
-                print "Que desea hacer: "
-                print "1 - Crear un jugador"
-                print "2 - Modificar un jugador"
-                print "3 - Eliminar un jugador"
-                print "4 - Consultar un jugador"
-                print "5 - Ver todos los jugadores creados"
-                print "0 - Volver"
-                opc1 = input("Opcion: ")
-                if opc1 == 1:
-                    r.crear_jugador()
-                elif opc1 == 2:
-                    r.modificar_jugador()
-                elif opc1 == 3:
-                    r.eliminar_jugador()
-                elif opc1 == 4:
-                    r.consultar_jugador()
-                elif opc1 == 5:
-                    r.listar_jugadores()
-                elif opc1 == 0:
-                    loop = True
-                    break
-                else:
-                    print "Opcion incorrecta"
+            administrar_jugadores()
         elif opc == 2:
-            loop = False
-            while not loop:
-                print "=" * 20
-                print "ADMINISTRAR ENTRENADORES"
-                print "Que desea hacer: "
-                print "1 - Crear entrenador"
-                print "2 - Modificar entrenador"
-                print "3 - Eliminar entrenador"
-                print "4 - Consultar entrenador"
-                print "5 - Ver todos los entrenadores creados"
-                print "0 - Volver"
-                opc1 = input("Opcion: ")
-                if opc1 == 1:
-                    r.crear_entrenador()
-                elif opc1 == 2:
-                    r.modificar_entrenador()
-                elif opc1 == 3:
-                    r.eliminar_entrenador()
-                elif opc1 == 4:
-                    r.consultar_entrenador()
-                elif opc1 == 5:
-                    r.listar_entrenadores()
-                elif opc1 == 0:
-                    loop = True
-                    break
-                else:
-                    print "Opcion incorrecta"
+            administrar_entrenadores()
         elif opc == 3:
-            loop = False
-            while not loop:
-                print "=" * 20
-                print "ADMINISTRAR ESTADIOS"
-                print "Que desea hacer: "
-                print "1 - Crear estadio"
-                print "2 - Modificar estadio"
-                print "3 - Eliminar estadio"
-                print "4 - Consultar estadio"
-                print "5 - Ver todos los estadios creados"
-                print "0 - Volver"
-                opc1 = input("Opcion: ")
-                if opc1 == 1:
-                    r.crear_estadio()
-                elif opc1 == 2:
-                    r.modificar_estadio()
-                elif opc1 == 3:
-                    r.eliminar_estadio()
-                elif opc1 == 4:
-                    r.consultar_estadio()
-                elif opc1 == 5:
-                    r.listar_estadios()
-                elif opc1 == 0:
-                    loop = True
-                    break
-                else:
-                    print "Opcion incorrecta"
+            administrar_estadios()
         elif opc == 4:
-            loop = False
-            while not loop:
-                print "=" * 20
-                print "ADMINISTRAR EQUIPOS"
-                print "Que desea hacer: "
-                print "1 - Crear un equipo"
-                print "2 - Modificar un equipo"
-                print "3 - Eliminar un equipo"
-                print "4 - Consultar un equipo"
-                print "5 - Ver todos los equipos creados"
-                print "0 - Volver"
-                opc1 = input("Opcion: ")
-                if opc1 == 1:
-                    r.crear_equipo()
-                elif opc1 == 2:
-                    r.modificar_equipo()
-                elif opc1 == 3:
-                    r.eliminar_equipo()
-                elif opc1 == 4:
-                    r.consultar_equipo()
-                elif opc1 == 5:
-                    r.listar_equipos()
-                elif opc1 == 0:
-                    loop = True
-                    break
-                else:
-                    print "Opcion incorrecta"
+            administrar_equipos()
         elif opc == 5:
-            loop = False
-            while not loop:
-                print "=" * 20
-                print "ADMINISTRAR LIGAS"
-                print "Que desea hacer: "
-                print "1 - Crear liga"
-                print "2 - Modificar liga"
-                print "3 - Eliminar liga"
-                print "4 - Consultar liga"
-                print "5 - Ver todas las ligas creadas"
-                print "6 - Administrar una liga"
-                print "0 - Volver"
-                opc1 = input("Opcion: ")
-                if opc1 == 1:
-                    r.crear_liga()
-                elif opc1 == 2:
-                    r.modificar_liga()
-                elif opc1 == 3:
-                    r.eliminar_liga()
-                elif opc1 == 4:
-                    r.consultar_liga()
-                elif opc1 == 5:
-                    r.listar_ligas()
-                elif opc1 == 6:
-                    liga = raw_input("Introduzca el nombre de la liga a administrar: ")
-                    l = r.existe_liga(liga)
-                    if l is None:
-                        print "La liga no existe"
-                    else:
-                        loop1 = False
-                        while not loop1:
-                            print "=" * 20
-                            print "ADMINISTRAR LIGA: " + liga
-                            print "Que desea hacer: "
-                            print "1 - Aniadir un equipo a la liga"
-                            print "2 - Ver equipos de la liga"
-                            print "3 - Consultar un equipo de la liga"
-                            print "4 - Ver partidos de la liga"
-                            print "5 - Consultar calendario de la liga"
-                            print "6 - Consultar clasificacion de la liga"
-                            print "7 - Consultar un partido de la liga"
-                            print "8 - Jugar un partido de la liga"
-                            print "9 - Consultar mejor estadio de la liga"
-                            print "10 - Consultar pichichi de la liga"
-                            print "11 - Consultar pichichi de un equipo de la liga"
-                            print "0 - Volver"
-                            opc2 = input("Opcion: ")
-                            if opc2 == 1:
-                                equipo = raw_input("Introduzca el nombre del equipo que desea aniadir a la liga: ")
-                                e = r.existe_equipo(equipo)
-                                if e is None:
-                                    print "El equipo no existe (debe ser creado antes)"
-                                else:
-                                    l.aniadir_equipo(e)
-                            elif opc2 == 2:
-                                l.listar_equipos()
-                            elif opc2 == 3:
-                                equipo = raw_input("Introduzca el nombre del equipo a consultar")
-                                e = l.existe_equipo(equipo)
-                                if e is None:
-                                    print "El equipo no esta en la liga"
-                                else:
-                                    l.consultar_equipo(e)
-                            elif opc2 == 4:
-                                l.listar_partidos()
-                            elif opc2 == 5:
-                                l.consultar_calendario()
-                            elif opc2 == 6:
-                                l.consultar_clasificacion()
-                            elif opc2 == 7:
-                                jornada = input("Introduzca la jornada del partido a consultar: ")
-                                p = l.existePartido(jornada)
-                                if p is None:
-                                    print "La jornada no coincide con ninguna de la liga"
-                                else:
-                                    l.consultar_partido(p)
-                            elif opc2 == 8:
-                                l.jugar_partido()
-                            elif opc2 == 9:
-                                l.consultar_mejor_estadio()
-                            elif opc2 == 10:
-                                l.pichichi_liga()
-                            elif opc2 == 11:
-                                equipo = raw_input("Introduzca el nombre del equipo a consultar el pichichi: ")
-                                e = l.existeEquipo(equipo)
-                                if e is None:
-                                    print "El equipo no esta en la liga"
-                                else:
-                                    j = e.pichichi_equipo()
-                                    if j is not None:
-                                        j.mostrar_jugador()
-                                    else:
-                                        print "El equipo no tiene pichichi aun."
-                            elif opc2 == 0:
-                                loop1 = True
-                                break
-                            else:
-                                print "Opcion incorrecta"
-                elif opc1 == 0:
-                    loop = True
-                    break
-                else:
-                    print "Opcion incorrecta"
+            administrar_ligas()
         elif opc == 0:
-            print "Hasta pronto!"
+            print ("Hasta pronto!")
             salir=True
         else:
-            print "Opcion incorrecta"
+            print ("Opcion incorrecta")
 else:
-    print "Opcion incorrecta"
+    print ("Opcion incorrecta")

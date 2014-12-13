@@ -34,7 +34,7 @@ class Estadio:
 
     def mostrar_estadio(self):
         cad=str(self)
-        print cad
+        print (cad)
 
     def __str__(self):
         if self.get_nombre_equipo() is None:
