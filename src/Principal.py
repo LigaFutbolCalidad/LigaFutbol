@@ -35,20 +35,20 @@ en1 = Entrenador("Pep","Guardiola","1234P","22/11/1975","Espania","1234L")
 en2 = Entrenador("Carlos","Ancelloti","1234A","21/01/1970","Italia","1235L")
 en3 = Entrenador("Nunu","Espirito Santo","1235E","20/11/1970","Brasil","1236L")
 en4 = Entrenador("Unai","Emery","1236E","01/01/1970","Espania","1237L")
-r.aniadirEntrenador(en1)
-r.aniadirEntrenador(en2)
-r.aniadirEntrenador(en3)
-r.aniadirEntrenador(en4)
+r.aniadir_entrenador(en1)
+r.aniadir_entrenador(en2)
+r.aniadir_entrenador(en3)
+r.aniadir_entrenador(en4)
 
 #ESTADIOS
 es1 = Estadio("Camp Nou","Barcelona",1650300)
 es2 = Estadio("Bernabeu","Madrid",1500200)
 es3 = Estadio("Mestalla","Valencia",1560200)
 es4 = Estadio("Sanchez-Pizjuan","Sevilla",1100250)
-r.aniadirEstadio(es1)
-r.aniadirEstadio(es2)
-r.aniadirEstadio(es3)
-r.aniadirEstadio(es4)
+r.aniadir_estadio(es1)
+r.aniadir_estadio(es2)
+r.aniadir_estadio(es3)
+r.aniadir_estadio(es4)
 
 #EQUIPOS
 eq1 = Equipo("FC Barcelona","1900","Barcelona")
@@ -57,7 +57,7 @@ eq1.agregar_jugador(j2)
 eq1.agregar_jugador(j3)
 eq1.asignar_entrenador(en1)
 eq1.asignar_estadio(es1)
-r.aniadirEquipo(eq1)
+r.aniadir_equipo(eq1)
 
 eq2 = Equipo("Real Madrid","1902","Madrid")
 eq2.agregar_jugador(j4)
@@ -65,7 +65,7 @@ eq2.agregar_jugador(j5)
 eq2.agregar_jugador(j6)
 eq2.asignar_entrenador(en2)
 eq2.asignar_estadio(es2)
-r.aniadirEquipo(eq2)
+r.aniadir_equipo(eq2)
 
 eq3 = Equipo("FC Valencia","1901","Valencia")
 eq3.agregar_jugador(j7)
@@ -73,7 +73,7 @@ eq3.agregar_jugador(j8)
 eq3.agregar_jugador(j9)
 eq3.asignar_entrenador(en3)
 eq3.asignar_estadio(es3)
-r.aniadirEquipo(eq3)
+r.aniadir_equipo(eq3)
 
 eq4 = Equipo("Sevilla FC","1901","Sevilla")
 eq4.agregar_jugador(j10)
@@ -81,7 +81,7 @@ eq4.agregar_jugador(j11)
 eq4.agregar_jugador(j12)
 eq4.asignar_entrenador(en4)
 eq4.asignar_estadio(es4)
-r.aniadirEquipo(eq4)
+r.aniadir_equipo(eq4)
 
 #LIGAS
 l = Liga("Liga BBVA","2014","Espania")
@@ -89,7 +89,7 @@ l.aniadir_equipo(eq1)
 l.aniadir_equipo(eq2)
 l.aniadir_equipo(eq3)
 l.aniadir_equipo(eq4)
-r.aniadirLiga(l)
+r.aniadir_liga(l)
 
 print "\nLos datos se han cargado, como desea probar la aplicacion?"
 print "1 - AUTO"
@@ -106,9 +106,9 @@ if auto == 1:
     l.listar_pichichis_equipos()
 elif auto == 0:
     #MENU
-    exit=False
-    while not exit:
-        print "="*20
+    salir=False
+    while not salir:
+        print "=" * 20
         print "MENU PRINCIPAL"
         print "Que desea hacer: "
         print "1 - Administrar jugadores"
@@ -121,7 +121,7 @@ elif auto == 0:
         if opc == 1:
             loop = False
             while not loop:
-                print "="*10
+                print "=" * 20
                 print "ADMINISTRAR JUGADORES"
                 print "Que desea hacer: "
                 print "1 - Crear un jugador"
@@ -149,7 +149,7 @@ elif auto == 0:
         elif opc == 2:
             loop = False
             while not loop:
-                print "="*10
+                print "=" * 20
                 print "ADMINISTRAR ENTRENADORES"
                 print "Que desea hacer: "
                 print "1 - Crear entrenador"
@@ -177,7 +177,7 @@ elif auto == 0:
         elif opc == 3:
             loop = False
             while not loop:
-                print "="*10
+                print "=" * 20
                 print "ADMINISTRAR ESTADIOS"
                 print "Que desea hacer: "
                 print "1 - Crear estadio"
@@ -205,7 +205,7 @@ elif auto == 0:
         elif opc == 4:
             loop = False
             while not loop:
-                print "="*10
+                print "=" * 20
                 print "ADMINISTRAR EQUIPOS"
                 print "Que desea hacer: "
                 print "1 - Crear un equipo"
@@ -233,7 +233,7 @@ elif auto == 0:
         elif opc == 5:
             loop = False
             while not loop:
-                print "="*10
+                print "=" * 20
                 print "ADMINISTRAR LIGAS"
                 print "Que desea hacer: "
                 print "1 - Crear liga"
@@ -256,14 +256,14 @@ elif auto == 0:
                     r.listar_ligas()
                 elif opc1 == 6:
                     liga = raw_input("Introduzca el nombre de la liga a administrar: ")
-                    l = r.existeLiga(liga)
-                    if l == None:
+                    l = r.existe_liga(liga)
+                    if l is None:
                         print "La liga no existe"
                     else:
                         loop1 = False
                         while not loop1:
-                            print "="*10
-                            print "ADMINISTRAR LIGA: "+liga
+                            print "=" * 20
+                            print "ADMINISTRAR LIGA: " + liga
                             print "Que desea hacer: "
                             print "1 - Aniadir un equipo a la liga"
                             print "2 - Ver equipos de la liga"
@@ -280,8 +280,8 @@ elif auto == 0:
                             opc2 = input("Opcion: ")
                             if opc2 == 1:
                                 equipo = raw_input("Introduzca el nombre del equipo que desea aniadir a la liga: ")
-                                e = r.existeEquipo(equipo)
-                                if e == None:
+                                e = r.existe_equipo(equipo)
+                                if e is None:
                                     print "El equipo no existe (debe ser creado antes)"
                                 else:
                                     l.aniadir_equipo(e)
@@ -289,8 +289,8 @@ elif auto == 0:
                                 l.listar_equipos()
                             elif opc2 == 3:
                                 equipo = raw_input("Introduzca el nombre del equipo a consultar")
-                                e = l.existeEquipo(equipo)
-                                if e == None:
+                                e = l.existe_equipo(equipo)
+                                if e is None:
                                     print "El equipo no esta en la liga"
                                 else:
                                     l.consultar_equipo(e)
@@ -303,7 +303,7 @@ elif auto == 0:
                             elif opc2 == 7:
                                 jornada = input("Introduzca la jornada del partido a consultar: ")
                                 p = l.existePartido(jornada)
-                                if p == None:
+                                if p is None:
                                     print "La jornada no coincide con ninguna de la liga"
                                 else:
                                     l.consultar_partido(p)
@@ -316,11 +316,11 @@ elif auto == 0:
                             elif opc2 == 11:
                                 equipo = raw_input("Introduzca el nombre del equipo a consultar el pichichi: ")
                                 e = l.existeEquipo(equipo)
-                                if e == None:
+                                if e is None:
                                     print "El equipo no esta en la liga"
                                 else:
                                     j = e.pichichi_equipo()
-                                    if j!=None:
+                                    if j is not None:
                                         j.mostrar_jugador()
                                     else:
                                         print "El equipo no tiene pichichi aun."
@@ -336,7 +336,7 @@ elif auto == 0:
                     print "Opcion incorrecta"
         elif opc == 0:
             print "Hasta pronto!"
-            exit=True
+            salir=True
         else:
             print "Opcion incorrecta"
 else:
