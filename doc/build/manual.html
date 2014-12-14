@@ -1,0 +1,255 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Manual del usuario &mdash; LigaFutbol 0.2 documentation</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="LigaFutbol 0.2 documentation" href="index.html"/>
+        <link rel="next" title="Programa principal" href="principal.html"/>
+        <link rel="prev" title="Documentacion del test_registro" href="test_registro.html"/> 
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+          <a href="index.html" class="fa fa-home"> LigaFutbol</a>
+        
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+        
+            <ul>
+<li class="toctree-l1"><a class="reference internal" href="persona.html">Documentacion de Persona</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jugador.html">Documentacion de Jugador</a></li>
+<li class="toctree-l1"><a class="reference internal" href="entrenador.html">Documentacion de Entrenador</a></li>
+<li class="toctree-l1"><a class="reference internal" href="estadio.html">Documentacion de Estadio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="equipo.html">Documentacion de Equipo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="liga.html">Documentacion de Liga</a></li>
+<li class="toctree-l1"><a class="reference internal" href="partido.html">Documentacion de Partido</a></li>
+<li class="toctree-l1"><a class="reference internal" href="registro.html">Documentacion de Registro</a></li>
+<li class="toctree-l1"><a class="reference internal" href="principal.html">Documentacion de Principal</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="test_jugador.html">Documentacion del test de jugador</a></li>
+<li class="toctree-l1"><a class="reference internal" href="test_equipo.html">Documentacion del test de equipo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="test_liga.html">Documentacion del test de liga</a></li>
+<li class="toctree-l1"><a class="reference internal" href="test_registro.html">Documentacion del test de registro</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="">Ver manual de usuario</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="principal.html">Codigo del programa de prueba</a></li>
+</ul>
+</li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">LigaFutbol</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>Manual del usuario</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="_sources/manual.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document">
+            
+  <div class="section" id="manual-del-usuario">
+<h1>Manual del usuario<a class="headerlink" href="#manual-del-usuario" title="Permalink to this headline">¶</a></h1>
+<div class="topic">
+<p class="topic-title first">Pruebas</p>
+<p>La aplicacion nos permite administrar varias ligas, guardandolo todo en un registro. Podemos crear jugadores,
+entrenadores, estadios... etc todo dentro de un registro y usarlo para crear equipos y ligas que contendran a estos.</p>
+<p>Para poder probar la aplicacion hay que ejecutar el fichero Principal.py.
+Ya al ejecutarlo nos crea una serie de jugadores, entrenadores, estadios, equipos, ligas...
+para poder probar el programa.</p>
+<p>Cuando lo ejecutamos, aparte de mostrarnos que se han cargado los datos, nos da dos opciones para manejarlo,
+una automatica y otra manual.</p>
+<p>Si elegimos automatica, nos creara todos los partidos con sus resultados de forma aleatoria, ademas de asignarle
+(tambien de modo aleatorio) a cada jugador un gol marcado. En resumen esta opcion nos probaria todo lo que se podria
+hacer con nuestro codigo, ademas de mostrarnos la clasificacion, pichichis...etc.</p>
+<p>Si elegimos de manera manual, nos mostrara un menu intuitivo de como hacer cada cosa. Esto seria la manera oficial,
+aunque a la hora de probarlo todo se hace un mundo. Es por eso que existe la opcion automatica.</p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Hemos cambiado el numero maximo de equipos por liga de 20 a 4 para facilitar las tareas de prueba</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Indentation:</th><td class="field-body">Captura del menu de eleccion del metodo de probar</td>
+</tr>
+</tbody>
+</table>
+<img alt="_images/captura1.jpg" src="_images/captura1.jpg" />
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Indentation:</th><td class="field-body">Captura del menu principal de forma manual</td>
+</tr>
+</tbody>
+</table>
+<img alt="_images/captura2.jpg" src="_images/captura2.jpg" />
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Indentation:</th><td class="field-body">Captura del menu principal de administrar una liga</td>
+</tr>
+</tbody>
+</table>
+<img alt="_images/captura3.jpg" src="_images/captura3.jpg" />
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Indentation:</th><td class="field-body">Captura de la clasificacion de todos los partidos jugados</td>
+</tr>
+</tbody>
+</table>
+<img alt="_images/captura4.jpg" src="_images/captura4.jpg" />
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="principal.html">Codigo del programa de prueba</a></li>
+</ul>
+</div>
+<div class="admonition-recuerda admonition">
+<p class="first admonition-title">Recuerda</p>
+<p>Puedes elegir entre el metodo manual o automatico, aunque este ultimo te resultara mucho mas comodo.</p>
+<p>Las opciones solo aceptan valores numericos.</p>
+<p class="last">El resto de valores son tipo cadena excepto, por ejemplo, el dorsal de un jugador o jornada de los partidos
+asi como todos los valores numericos tipo goles, partidos ganados...etc</p>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="principal.html" class="btn btn-neutral float-right" title="Programa principal">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="test_registro.html" class="btn btn-neutral" title="Documentacion del test_registro"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2014, Grupo7.
+    </p>
+  </div>
+
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.2',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

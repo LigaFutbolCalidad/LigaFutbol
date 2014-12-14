@@ -1,0 +1,58 @@
+.. LigaFutbol documentation master file, created by
+   sphinx-quickstart on Sun Dec 14 21:19:06 2014.
+   You can adapt this file completely to your liking, but it should at least
+   contain the root `toctree` directive.
+
+Manual del usuario
+=========================================
+.. topic:: Pruebas
+
+    La aplicacion nos permite administrar varias ligas, guardandolo todo en un registro. Podemos crear jugadores,
+    entrenadores, estadios... etc todo dentro de un registro y usarlo para crear equipos y ligas que contendran a estos.
+
+    Para poder probar la aplicacion hay que ejecutar el fichero Principal.py.
+    Ya al ejecutarlo nos crea una serie de jugadores, entrenadores, estadios, equipos, ligas...
+    para poder probar el programa.
+
+    Cuando lo ejecutamos, aparte de mostrarnos que se han cargado los datos, nos da dos opciones para manejarlo,
+    una automatica y otra manual.
+
+    Si elegimos automatica, nos creara todos los partidos con sus resultados de forma aleatoria, ademas de asignarle
+    (tambien de modo aleatorio) a cada jugador un gol marcado. En resumen esta opcion nos probaria todo lo que se podria
+    hacer con nuestro codigo, ademas de mostrarnos la clasificacion, pichichis...etc.
+
+    Si elegimos de manera manual, nos mostrara un menu intuitivo de como hacer cada cosa. Esto seria la manera oficial,
+    aunque a la hora de probarlo todo se hace un mundo. Es por eso que existe la opcion automatica.
+
+.. note:: Hemos cambiado el numero maximo de equipos por liga de 20 a 4 para facilitar las tareas de prueba
+
+:Indentation: Captura del menu de eleccion del metodo de probar
+
+.. image:: img\captura1.jpg
+
+:Indentation: Captura del menu principal de forma manual
+
+.. image:: img\captura2.jpg
+
+:Indentation: Captura del menu principal de administrar una liga
+
+.. image:: img\captura3.jpg
+
+:Indentation: Captura de la clasificacion de todos los partidos jugados
+
+.. image:: img\captura4.jpg
+
+
+.. toctree::
+
+    Codigo del programa de prueba <principal>
+
+
+.. admonition:: Recuerda
+
+   Puedes elegir entre el metodo manual o automatico, aunque este ultimo te resultara mucho mas comodo.
+
+   Las opciones solo aceptan valores numericos.
+
+   El resto de valores son tipo cadena excepto, por ejemplo, el dorsal de un jugador o jornada de los partidos
+   asi como todos los valores numericos tipo goles, partidos ganados...etc

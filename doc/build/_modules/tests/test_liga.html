@@ -1,0 +1,413 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>tests.test_liga &mdash; LigaFutbol 0.2 documentation</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="LigaFutbol 0.2 documentation" href="../../index.html"/>
+        <link rel="up" title="Module code" href="../index.html"/> 
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+          <a href="../../index.html" class="fa fa-home"> LigaFutbol</a>
+        
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+        
+            <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../persona.html">Documentacion de Persona</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../jugador.html">Documentacion de Jugador</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../entrenador.html">Documentacion de Entrenador</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../estadio.html">Documentacion de Estadio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../equipo.html">Documentacion de Equipo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../liga.html">Documentacion de Liga</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../partido.html">Documentacion de Partido</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../registro.html">Documentacion de Registro</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../principal.html">Documentacion de Principal</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../test_jugador.html">Documentacion del test de jugador</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../test_equipo.html">Documentacion del test de equipo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../test_liga.html">Documentacion del test de liga</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../test_registro.html">Documentacion del test de registro</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../manual.html">Ver manual de usuario</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../principal.html">Codigo del programa de prueba</a></li>
+</ul>
+</li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../index.html">LigaFutbol</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../index.html">Module code</a> &raquo;</li>
+      
+    <li>tests.test_liga</li>
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document">
+            
+  <h1>Source code for tests.test_liga</h1><div class="highlight"><pre>
+<span class="n">__author__</span> <span class="o">=</span> <span class="s">&#39;Grupo 7&#39;</span>
+
+<span class="kn">from</span> <span class="nn">unittest</span> <span class="kn">import</span> <span class="n">TestCase</span>
+<span class="kn">from</span> <span class="nn">src.Equipo</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">src.Liga</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">src.Jugador</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">src.Estadio</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">mockito</span> <span class="kn">import</span> <span class="o">*</span>
+
+
+<div class="viewcode-block" id="TestLiga"><a class="viewcode-back" href="../../test_liga.html#tests.test_liga.TestLiga">[docs]</a><span class="k">class</span> <span class="nc">TestLiga</span><span class="p">(</span><span class="n">TestCase</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Clase test de una liga</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="TestLiga.test_existe_equipo"><a class="viewcode-back" href="../../test_liga.html#tests.test_liga.TestLiga.test_existe_equipo">[docs]</a>    <span class="k">def</span> <span class="nf">test_existe_equipo</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Test existe equipo</span>
+
+<span class="sd">        Crea una liga y un equipo y lo aniade a la liga. Comprueba que devuelve ese equipo</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">l</span> <span class="o">=</span> <span class="n">Liga</span><span class="p">(</span><span class="s">&quot;Liga BBVA&quot;</span><span class="p">,</span> <span class="s">&quot;2014&quot;</span><span class="p">,</span> <span class="s">&quot;Espania&quot;</span><span class="p">)</span>
+        <span class="n">equipo</span> <span class="o">=</span> <span class="n">Equipo</span><span class="p">(</span><span class="s">&quot;Sevilla FC&quot;</span><span class="p">,</span> <span class="s">&quot;1905&quot;</span><span class="p">,</span> <span class="s">&quot;Sevilla&quot;</span><span class="p">)</span>
+        <span class="n">l</span><span class="o">.</span><span class="n">aniadir_equipo</span><span class="p">(</span><span class="n">equipo</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">l</span><span class="o">.</span><span class="n">existe_equipo</span><span class="p">(</span><span class="n">equipo</span><span class="o">.</span><span class="n">get_nombre</span><span class="p">()),</span> <span class="n">equipo</span><span class="p">)</span>
+</div>
+<div class="viewcode-block" id="TestLiga.test_crear_partidos"><a class="viewcode-back" href="../../test_liga.html#tests.test_liga.TestLiga.test_crear_partidos">[docs]</a>    <span class="k">def</span> <span class="nf">test_crear_partidos</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Test crear partidos</span>
+
+<span class="sd">        Crea una liga y 4 equipos y los aniade. Crea dos partidos iguales y los compara para comprobar que se han creado</span>
+<span class="sd">        los partidos autmaticamente</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">eq1</span> <span class="o">=</span> <span class="n">Equipo</span><span class="p">(</span><span class="s">&quot;FC Barcelona&quot;</span><span class="p">,</span> <span class="s">&quot;1900&quot;</span><span class="p">,</span> <span class="s">&quot;Barcelona&quot;</span><span class="p">)</span>
+        <span class="n">eq2</span> <span class="o">=</span> <span class="n">Equipo</span><span class="p">(</span><span class="s">&quot;Real Madrid&quot;</span><span class="p">,</span> <span class="s">&quot;1902&quot;</span><span class="p">,</span> <span class="s">&quot;Madrid&quot;</span><span class="p">)</span>
+        <span class="n">eq3</span> <span class="o">=</span> <span class="n">Equipo</span><span class="p">(</span><span class="s">&quot;FC Valencia&quot;</span><span class="p">,</span> <span class="s">&quot;1901&quot;</span><span class="p">,</span> <span class="s">&quot;Valencia&quot;</span><span class="p">)</span>
+        <span class="n">eq4</span> <span class="o">=</span> <span class="n">Equipo</span><span class="p">(</span><span class="s">&quot;Sevilla FC&quot;</span><span class="p">,</span> <span class="s">&quot;1901&quot;</span><span class="p">,</span> <span class="s">&quot;Sevilla&quot;</span><span class="p">)</span>
+        <span class="n">l</span> <span class="o">=</span> <span class="n">Liga</span><span class="p">(</span><span class="s">&quot;Liga BBVA&quot;</span><span class="p">,</span> <span class="s">&quot;2014&quot;</span><span class="p">,</span> <span class="s">&quot;Espania&quot;</span><span class="p">)</span>
+        <span class="n">l</span><span class="o">.</span><span class="n">aniadir_equipo</span><span class="p">(</span><span class="n">eq1</span><span class="p">)</span>
+        <span class="n">l</span><span class="o">.</span><span class="n">aniadir_equipo</span><span class="p">(</span><span class="n">eq2</span><span class="p">)</span>
+        <span class="n">l</span><span class="o">.</span><span class="n">aniadir_equipo</span><span class="p">(</span><span class="n">eq3</span><span class="p">)</span>
+        <span class="n">l</span><span class="o">.</span><span class="n">aniadir_equipo</span><span class="p">(</span><span class="n">eq4</span><span class="p">)</span>
+        <span class="n">p</span> <span class="o">=</span> <span class="n">Partido</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s">&quot;FC Barcelona&quot;</span><span class="p">,</span> <span class="s">&quot;Real Madrid&quot;</span><span class="p">)</span>
+        <span class="n">p2</span> <span class="o">=</span> <span class="n">l</span><span class="o">.</span><span class="n">existe_partido</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">get_equipo_local</span><span class="p">(),</span> <span class="n">p2</span><span class="o">.</span><span class="n">get_equipo_local</span><span class="p">())</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">get_equipo_visitante</span><span class="p">(),</span> <span class="n">p2</span><span class="o">.</span><span class="n">get_equipo_visitante</span><span class="p">())</span>
+</div>
+<div class="viewcode-block" id="TestLiga.test_existe_partido"><a class="viewcode-back" href="../../test_liga.html#tests.test_liga.TestLiga.test_existe_partido">[docs]</a>    <span class="k">def</span> <span class="nf">test_existe_partido</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Test existe partido</span>
+
+<span class="sd">        Crea una liga y un partido y lo aniade a la liga. Comprueba que devuelve ese partido</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">p</span> <span class="o">=</span> <span class="n">Partido</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s">&quot;FC Barcelona&quot;</span><span class="p">,</span> <span class="s">&quot;Real Madrid&quot;</span><span class="p">)</span>
+        <span class="n">l</span> <span class="o">=</span> <span class="n">Liga</span><span class="p">(</span><span class="s">&quot;Liga BBVA&quot;</span><span class="p">,</span> <span class="s">&quot;2014&quot;</span><span class="p">,</span> <span class="s">&quot;Espania&quot;</span><span class="p">)</span>
+        <span class="n">l</span><span class="o">.</span><span class="n">partidos</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">l</span><span class="o">.</span><span class="n">existe_partido</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span> <span class="n">p</span><span class="p">)</span>
+</div>
+<div class="viewcode-block" id="TestLiga.test_pichichi_liga"><a class="viewcode-back" href="../../test_liga.html#tests.test_liga.TestLiga.test_pichichi_liga">[docs]</a>    <span class="k">def</span> <span class="nf">test_pichichi_liga</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Test pichichi liga</span>
+
+<span class="sd">        Crea unos equipos con unos jugadores y una liga a la que los aniade. Comprueba que devuelve el jugador</span>
+<span class="sd">         que mas goles tiene</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">j1</span> <span class="o">=</span> <span class="n">mock</span><span class="p">(</span><span class="n">Jugador</span><span class="p">)</span>
+        <span class="n">j2</span> <span class="o">=</span> <span class="n">mock</span><span class="p">(</span><span class="n">Jugador</span><span class="p">)</span>
+        <span class="n">j3</span> <span class="o">=</span> <span class="n">mock</span><span class="p">(</span><span class="n">Jugador</span><span class="p">)</span>
+        <span class="n">when</span><span class="p">(</span><span class="n">j1</span><span class="p">)</span><span class="o">.</span><span class="n">get_goles_marcados</span><span class="p">()</span><span class="o">.</span><span class="n">thenReturn</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+        <span class="n">when</span><span class="p">(</span><span class="n">j2</span><span class="p">)</span><span class="o">.</span><span class="n">get_goles_marcados</span><span class="p">()</span><span class="o">.</span><span class="n">thenReturn</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+        <span class="n">when</span><span class="p">(</span><span class="n">j3</span><span class="p">)</span><span class="o">.</span><span class="n">get_goles_marcados</span><span class="p">()</span><span class="o">.</span><span class="n">thenReturn</span><span class="p">(</span><span class="mi">9</span><span class="p">)</span>
+        <span class="n">eq1</span> <span class="o">=</span> <span class="n">Equipo</span><span class="p">(</span><span class="s">&quot;FC Barcelona&quot;</span><span class="p">,</span> <span class="s">&quot;1900&quot;</span><span class="p">,</span> <span class="s">&quot;Barcelona&quot;</span><span class="p">)</span>
+        <span class="n">eq2</span> <span class="o">=</span> <span class="n">Equipo</span><span class="p">(</span><span class="s">&quot;Real Madrid&quot;</span><span class="p">,</span> <span class="s">&quot;1902&quot;</span><span class="p">,</span> <span class="s">&quot;Madrid&quot;</span><span class="p">)</span>
+        <span class="n">eq3</span> <span class="o">=</span> <span class="n">Equipo</span><span class="p">(</span><span class="s">&quot;FC Valencia&quot;</span><span class="p">,</span> <span class="s">&quot;1901&quot;</span><span class="p">,</span> <span class="s">&quot;Valencia&quot;</span><span class="p">)</span>
+        <span class="n">eq1</span><span class="o">.</span><span class="n">agregar_jugador</span><span class="p">(</span><span class="n">j1</span><span class="p">)</span>
+        <span class="n">eq2</span><span class="o">.</span><span class="n">agregar_jugador</span><span class="p">(</span><span class="n">j2</span><span class="p">)</span>
+        <span class="n">eq3</span><span class="o">.</span><span class="n">agregar_jugador</span><span class="p">(</span><span class="n">j3</span><span class="p">)</span>
+        <span class="n">liga</span> <span class="o">=</span> <span class="n">Liga</span><span class="p">(</span><span class="s">&quot;Liga BBVA&quot;</span><span class="p">,</span> <span class="s">&quot;2014&quot;</span><span class="p">,</span> <span class="s">&quot;Espania&quot;</span><span class="p">)</span>
+        <span class="n">liga</span><span class="o">.</span><span class="n">aniadir_equipo</span><span class="p">(</span><span class="n">eq1</span><span class="p">)</span>
+        <span class="n">liga</span><span class="o">.</span><span class="n">aniadir_equipo</span><span class="p">(</span><span class="n">eq2</span><span class="p">)</span>
+        <span class="n">liga</span><span class="o">.</span><span class="n">aniadir_equipo</span><span class="p">(</span><span class="n">eq3</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">liga</span><span class="o">.</span><span class="n">recorrer_equipos</span><span class="p">()</span><span class="o">.</span><span class="n">get_goles_marcados</span><span class="p">(),</span> <span class="mi">9</span><span class="p">)</span>
+</div>
+<div class="viewcode-block" id="TestLiga.test_aniadir_equipo"><a class="viewcode-back" href="../../test_liga.html#tests.test_liga.TestLiga.test_aniadir_equipo">[docs]</a>    <span class="k">def</span> <span class="nf">test_aniadir_equipo</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Test para aniadir un equipo</span>
+
+<span class="sd">        Aniade un equipo a la liga y comprueba que esta aniadido</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">eq1</span> <span class="o">=</span> <span class="n">Equipo</span><span class="p">(</span><span class="s">&quot;FC Barcelona&quot;</span><span class="p">,</span> <span class="s">&quot;1900&quot;</span><span class="p">,</span> <span class="s">&quot;Barcelona&quot;</span><span class="p">)</span>
+        <span class="n">l</span> <span class="o">=</span> <span class="n">Liga</span><span class="p">(</span><span class="s">&quot;Liga BBVA&quot;</span><span class="p">,</span> <span class="s">&quot;2014&quot;</span><span class="p">,</span> <span class="s">&quot;Espania&quot;</span><span class="p">)</span>
+        <span class="n">l</span><span class="o">.</span><span class="n">aniadir_equipo</span><span class="p">(</span><span class="n">eq1</span><span class="p">)</span>
+        <span class="n">l</span><span class="o">.</span><span class="n">existe_equipo</span><span class="p">(</span><span class="s">&quot;FC Barcelona&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">mostrar_equipo</span><span class="p">()</span>
+</div>
+<div class="viewcode-block" id="TestLiga.test_listar_equipos"><a class="viewcode-back" href="../../test_liga.html#tests.test_liga.TestLiga.test_listar_equipos">[docs]</a>    <span class="k">def</span> <span class="nf">test_listar_equipos</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Test listar equipos de la liga</span>
+
+<span class="sd">        Imprime los equipos que se aniaden como prueba</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">eq1</span> <span class="o">=</span> <span class="n">Equipo</span><span class="p">(</span><span class="s">&quot;FC Barcelona&quot;</span><span class="p">,</span> <span class="s">&quot;1900&quot;</span><span class="p">,</span> <span class="s">&quot;Barcelona&quot;</span><span class="p">)</span>
+        <span class="n">eq2</span> <span class="o">=</span> <span class="n">Equipo</span><span class="p">(</span><span class="s">&quot;Real Madrid&quot;</span><span class="p">,</span> <span class="s">&quot;1902&quot;</span><span class="p">,</span> <span class="s">&quot;Madrid&quot;</span><span class="p">)</span>
+        <span class="n">eq3</span> <span class="o">=</span> <span class="n">Equipo</span><span class="p">(</span><span class="s">&quot;FC Valencia&quot;</span><span class="p">,</span> <span class="s">&quot;1901&quot;</span><span class="p">,</span> <span class="s">&quot;Valencia&quot;</span><span class="p">)</span>
+        <span class="n">l</span> <span class="o">=</span> <span class="n">Liga</span><span class="p">(</span><span class="s">&quot;Liga BBVA&quot;</span><span class="p">,</span> <span class="s">&quot;2014&quot;</span><span class="p">,</span> <span class="s">&quot;Espania&quot;</span><span class="p">)</span>
+        <span class="n">l</span><span class="o">.</span><span class="n">aniadir_equipo</span><span class="p">(</span><span class="n">eq1</span><span class="p">)</span>
+        <span class="n">l</span><span class="o">.</span><span class="n">aniadir_equipo</span><span class="p">(</span><span class="n">eq2</span><span class="p">)</span>
+        <span class="n">l</span><span class="o">.</span><span class="n">aniadir_equipo</span><span class="p">(</span><span class="n">eq3</span><span class="p">)</span>
+        <span class="n">l</span><span class="o">.</span><span class="n">listar_equipos</span><span class="p">()</span>
+</div>
+<div class="viewcode-block" id="TestLiga.test_consultar_equipo"><a class="viewcode-back" href="../../test_liga.html#tests.test_liga.TestLiga.test_consultar_equipo">[docs]</a>    <span class="k">def</span> <span class="nf">test_consultar_equipo</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Test de consultar equipo</span>
+
+<span class="sd">        Comprueba que muestra los datos del equipo</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">eq1</span> <span class="o">=</span> <span class="n">Equipo</span><span class="p">(</span><span class="s">&quot;FC Barcelona&quot;</span><span class="p">,</span> <span class="s">&quot;1900&quot;</span><span class="p">,</span> <span class="s">&quot;Barcelona&quot;</span><span class="p">)</span>
+        <span class="n">l</span> <span class="o">=</span> <span class="n">Liga</span><span class="p">(</span><span class="s">&quot;Liga BBVA&quot;</span><span class="p">,</span> <span class="s">&quot;2014&quot;</span><span class="p">,</span> <span class="s">&quot;Espania&quot;</span><span class="p">)</span>
+        <span class="n">l</span><span class="o">.</span><span class="n">aniadir_equipo</span><span class="p">(</span><span class="n">eq1</span><span class="p">)</span>
+        <span class="n">l</span><span class="o">.</span><span class="n">consultar_equipo</span><span class="p">(</span><span class="n">eq1</span><span class="p">)</span>
+</div>
+<div class="viewcode-block" id="TestLiga.test_listar_partidos"><a class="viewcode-back" href="../../test_liga.html#tests.test_liga.TestLiga.test_listar_partidos">[docs]</a>    <span class="k">def</span> <span class="nf">test_listar_partidos</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Test de listar los partidos de la liga</span>
+
+<span class="sd">        Imprime los datos de los partidos aniadidos como prueba</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">p1</span> <span class="o">=</span> <span class="n">Partido</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s">&quot;FC Barcelona&quot;</span><span class="p">,</span> <span class="s">&quot;Real madrid&quot;</span><span class="p">)</span>
+        <span class="n">p2</span> <span class="o">=</span> <span class="n">Partido</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="s">&quot;FC Valencia&quot;</span><span class="p">,</span> <span class="s">&quot;FC Barcelona&quot;</span><span class="p">)</span>
+        <span class="n">l</span> <span class="o">=</span> <span class="n">Liga</span><span class="p">(</span><span class="s">&quot;Liga BBVA&quot;</span><span class="p">,</span> <span class="s">&quot;2014&quot;</span><span class="p">,</span> <span class="s">&quot;Espania&quot;</span><span class="p">)</span>
+        <span class="n">l</span><span class="o">.</span><span class="n">partidos</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">p1</span><span class="p">)</span>
+        <span class="n">l</span><span class="o">.</span><span class="n">partidos</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">p2</span><span class="p">)</span>
+        <span class="n">l</span><span class="o">.</span><span class="n">listar_partidos</span><span class="p">()</span>
+</div>
+<div class="viewcode-block" id="TestLiga.test_consultar_calendario"><a class="viewcode-back" href="../../test_liga.html#tests.test_liga.TestLiga.test_consultar_calendario">[docs]</a>    <span class="k">def</span> <span class="nf">test_consultar_calendario</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Test consultar el calendario de la liga</span>
+
+<span class="sd">        Imprime los datos de los partidos que aun no se han jugado dado los datos de prueba</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">p1</span> <span class="o">=</span> <span class="n">Partido</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s">&quot;FC Barcelona&quot;</span><span class="p">,</span> <span class="s">&quot;Real madrid&quot;</span><span class="p">)</span>
+        <span class="n">p2</span> <span class="o">=</span> <span class="n">Partido</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="s">&quot;FC Valencia&quot;</span><span class="p">,</span> <span class="s">&quot;FC Barcelona&quot;</span><span class="p">)</span>
+        <span class="n">p2</span><span class="o">.</span><span class="n">set_jugado</span><span class="p">(</span><span class="bp">True</span><span class="p">)</span>
+        <span class="n">l</span> <span class="o">=</span> <span class="n">Liga</span><span class="p">(</span><span class="s">&quot;Liga BBVA&quot;</span><span class="p">,</span> <span class="s">&quot;2014&quot;</span><span class="p">,</span> <span class="s">&quot;Espania&quot;</span><span class="p">)</span>
+        <span class="n">l</span><span class="o">.</span><span class="n">partidos</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">p1</span><span class="p">)</span>
+        <span class="n">l</span><span class="o">.</span><span class="n">partidos</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">p2</span><span class="p">)</span>
+        <span class="n">l</span><span class="o">.</span><span class="n">consultar_calendario</span><span class="p">()</span>
+</div>
+<div class="viewcode-block" id="TestLiga.test_consultar_clasificacion"><a class="viewcode-back" href="../../test_liga.html#tests.test_liga.TestLiga.test_consultar_clasificacion">[docs]</a>    <span class="k">def</span> <span class="nf">test_consultar_clasificacion</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Test consultar la clasificacion</span>
+
+<span class="sd">        Imprime los datos de los partidos y las posiciones tras crear los partidos</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">eq1</span> <span class="o">=</span> <span class="n">Equipo</span><span class="p">(</span><span class="s">&quot;FC Barcelona&quot;</span><span class="p">,</span> <span class="s">&quot;1900&quot;</span><span class="p">,</span> <span class="s">&quot;Barcelona&quot;</span><span class="p">)</span>
+        <span class="n">eq2</span> <span class="o">=</span> <span class="n">Equipo</span><span class="p">(</span><span class="s">&quot;Real Madrid&quot;</span><span class="p">,</span> <span class="s">&quot;1902&quot;</span><span class="p">,</span> <span class="s">&quot;Madrid&quot;</span><span class="p">)</span>
+        <span class="n">eq3</span> <span class="o">=</span> <span class="n">Equipo</span><span class="p">(</span><span class="s">&quot;FC Valencia&quot;</span><span class="p">,</span> <span class="s">&quot;1901&quot;</span><span class="p">,</span> <span class="s">&quot;Valencia&quot;</span><span class="p">)</span>
+        <span class="n">eq1</span><span class="o">.</span><span class="n">set_puntos</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+        <span class="n">eq2</span><span class="o">.</span><span class="n">set_puntos</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+        <span class="n">eq3</span><span class="o">.</span><span class="n">set_puntos</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+        <span class="n">eq1</span><span class="o">.</span><span class="n">set_goles_favor</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+        <span class="n">eq2</span><span class="o">.</span><span class="n">set_goles_favor</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+        <span class="n">eq3</span><span class="o">.</span><span class="n">set_goles_favor</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+        <span class="n">eq1</span><span class="o">.</span><span class="n">set_partidos_ganados</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+        <span class="n">eq1</span><span class="o">.</span><span class="n">set_partidos_empatados</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+        <span class="n">eq2</span><span class="o">.</span><span class="n">set_partidos_empatados</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+        <span class="n">eq3</span><span class="o">.</span><span class="n">set_partidos_ganados</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+        <span class="n">eq3</span><span class="o">.</span><span class="n">set_partidos_perdidos</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+        <span class="n">l</span> <span class="o">=</span> <span class="n">Liga</span><span class="p">(</span><span class="s">&quot;Liga BBVA&quot;</span><span class="p">,</span> <span class="s">&quot;2014&quot;</span><span class="p">,</span> <span class="s">&quot;Espania&quot;</span><span class="p">)</span>
+        <span class="n">l</span><span class="o">.</span><span class="n">aniadir_equipo</span><span class="p">(</span><span class="n">eq1</span><span class="p">)</span>
+        <span class="n">l</span><span class="o">.</span><span class="n">aniadir_equipo</span><span class="p">(</span><span class="n">eq2</span><span class="p">)</span>
+        <span class="n">l</span><span class="o">.</span><span class="n">aniadir_equipo</span><span class="p">(</span><span class="n">eq3</span><span class="p">)</span>
+        <span class="n">l</span><span class="o">.</span><span class="n">consultar_clasificacion</span><span class="p">()</span>
+</div>
+<div class="viewcode-block" id="TestLiga.test_consultar_partido"><a class="viewcode-back" href="../../test_liga.html#tests.test_liga.TestLiga.test_consultar_partido">[docs]</a>    <span class="k">def</span> <span class="nf">test_consultar_partido</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Test consultar partido</span>
+
+<span class="sd">        Imprime los datos del partido que se introducen como prueba</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">p1</span> <span class="o">=</span> <span class="n">Partido</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s">&quot;FC Barcelona&quot;</span><span class="p">,</span> <span class="s">&quot;Real madrid&quot;</span><span class="p">)</span>
+        <span class="n">l</span> <span class="o">=</span> <span class="n">Liga</span><span class="p">(</span><span class="s">&quot;Liga BBVA&quot;</span><span class="p">,</span> <span class="s">&quot;2014&quot;</span><span class="p">,</span> <span class="s">&quot;Espania&quot;</span><span class="p">)</span>
+        <span class="n">l</span><span class="o">.</span><span class="n">partidos</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">p1</span><span class="p">)</span>
+        <span class="n">l</span><span class="o">.</span><span class="n">consultar_partido</span><span class="p">(</span><span class="n">p1</span><span class="p">)</span>
+</div>
+<div class="viewcode-block" id="TestLiga.test_consultar_mejor_estadio"><a class="viewcode-back" href="../../test_liga.html#tests.test_liga.TestLiga.test_consultar_mejor_estadio">[docs]</a>    <span class="k">def</span> <span class="nf">test_consultar_mejor_estadio</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Test consultar el mejor estadio de la liga</span>
+
+<span class="sd">        Imprime el nombre del estadio con mayor capacidad de la liga dado los datos de prueba</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">eq1</span> <span class="o">=</span> <span class="n">Equipo</span><span class="p">(</span><span class="s">&quot;FC Barcelona&quot;</span><span class="p">,</span> <span class="s">&quot;1900&quot;</span><span class="p">,</span> <span class="s">&quot;Barcelona&quot;</span><span class="p">)</span>
+        <span class="n">eq2</span> <span class="o">=</span> <span class="n">Equipo</span><span class="p">(</span><span class="s">&quot;Real Madrid&quot;</span><span class="p">,</span> <span class="s">&quot;1902&quot;</span><span class="p">,</span> <span class="s">&quot;Madrid&quot;</span><span class="p">)</span>
+        <span class="n">eq3</span> <span class="o">=</span> <span class="n">Equipo</span><span class="p">(</span><span class="s">&quot;FC Valencia&quot;</span><span class="p">,</span> <span class="s">&quot;1901&quot;</span><span class="p">,</span> <span class="s">&quot;Valencia&quot;</span><span class="p">)</span>
+        <span class="n">es1</span> <span class="o">=</span> <span class="n">Estadio</span><span class="p">(</span><span class="s">&quot;Camp Nou&quot;</span><span class="p">,</span> <span class="s">&quot;Barcelona&quot;</span><span class="p">,</span> <span class="mi">1650300</span><span class="p">)</span>
+        <span class="n">es2</span> <span class="o">=</span> <span class="n">Estadio</span><span class="p">(</span><span class="s">&quot;Bernabeu&quot;</span><span class="p">,</span> <span class="s">&quot;Madrid&quot;</span><span class="p">,</span> <span class="mi">1500200</span><span class="p">)</span>
+        <span class="n">es3</span> <span class="o">=</span> <span class="n">Estadio</span><span class="p">(</span><span class="s">&quot;Mestalla&quot;</span><span class="p">,</span> <span class="s">&quot;Valencia&quot;</span><span class="p">,</span> <span class="mi">1560200</span><span class="p">)</span>
+        <span class="n">eq1</span><span class="o">.</span><span class="n">asignar_estadio</span><span class="p">(</span><span class="n">es1</span><span class="p">)</span>
+        <span class="n">eq2</span><span class="o">.</span><span class="n">asignar_estadio</span><span class="p">(</span><span class="n">es2</span><span class="p">)</span>
+        <span class="n">eq3</span><span class="o">.</span><span class="n">asignar_estadio</span><span class="p">(</span><span class="n">es3</span><span class="p">)</span>
+        <span class="n">l</span> <span class="o">=</span> <span class="n">Liga</span><span class="p">(</span><span class="s">&quot;Liga BBVA&quot;</span><span class="p">,</span> <span class="s">&quot;2014&quot;</span><span class="p">,</span> <span class="s">&quot;Espania&quot;</span><span class="p">)</span>
+        <span class="n">l</span><span class="o">.</span><span class="n">aniadir_equipo</span><span class="p">(</span><span class="n">eq1</span><span class="p">)</span>
+        <span class="n">l</span><span class="o">.</span><span class="n">aniadir_equipo</span><span class="p">(</span><span class="n">eq2</span><span class="p">)</span>
+        <span class="n">l</span><span class="o">.</span><span class="n">aniadir_equipo</span><span class="p">(</span><span class="n">eq3</span><span class="p">)</span>
+        <span class="n">l</span><span class="o">.</span><span class="n">consultar_mejor_estadio</span><span class="p">()</span>
+</div>
+<div class="viewcode-block" id="TestLiga.test_listar_pichichis_equipos"><a class="viewcode-back" href="../../test_liga.html#tests.test_liga.TestLiga.test_listar_pichichis_equipos">[docs]</a>    <span class="k">def</span> <span class="nf">test_listar_pichichis_equipos</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Test listar los pichichis de los equipos de la liga</span>
+
+<span class="sd">        Imprime los datos de los pichichis de los equipos de la liga dado los datos introducidos de prueba</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">eq1</span> <span class="o">=</span> <span class="n">Equipo</span><span class="p">(</span><span class="s">&quot;FC Barcelona&quot;</span><span class="p">,</span> <span class="s">&quot;1900&quot;</span><span class="p">,</span> <span class="s">&quot;Barcelona&quot;</span><span class="p">)</span>
+        <span class="n">eq2</span> <span class="o">=</span> <span class="n">Equipo</span><span class="p">(</span><span class="s">&quot;Real Madrid&quot;</span><span class="p">,</span> <span class="s">&quot;1902&quot;</span><span class="p">,</span> <span class="s">&quot;Madrid&quot;</span><span class="p">)</span>
+        <span class="n">eq3</span> <span class="o">=</span> <span class="n">Equipo</span><span class="p">(</span><span class="s">&quot;FC Valencia&quot;</span><span class="p">,</span> <span class="s">&quot;1901&quot;</span><span class="p">,</span> <span class="s">&quot;Valencia&quot;</span><span class="p">)</span>
+        <span class="n">j1</span> <span class="o">=</span> <span class="n">Jugador</span><span class="p">(</span><span class="s">&quot;Leo&quot;</span><span class="p">,</span> <span class="s">&quot;Messi&quot;</span><span class="p">,</span> <span class="s">&quot;1234M&quot;</span><span class="p">,</span> <span class="s">&quot;23/02/1980&quot;</span><span class="p">,</span> <span class="s">&quot;Argentina&quot;</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="s">&quot;delantero&quot;</span><span class="p">)</span>
+        <span class="n">j2</span> <span class="o">=</span> <span class="n">Jugador</span><span class="p">(</span><span class="s">&quot;Luis&quot;</span><span class="p">,</span> <span class="s">&quot;Suarez&quot;</span><span class="p">,</span> <span class="s">&quot;1234S&quot;</span><span class="p">,</span> <span class="s">&quot;11/08/1985&quot;</span><span class="p">,</span> <span class="s">&quot;Uruguay&quot;</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="s">&quot;delantero&quot;</span><span class="p">)</span>
+        <span class="n">j3</span> <span class="o">=</span> <span class="n">Jugador</span><span class="p">(</span><span class="s">&quot;Neymar&quot;</span><span class="p">,</span> <span class="s">&quot;Junior&quot;</span><span class="p">,</span> <span class="s">&quot;1234J&quot;</span><span class="p">,</span> <span class="s">&quot;19/02/1990&quot;</span><span class="p">,</span> <span class="s">&quot;Brasil&quot;</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="s">&quot;delantero&quot;</span><span class="p">)</span>
+        <span class="n">j1</span><span class="o">.</span><span class="n">set_goles_marcados</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+        <span class="n">j2</span><span class="o">.</span><span class="n">set_goles_marcados</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+        <span class="n">j3</span><span class="o">.</span><span class="n">set_goles_marcados</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+        <span class="n">eq1</span><span class="o">.</span><span class="n">agregar_jugador</span><span class="p">(</span><span class="n">j1</span><span class="p">)</span>
+        <span class="n">eq2</span><span class="o">.</span><span class="n">agregar_jugador</span><span class="p">(</span><span class="n">j2</span><span class="p">)</span>
+        <span class="n">eq3</span><span class="o">.</span><span class="n">agregar_jugador</span><span class="p">(</span><span class="n">j3</span><span class="p">)</span>
+        <span class="n">l</span> <span class="o">=</span> <span class="n">Liga</span><span class="p">(</span><span class="s">&quot;Liga BBVA&quot;</span><span class="p">,</span> <span class="s">&quot;2014&quot;</span><span class="p">,</span> <span class="s">&quot;Espania&quot;</span><span class="p">)</span>
+        <span class="n">l</span><span class="o">.</span><span class="n">aniadir_equipo</span><span class="p">(</span><span class="n">eq1</span><span class="p">)</span>
+        <span class="n">l</span><span class="o">.</span><span class="n">aniadir_equipo</span><span class="p">(</span><span class="n">eq2</span><span class="p">)</span>
+        <span class="n">l</span><span class="o">.</span><span class="n">aniadir_equipo</span><span class="p">(</span><span class="n">eq3</span><span class="p">)</span>
+        <span class="n">l</span><span class="o">.</span><span class="n">listar_pichichis_equipos</span><span class="p">()</span>
+</div>
+<div class="viewcode-block" id="TestLiga.test_mostrar_liga"><a class="viewcode-back" href="../../test_liga.html#tests.test_liga.TestLiga.test_mostrar_liga">[docs]</a>    <span class="k">def</span> <span class="nf">test_mostrar_liga</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Test mostrar liga</span>
+
+<span class="sd">        Imprime los datos de la liga dado los de prueba</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">l</span> <span class="o">=</span> <span class="n">Liga</span><span class="p">(</span><span class="s">&quot;Liga BBVA&quot;</span><span class="p">,</span> <span class="s">&quot;2014&quot;</span><span class="p">,</span> <span class="s">&quot;Espania&quot;</span><span class="p">)</span>
+        <span class="n">l</span><span class="o">.</span><span class="n">mostrar_liga</span><span class="p">()</span></div></div>
+</pre></div>
+
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2014, Grupo7.
+    </p>
+  </div>
+
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'0.2',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

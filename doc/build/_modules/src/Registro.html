@@ -1,0 +1,824 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>src.Registro &mdash; LigaFutbol 0.2 documentation</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="LigaFutbol 0.2 documentation" href="../../index.html"/>
+        <link rel="up" title="Module code" href="../index.html"/> 
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+          <a href="../../index.html" class="fa fa-home"> LigaFutbol</a>
+        
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+        
+            <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../persona.html">Documentacion de Persona</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../jugador.html">Documentacion de Jugador</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../entrenador.html">Documentacion de Entrenador</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../estadio.html">Documentacion de Estadio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../equipo.html">Documentacion de Equipo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../liga.html">Documentacion de Liga</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../partido.html">Documentacion de Partido</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../registro.html">Documentacion de Registro</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../principal.html">Documentacion de Principal</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../test_jugador.html">Documentacion del test de jugador</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../test_equipo.html">Documentacion del test de equipo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../test_liga.html">Documentacion del test de liga</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../test_registro.html">Documentacion del test de registro</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../manual.html">Ver manual de usuario</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../principal.html">Codigo del programa de prueba</a></li>
+</ul>
+</li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../index.html">LigaFutbol</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../index.html">Module code</a> &raquo;</li>
+      
+    <li>src.Registro</li>
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document">
+            
+  <h1>Source code for src.Registro</h1><div class="highlight"><pre>
+<span class="n">__author__</span> <span class="o">=</span> <span class="s">&#39;Grupo 7&#39;</span>
+<span class="kn">from</span> <span class="nn">src.Jugador</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">src.Entrenador</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">src.Estadio</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">src.Equipo</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">src.Liga</span> <span class="kn">import</span> <span class="o">*</span>
+
+
+<div class="viewcode-block" id="Registro"><a class="viewcode-back" href="../../registro.html#src.Registro.Registro">[docs]</a><span class="k">class</span> <span class="nc">Registro</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Representacion de un registro que administra muchas ligas</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+<div class="viewcode-block" id="Registro.__init__"><a class="viewcode-back" href="../../registro.html#src.Registro.Registro.__init__">[docs]</a>    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Constructor</span>
+
+<span class="sd">        Inicializa el constructor de Registro</span>
+<span class="sd">        :param ligas: Lista que contiene ligas</span>
+<span class="sd">        :type ligas: list</span>
+<span class="sd">        :param equipos: Lista que contiene equipos</span>
+<span class="sd">        :type equipos: list</span>
+<span class="sd">        :param jugadores: Lista que contiene jugadores</span>
+<span class="sd">        :type jugadores: list</span>
+<span class="sd">        :param entrenadores: Lista que contiene entrenadores</span>
+<span class="sd">        :type estadios: list</span>
+<span class="sd">        :param estadios: Lista que contiene estadios</span>
+<span class="sd">        :type estadios: list</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ligas</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">equipos</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">jugadores</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">entrenadores</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">estadios</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="c"># CRUD JUGADOR</span></div>
+<div class="viewcode-block" id="Registro.existe_jugador"><a class="viewcode-back" href="../../registro.html#src.Registro.Registro.existe_jugador">[docs]</a>    <span class="k">def</span> <span class="nf">existe_jugador</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dni</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Metodo existe_jugador</span>
+
+<span class="sd">        Comprueba que existe un jugador en la lista de jugadores del registro</span>
+<span class="sd">        :param dni: Dni del jugador</span>
+<span class="sd">        :type dni: String</span>
+<span class="sd">        :return: jugador</span>
+<span class="sd">        :rtype: Jugador</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">jugador</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">jugadores</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">j</span><span class="o">.</span><span class="n">get_dni</span><span class="p">()</span> <span class="o">==</span> <span class="n">dni</span><span class="p">:</span>
+                <span class="n">jugador</span> <span class="o">=</span> <span class="n">j</span>
+        <span class="k">return</span> <span class="n">jugador</span>
+</div>
+<div class="viewcode-block" id="Registro.crear_jugador"><a class="viewcode-back" href="../../registro.html#src.Registro.Registro.crear_jugador">[docs]</a>    <span class="k">def</span> <span class="nf">crear_jugador</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Metodo crear_jugador</span>
+
+<span class="sd">        Crea un nuevo jugador y lo aniade a la lista de jugadores del registro</span>
+<span class="sd">        :var nombre: Nombre del jugador</span>
+<span class="sd">        :type nombre: String</span>
+<span class="sd">        :var apellidos: Apellidos del jugador</span>
+<span class="sd">        :type apellidos: String</span>
+<span class="sd">        :var dni: Dni del jugador</span>
+<span class="sd">        :type dni: String</span>
+<span class="sd">        :var fecha_nac: Fecha de nacimiento del jugador</span>
+<span class="sd">        :type fecha_nac: String</span>
+<span class="sd">        :var pais_nac: Pais de nacimiento del jugador</span>
+<span class="sd">        :type pais_nac: String</span>
+<span class="sd">        :var dorsal: Dorsal del jugador</span>
+<span class="sd">        :type dorsal: int</span>
+<span class="sd">        :var posicion: Posicion de juego del jugador</span>
+<span class="sd">        :type posicion: String</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">nombre</span> <span class="o">=</span> <span class="nb">raw_input</span><span class="p">(</span><span class="s">&quot;Indique el nombre del jugador: &quot;</span><span class="p">)</span>
+        <span class="n">apellidos</span> <span class="o">=</span> <span class="nb">raw_input</span><span class="p">(</span><span class="s">&quot;Indique los apellidos del jugador: &quot;</span><span class="p">)</span>
+        <span class="n">dni</span> <span class="o">=</span> <span class="nb">raw_input</span><span class="p">(</span><span class="s">&quot;Indique el dni del jugador: &quot;</span><span class="p">)</span>
+        <span class="n">fecha_nac</span> <span class="o">=</span> <span class="nb">raw_input</span><span class="p">(</span><span class="s">&quot;Indique la fecha de nacimiento del jugador: &quot;</span><span class="p">)</span>
+        <span class="n">pais_nac</span> <span class="o">=</span> <span class="nb">raw_input</span><span class="p">(</span><span class="s">&quot;Indique el pais de nacimiento del jugador: &quot;</span><span class="p">)</span>
+        <span class="n">dorsal</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">&quot;Indique el dorsal del jugador: &quot;</span><span class="p">)</span>
+        <span class="n">posicion</span> <span class="o">=</span> <span class="nb">raw_input</span><span class="p">(</span><span class="s">&quot;Indique la posicion de juego: &quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">existe_jugador</span><span class="p">(</span><span class="n">dni</span><span class="p">)</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="k">print</span> <span class="p">(</span><span class="s">&quot;El jugador ya existe&quot;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">j</span> <span class="o">=</span> <span class="n">Jugador</span><span class="p">(</span><span class="n">nombre</span><span class="p">,</span> <span class="n">apellidos</span><span class="p">,</span> <span class="n">dni</span><span class="p">,</span> <span class="n">fecha_nac</span><span class="p">,</span> <span class="n">pais_nac</span><span class="p">,</span> <span class="n">dorsal</span><span class="p">,</span> <span class="n">posicion</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">aniadir_jugador</span><span class="p">(</span><span class="n">j</span><span class="p">)</span>
+</div>
+<div class="viewcode-block" id="Registro.modificar_jugador"><a class="viewcode-back" href="../../registro.html#src.Registro.Registro.modificar_jugador">[docs]</a>    <span class="k">def</span> <span class="nf">modificar_jugador</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Metodo modificar_jugador</span>
+
+<span class="sd">        Modifica un jugador ya existente en la lista de jugadores del registro</span>
+<span class="sd">        :var dni: Dni del jugador a modificar</span>
+<span class="sd">        :type dni: String</span>
+<span class="sd">        :var nombre: Nuevo nombre del jugador</span>
+<span class="sd">        :type nombre: String</span>
+<span class="sd">        :var apellidos: Nuevos apellidos del jugador</span>
+<span class="sd">        :type apellidos: String</span>
+<span class="sd">        :var fecha_nac: Nueva fecha de nacimiento del jugador</span>
+<span class="sd">        :type fecha_nac: String</span>
+<span class="sd">        :var pais_nac: Nuevo pais de nacimiento del jugador</span>
+<span class="sd">        :type pais_nac: String</span>
+<span class="sd">        :var dorsal: Nuevo dorsal del jugador</span>
+<span class="sd">        :type dorsal: int</span>
+<span class="sd">        :var posicion: Nueva posicion de juego del jugador</span>
+<span class="sd">        :type posicion: String</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">dni</span> <span class="o">=</span> <span class="nb">raw_input</span><span class="p">(</span><span class="s">&quot;Introduce el dni del jugador ha modificar: &quot;</span><span class="p">)</span>
+        <span class="n">j</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">existe_jugador</span><span class="p">(</span><span class="n">dni</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">j</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="k">print</span> <span class="p">(</span><span class="s">&quot;El dni no se corresponde con ningun jugador&quot;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">print</span> <span class="p">(</span><span class="s">&quot;Introduzca los nuevos datos:&quot;</span><span class="p">)</span>
+            <span class="n">nombre</span> <span class="o">=</span> <span class="nb">raw_input</span><span class="p">(</span><span class="s">&quot;Nombre: &quot;</span><span class="p">)</span>
+            <span class="n">apellidos</span> <span class="o">=</span> <span class="nb">raw_input</span><span class="p">(</span><span class="s">&quot;Apellidos: &quot;</span><span class="p">)</span>
+            <span class="n">fecha_nac</span> <span class="o">=</span> <span class="nb">raw_input</span><span class="p">(</span><span class="s">&quot;Fecha nacimiento: &quot;</span><span class="p">)</span>
+            <span class="n">pais_nac</span> <span class="o">=</span> <span class="nb">raw_input</span><span class="p">(</span><span class="s">&quot;Pais de nacimiento: &quot;</span><span class="p">)</span>
+            <span class="n">dorsal</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">&quot;Dorsal: &quot;</span><span class="p">)</span>
+            <span class="n">posicion</span> <span class="o">=</span> <span class="nb">raw_input</span><span class="p">(</span><span class="s">&quot;Posicion: &quot;</span><span class="p">)</span>
+            <span class="n">j</span><span class="o">.</span><span class="n">set_nombre</span><span class="p">(</span><span class="n">nombre</span><span class="p">)</span>
+            <span class="n">j</span><span class="o">.</span><span class="n">set_apellidos</span><span class="p">(</span><span class="n">apellidos</span><span class="p">)</span>
+            <span class="n">j</span><span class="o">.</span><span class="n">set_fecha_nac</span><span class="p">(</span><span class="n">fecha_nac</span><span class="p">)</span>
+            <span class="n">j</span><span class="o">.</span><span class="n">set_pais_nac</span><span class="p">(</span><span class="n">pais_nac</span><span class="p">)</span>
+            <span class="n">j</span><span class="o">.</span><span class="n">set_dorsal</span><span class="p">(</span><span class="n">dorsal</span><span class="p">)</span>
+            <span class="n">j</span><span class="o">.</span><span class="n">set_posicion</span><span class="p">(</span><span class="n">posicion</span><span class="p">)</span>
+            <span class="k">print</span> <span class="p">(</span><span class="s">&quot;Jugador modificado correctamente&quot;</span><span class="p">)</span>
+</div>
+<div class="viewcode-block" id="Registro.eliminar_jugador"><a class="viewcode-back" href="../../registro.html#src.Registro.Registro.eliminar_jugador">[docs]</a>    <span class="k">def</span> <span class="nf">eliminar_jugador</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Metodo eliminar_jugador</span>
+
+<span class="sd">        Elimina un jugador (existente) en la lista de jugadores del registro</span>
+<span class="sd">        :var dni: Dni del jugador a eliminar</span>
+<span class="sd">        :type dni: String</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">dni</span> <span class="o">=</span> <span class="nb">raw_input</span><span class="p">(</span><span class="s">&quot;Introduce el dni del jugador a eliminar: &quot;</span><span class="p">)</span>
+        <span class="n">j</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">existe_jugador</span><span class="p">(</span><span class="n">dni</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">j</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="k">print</span> <span class="p">(</span><span class="s">&quot;El dni no se corresponde con ningun jugador&quot;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">jugadores</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">j</span><span class="p">)</span>
+            <span class="k">print</span> <span class="p">(</span><span class="s">&quot;Jugador eliminado correctamente&quot;</span><span class="p">)</span>
+</div>
+<div class="viewcode-block" id="Registro.consultar_jugador"><a class="viewcode-back" href="../../registro.html#src.Registro.Registro.consultar_jugador">[docs]</a>    <span class="k">def</span> <span class="nf">consultar_jugador</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Metodo consultar_jugador</span>
+
+<span class="sd">        Consulta los datos un jugador (existente) en la lista de jugadores del registro</span>
+<span class="sd">        :var dni: Dni del jugador a consultar</span>
+<span class="sd">        :type dni: String</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">dni</span> <span class="o">=</span> <span class="nb">raw_input</span><span class="p">(</span><span class="s">&quot;Introduce el dni del jugador a consultar: &quot;</span><span class="p">)</span>
+        <span class="n">j</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">existe_jugador</span><span class="p">(</span><span class="n">dni</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">j</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="k">print</span> <span class="p">(</span><span class="s">&quot;El dni no se corresponde con ningun jugador&quot;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">j</span><span class="o">.</span><span class="n">mostrar_jugador</span><span class="p">()</span>
+
+    <span class="c">#CRUD ENTRENADOR</span></div>
+<div class="viewcode-block" id="Registro.existe_entrenador"><a class="viewcode-back" href="../../registro.html#src.Registro.Registro.existe_entrenador">[docs]</a>    <span class="k">def</span> <span class="nf">existe_entrenador</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dni</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Metodo existe_entrenador</span>
+
+<span class="sd">        Comprueba que existe un entrenador en la lista de entrenadores del registro</span>
+<span class="sd">        :param dni: Dni del entrenador</span>
+<span class="sd">        :type dni: String</span>
+<span class="sd">        :return: entrenador</span>
+<span class="sd">        :rtype: Entrenador</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">entrenador</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">entrenadores</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">e</span><span class="o">.</span><span class="n">get_dni</span><span class="p">()</span> <span class="o">==</span> <span class="n">dni</span><span class="p">:</span>
+                <span class="n">entrenador</span> <span class="o">=</span> <span class="n">e</span>
+        <span class="k">return</span> <span class="n">entrenador</span>
+</div>
+<div class="viewcode-block" id="Registro.crear_entrenador"><a class="viewcode-back" href="../../registro.html#src.Registro.Registro.crear_entrenador">[docs]</a>    <span class="k">def</span> <span class="nf">crear_entrenador</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Metodo crear_entrenador</span>
+
+<span class="sd">        Crea un nuevo entrenador y lo aniade a la lista de entrenadores del registro</span>
+<span class="sd">        :var nombre: Nombre del entrenador</span>
+<span class="sd">        :type nombre: String</span>
+<span class="sd">        :var apellidos: Apellidos del entrenador</span>
+<span class="sd">        :type apellidos: String</span>
+<span class="sd">        :var dni: Dni del entrenador</span>
+<span class="sd">        :type dni: String</span>
+<span class="sd">        :var fecha_nac: Fecha de nacimiento del entrenador</span>
+<span class="sd">        :type fecha_nac: String</span>
+<span class="sd">        :var pais_nac: Pais de nacimiento del entrenador</span>
+<span class="sd">        :type pais_nac: String</span>
+<span class="sd">        :var licencia: Licencia del entrenador</span>
+<span class="sd">        :type licencia: String</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">nombre</span> <span class="o">=</span> <span class="nb">raw_input</span><span class="p">(</span><span class="s">&quot;Indique el nombre del entrenador: &quot;</span><span class="p">)</span>
+        <span class="n">apellidos</span> <span class="o">=</span> <span class="nb">raw_input</span><span class="p">(</span><span class="s">&quot;Indique los apellidos del entrenador: &quot;</span><span class="p">)</span>
+        <span class="n">dni</span> <span class="o">=</span> <span class="nb">raw_input</span><span class="p">(</span><span class="s">&quot;Indique el dni del entrenador: &quot;</span><span class="p">)</span>
+        <span class="n">fecha_nac</span> <span class="o">=</span> <span class="nb">raw_input</span><span class="p">(</span><span class="s">&quot;Indique la fecha de nacimiento del entrenador: &quot;</span><span class="p">)</span>
+        <span class="n">pais_nac</span> <span class="o">=</span> <span class="nb">raw_input</span><span class="p">(</span><span class="s">&quot;Indique el pais de nacimiento del entrenador: &quot;</span><span class="p">)</span>
+        <span class="n">licencia</span> <span class="o">=</span> <span class="nb">raw_input</span><span class="p">(</span><span class="s">&quot;Indique la licecia del entrenador: &quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">existe_entrenador</span><span class="p">(</span><span class="n">dni</span><span class="p">)</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="k">print</span> <span class="p">(</span><span class="s">&quot;El entrenador ya existe&quot;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">e</span> <span class="o">=</span> <span class="n">Entrenador</span><span class="p">(</span><span class="n">nombre</span><span class="p">,</span> <span class="n">apellidos</span><span class="p">,</span> <span class="n">dni</span><span class="p">,</span> <span class="n">fecha_nac</span><span class="p">,</span> <span class="n">pais_nac</span><span class="p">,</span> <span class="n">licencia</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">aniadir_entrenador</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+</div>
+<div class="viewcode-block" id="Registro.modificar_entrenador"><a class="viewcode-back" href="../../registro.html#src.Registro.Registro.modificar_entrenador">[docs]</a>    <span class="k">def</span> <span class="nf">modificar_entrenador</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Metodo modificar_entrenador</span>
+
+<span class="sd">        Modifica un entrenador ya existente en la lista de entrenadores del registro</span>
+<span class="sd">        :var dni: Dni del entrenador a modificar</span>
+<span class="sd">        :type dni: String</span>
+<span class="sd">        :var nombre: Nuevo nombre del entrenador</span>
+<span class="sd">        :type nombre: String</span>
+<span class="sd">        :var apellidos: Nuevos apellidos del entrenador</span>
+<span class="sd">        :type apellidos: String</span>
+<span class="sd">        :var fecha_nac: Nueva fecha de nacimiento del entrenador</span>
+<span class="sd">        :type fecha_nac: String</span>
+<span class="sd">        :var pais_nac: Nuevo pais de nacimiento del entrenador</span>
+<span class="sd">        :type pais_nac: String</span>
+<span class="sd">        :var licencia: Nueva licencia del entrenador</span>
+<span class="sd">        :type licencia: String</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">dni</span> <span class="o">=</span> <span class="nb">raw_input</span><span class="p">(</span><span class="s">&quot;Introduce el dni del entrenador ha modificar: &quot;</span><span class="p">)</span>
+        <span class="n">e</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">existe_entrenador</span><span class="p">(</span><span class="n">dni</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">e</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="k">print</span> <span class="p">(</span><span class="s">&quot;El dni no se corresponde con ningun entrenador&quot;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">print</span> <span class="p">(</span><span class="s">&quot;Introduzca los nuevos datos:&quot;</span><span class="p">)</span>
+            <span class="n">nombre</span> <span class="o">=</span> <span class="nb">raw_input</span><span class="p">(</span><span class="s">&quot;Nombre: &quot;</span><span class="p">)</span>
+            <span class="n">apellidos</span> <span class="o">=</span> <span class="nb">raw_input</span><span class="p">(</span><span class="s">&quot;Apellidos: &quot;</span><span class="p">)</span>
+            <span class="n">fecha_nac</span> <span class="o">=</span> <span class="nb">raw_input</span><span class="p">(</span><span class="s">&quot;Fecha nacimiento: &quot;</span><span class="p">)</span>
+            <span class="n">pais_nac</span> <span class="o">=</span> <span class="nb">raw_input</span><span class="p">(</span><span class="s">&quot;Pais de nacimiento: &quot;</span><span class="p">)</span>
+            <span class="n">licencia</span> <span class="o">=</span> <span class="nb">raw_input</span><span class="p">(</span><span class="s">&quot;Licencia: &quot;</span><span class="p">)</span>
+            <span class="n">e</span><span class="o">.</span><span class="n">set_nombre</span><span class="p">(</span><span class="n">nombre</span><span class="p">)</span>
+            <span class="n">e</span><span class="o">.</span><span class="n">set_apellidos</span><span class="p">(</span><span class="n">apellidos</span><span class="p">)</span>
+            <span class="n">e</span><span class="o">.</span><span class="n">set_fecha_nac</span><span class="p">(</span><span class="n">fecha_nac</span><span class="p">)</span>
+            <span class="n">e</span><span class="o">.</span><span class="n">set_pais_nac</span><span class="p">(</span><span class="n">pais_nac</span><span class="p">)</span>
+            <span class="n">e</span><span class="o">.</span><span class="n">set_licencia</span><span class="p">(</span><span class="n">licencia</span><span class="p">)</span>
+            <span class="k">print</span> <span class="p">(</span><span class="s">&quot;Entrenador modificado correctamente&quot;</span><span class="p">)</span>
+</div>
+<div class="viewcode-block" id="Registro.eliminar_entrenador"><a class="viewcode-back" href="../../registro.html#src.Registro.Registro.eliminar_entrenador">[docs]</a>    <span class="k">def</span> <span class="nf">eliminar_entrenador</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Metodo eliminar_entrenador</span>
+
+<span class="sd">        Elimina un entrenador (existente) en la lista de entrenadores del registro</span>
+<span class="sd">        :var dni: Dni del entrenador a eliminar</span>
+<span class="sd">        :type dni: String</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">dni</span> <span class="o">=</span> <span class="nb">raw_input</span><span class="p">(</span><span class="s">&quot;Introduce el dni del entrenador a eliminar: &quot;</span><span class="p">)</span>
+        <span class="n">e</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">existe_entrenador</span><span class="p">(</span><span class="n">dni</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">e</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="k">print</span> <span class="p">(</span><span class="s">&quot;El dni no se corresponde con ningun entrenador&quot;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">entrenadores</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+            <span class="k">print</span> <span class="p">(</span><span class="s">&quot;Entrenador eliminado correctamente&quot;</span><span class="p">)</span>
+</div>
+<div class="viewcode-block" id="Registro.consultar_entrenador"><a class="viewcode-back" href="../../registro.html#src.Registro.Registro.consultar_entrenador">[docs]</a>    <span class="k">def</span> <span class="nf">consultar_entrenador</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Metodo consultar_entrenador</span>
+
+<span class="sd">        Consulta los datos un entrenador (existente) en la lista de entrenadores del registro</span>
+<span class="sd">        :var dni: Dni del entrenador a consultar</span>
+<span class="sd">        :type dni: String</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">dni</span> <span class="o">=</span> <span class="nb">raw_input</span><span class="p">(</span><span class="s">&quot;Introduce el dni del entrenador a consultar: &quot;</span><span class="p">)</span>
+        <span class="n">e</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">existe_entrenador</span><span class="p">(</span><span class="n">dni</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">e</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="k">print</span> <span class="p">(</span><span class="s">&quot;El dni no se corresponde con ningun entrenador&quot;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">e</span><span class="o">.</span><span class="n">mostrar_entrenador</span><span class="p">()</span>
+
+    <span class="c">#CRUD ESTADIO</span></div>
+<div class="viewcode-block" id="Registro.existe_estadio"><a class="viewcode-back" href="../../registro.html#src.Registro.Registro.existe_estadio">[docs]</a>    <span class="k">def</span> <span class="nf">existe_estadio</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nombre</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Metodo existe_estadio</span>
+
+<span class="sd">        Comprueba que existe un estadio en la lista de estadios del registro</span>
+<span class="sd">        :param nombre: Nombre del estadio</span>
+<span class="sd">        :type nombre: String</span>
+<span class="sd">        :return: estadio</span>
+<span class="sd">        :rtype: Estadio</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">estadio</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">estadios</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">e</span><span class="o">.</span><span class="n">get_nombre</span><span class="p">()</span> <span class="o">==</span> <span class="n">nombre</span><span class="p">:</span>
+                <span class="n">estadio</span> <span class="o">=</span> <span class="n">e</span>
+        <span class="k">return</span> <span class="n">estadio</span>
+</div>
+<div class="viewcode-block" id="Registro.crear_estadio"><a class="viewcode-back" href="../../registro.html#src.Registro.Registro.crear_estadio">[docs]</a>    <span class="k">def</span> <span class="nf">crear_estadio</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Metodo crear_estadio</span>
+
+<span class="sd">        Crea un nuevo estadio y lo aniade a la lista de estadios del registro</span>
+<span class="sd">        :var nombre: Nombre del estadio</span>
+<span class="sd">        :type nombre: String</span>
+<span class="sd">        :var ciudad: Ciudad del estadio</span>
+<span class="sd">        :type ciudad: String</span>
+<span class="sd">        :var capacidad: Capacidad del estadio</span>
+<span class="sd">        :type capacidad: String</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">nombre</span> <span class="o">=</span> <span class="nb">raw_input</span><span class="p">(</span><span class="s">&quot;Indique el nombre del estadio: &quot;</span><span class="p">)</span>
+        <span class="n">ciudad</span> <span class="o">=</span> <span class="nb">raw_input</span><span class="p">(</span><span class="s">&quot;Indique la ciudad del estadio: &quot;</span><span class="p">)</span>
+        <span class="n">capacidad</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">&quot;Indique la capacidad del estadio: &quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">existe_estadio</span><span class="p">(</span><span class="n">nombre</span><span class="p">)</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="k">print</span> <span class="p">(</span><span class="s">&quot;El estadio ya existe&quot;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">e</span> <span class="o">=</span> <span class="n">Estadio</span><span class="p">(</span><span class="n">nombre</span><span class="p">,</span> <span class="n">ciudad</span><span class="p">,</span> <span class="n">capacidad</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">aniadir_estadio</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+</div>
+<div class="viewcode-block" id="Registro.modificar_estadio"><a class="viewcode-back" href="../../registro.html#src.Registro.Registro.modificar_estadio">[docs]</a>    <span class="k">def</span> <span class="nf">modificar_estadio</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Metodo modificar_estadio</span>
+
+<span class="sd">        Modifica un estadio ya existente en la lista de estadios del registro</span>
+<span class="sd">        :var nombre: Nombre del estadio a modificar</span>
+<span class="sd">        :type nombre: String</span>
+<span class="sd">        :var ciudad: Nueva ciudad del estadio</span>
+<span class="sd">        :type ciudad: String</span>
+<span class="sd">        :var capacidad: Nueva capacidad del estadio</span>
+<span class="sd">        :type capacidad: int</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">nombre</span> <span class="o">=</span> <span class="nb">raw_input</span><span class="p">(</span><span class="s">&quot;Introduce el nombre del estadio ha modificar: &quot;</span><span class="p">)</span>
+        <span class="n">e</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">existe_estadio</span><span class="p">(</span><span class="n">nombre</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">e</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="k">print</span> <span class="p">(</span><span class="s">&quot;El nombre no se corresponde con ningun estadio&quot;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">print</span> <span class="p">(</span><span class="s">&quot;Introduzca los nuevos datos:&quot;</span><span class="p">)</span>
+            <span class="n">ciudad</span> <span class="o">=</span> <span class="nb">raw_input</span><span class="p">(</span><span class="s">&quot;Ciudad: &quot;</span><span class="p">)</span>
+            <span class="n">capacidad</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">&quot;Capacidad: &quot;</span><span class="p">)</span>
+            <span class="n">e</span><span class="o">.</span><span class="n">set_ciudad</span><span class="p">(</span><span class="n">ciudad</span><span class="p">)</span>
+            <span class="n">e</span><span class="o">.</span><span class="n">set_capacidad</span><span class="p">(</span><span class="n">capacidad</span><span class="p">)</span>
+            <span class="k">print</span> <span class="p">(</span><span class="s">&quot;Estadio modificado correctamente&quot;</span><span class="p">)</span>
+</div>
+<div class="viewcode-block" id="Registro.eliminar_estadio"><a class="viewcode-back" href="../../registro.html#src.Registro.Registro.eliminar_estadio">[docs]</a>    <span class="k">def</span> <span class="nf">eliminar_estadio</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Metodo eliminar_estadio</span>
+
+<span class="sd">        Elimina un estadio (existente) en la lista de estadios del registro</span>
+<span class="sd">        :var nombre: Nombre del estadio a eliminar</span>
+<span class="sd">        :type nombre: String</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">nombre</span> <span class="o">=</span> <span class="nb">raw_input</span><span class="p">(</span><span class="s">&quot;Introduce el nombre del estadio a eliminar: &quot;</span><span class="p">)</span>
+        <span class="n">e</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">existe_estadio</span><span class="p">(</span><span class="n">nombre</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">e</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="k">print</span> <span class="p">(</span><span class="s">&quot;El nombre no se corresponde con ningun estadio&quot;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">estadios</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+            <span class="k">print</span> <span class="p">(</span><span class="s">&quot;Estadio eliminado correctamente&quot;</span><span class="p">)</span>
+</div>
+<div class="viewcode-block" id="Registro.consultar_estadio"><a class="viewcode-back" href="../../registro.html#src.Registro.Registro.consultar_estadio">[docs]</a>    <span class="k">def</span> <span class="nf">consultar_estadio</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Metodo consultar_estadio</span>
+
+<span class="sd">        Consulta los datos un estadio (existente) en la lista de estadios del registro</span>
+<span class="sd">        :var nombre: Nombre del estadio a consultar</span>
+<span class="sd">        :type nombre: String</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">nombre</span> <span class="o">=</span> <span class="nb">raw_input</span><span class="p">(</span><span class="s">&quot;Introduce el nombre del estadio a consultar: &quot;</span><span class="p">)</span>
+        <span class="n">e</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">existe_estadio</span><span class="p">(</span><span class="n">nombre</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">e</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="k">print</span> <span class="p">(</span><span class="s">&quot;El nombre no se corresponde con ningun estadio&quot;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">e</span><span class="o">.</span><span class="n">mostrar_estadio</span><span class="p">()</span>
+
+    <span class="c">#CRUD EQUIPO</span></div>
+<div class="viewcode-block" id="Registro.existe_equipo"><a class="viewcode-back" href="../../registro.html#src.Registro.Registro.existe_equipo">[docs]</a>    <span class="k">def</span> <span class="nf">existe_equipo</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nombre</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Metodo existe_equipo</span>
+
+<span class="sd">        Comprueba que existe un equipo en la lista de equipos del registro</span>
+<span class="sd">        :param nombre: Nombre del equipo</span>
+<span class="sd">        :type nombre: String</span>
+<span class="sd">        :return: equipo</span>
+<span class="sd">        :rtype: Equipo</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">equipo</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">equipos</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">e</span><span class="o">.</span><span class="n">get_nombre</span><span class="p">()</span> <span class="o">==</span> <span class="n">nombre</span><span class="p">:</span>
+                <span class="n">equipo</span> <span class="o">=</span> <span class="n">e</span>
+        <span class="k">return</span> <span class="n">equipo</span>
+</div>
+<div class="viewcode-block" id="Registro.crear_equipo"><a class="viewcode-back" href="../../registro.html#src.Registro.Registro.crear_equipo">[docs]</a>    <span class="k">def</span> <span class="nf">crear_equipo</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Metodo crear_equipo</span>
+
+<span class="sd">        Crea un nuevo equipo y lo aniade a la lista de equipos del registro</span>
+<span class="sd">        :var nombre: Nombre del equipo</span>
+<span class="sd">        :type nombre: String</span>
+<span class="sd">        :var anio_creacion: Anio de creacion del equipo</span>
+<span class="sd">        :type anio_creacion: String</span>
+<span class="sd">        :var ciudad: Ciudad del equipo</span>
+<span class="sd">        :type ciudad: String</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">nombre</span> <span class="o">=</span> <span class="nb">raw_input</span><span class="p">(</span><span class="s">&quot;Indique el nombre del equipo: &quot;</span><span class="p">)</span>
+        <span class="n">anio_creacion</span> <span class="o">=</span> <span class="nb">raw_input</span><span class="p">(</span><span class="s">&quot;Indique el anio de creacion del equipo: &quot;</span><span class="p">)</span>
+        <span class="n">ciudad</span> <span class="o">=</span> <span class="nb">raw_input</span><span class="p">(</span><span class="s">&quot;Indique la ciudad del equipo: &quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">existe_equipo</span><span class="p">(</span><span class="n">nombre</span><span class="p">)</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="k">print</span> <span class="p">(</span><span class="s">&quot;El equipo ya existe&quot;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">e</span> <span class="o">=</span> <span class="n">Equipo</span><span class="p">(</span><span class="n">nombre</span><span class="p">,</span> <span class="n">anio_creacion</span><span class="p">,</span> <span class="n">ciudad</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">aniadir_equipo</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+</div>
+<div class="viewcode-block" id="Registro.modificar_equipo"><a class="viewcode-back" href="../../registro.html#src.Registro.Registro.modificar_equipo">[docs]</a>    <span class="k">def</span> <span class="nf">modificar_equipo</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Metodo modificar_equipo</span>
+
+<span class="sd">        Modifica un equipo ya existente en la lista de equipos del registro</span>
+<span class="sd">        :var nombre: Nombre del equipo a modificar</span>
+<span class="sd">        :type nombre: String</span>
+<span class="sd">        :var anio_creacion: Nuevo anio de creacion del equipo</span>
+<span class="sd">        :type anio_creacion: String</span>
+<span class="sd">        :var ciudad: Nueva ciudad del equipo</span>
+<span class="sd">        :type ciudad: String</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">nombre</span> <span class="o">=</span> <span class="nb">raw_input</span><span class="p">(</span><span class="s">&quot;Introduce el nombre del equipo ha modificar: &quot;</span><span class="p">)</span>
+        <span class="n">e</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">existe_equipo</span><span class="p">(</span><span class="n">nombre</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">e</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="k">print</span> <span class="p">(</span><span class="s">&quot;El nombre no se corresponde con ningun equipo&quot;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">print</span> <span class="p">(</span><span class="s">&quot;Introduzca los nuevos datos:&quot;</span><span class="p">)</span>
+            <span class="n">anio_creacion</span> <span class="o">=</span> <span class="nb">raw_input</span><span class="p">(</span><span class="s">&quot;Anio creacion: &quot;</span><span class="p">)</span>
+            <span class="n">ciudad</span> <span class="o">=</span> <span class="nb">raw_input</span><span class="p">(</span><span class="s">&quot;Ciudad: &quot;</span><span class="p">)</span>
+            <span class="n">e</span><span class="o">.</span><span class="n">set_anio_creacion</span><span class="p">(</span><span class="n">anio_creacion</span><span class="p">)</span>
+            <span class="n">e</span><span class="o">.</span><span class="n">set_ciudad</span><span class="p">(</span><span class="n">ciudad</span><span class="p">)</span>
+            <span class="k">print</span> <span class="p">(</span><span class="s">&quot;Equipo modificado correctamente&quot;</span><span class="p">)</span>
+</div>
+<div class="viewcode-block" id="Registro.eliminar_equipo"><a class="viewcode-back" href="../../registro.html#src.Registro.Registro.eliminar_equipo">[docs]</a>    <span class="k">def</span> <span class="nf">eliminar_equipo</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Metodo eliminar_equipo</span>
+
+<span class="sd">        Elimina un equipo (existente) en la lista de equipos del registro</span>
+<span class="sd">        :var nombre: Nombre del equipo a eliminar</span>
+<span class="sd">        :type nombre: String</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">nombre</span> <span class="o">=</span> <span class="nb">raw_input</span><span class="p">(</span><span class="s">&quot;Introduce el nombre del equipo a eliminar: &quot;</span><span class="p">)</span>
+        <span class="n">e</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">existe_equipo</span><span class="p">(</span><span class="n">nombre</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">e</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="k">print</span> <span class="p">(</span><span class="s">&quot;El nombre no se corresponde con ningun equipo&quot;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">equipos</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+            <span class="k">print</span> <span class="p">(</span><span class="s">&quot;Equipo eliminado correctamente&quot;</span><span class="p">)</span>
+</div>
+<div class="viewcode-block" id="Registro.consultar_equipo"><a class="viewcode-back" href="../../registro.html#src.Registro.Registro.consultar_equipo">[docs]</a>    <span class="k">def</span> <span class="nf">consultar_equipo</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Metodo consultar_equipo</span>
+
+<span class="sd">        Consulta los datos un equipo (existente) en la lista de equipos del registro</span>
+<span class="sd">        :var nombre: Nombre del equipo a consultar</span>
+<span class="sd">        :type nombre: String</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">nombre</span> <span class="o">=</span> <span class="nb">raw_input</span><span class="p">(</span><span class="s">&quot;Introduce el nombre del equipo a consultar: &quot;</span><span class="p">)</span>
+        <span class="n">e</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">existe_equipo</span><span class="p">(</span><span class="n">nombre</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">e</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="k">print</span> <span class="p">(</span><span class="s">&quot;El nombre no se corresponde con ningun equipo&quot;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">e</span><span class="o">.</span><span class="n">mostrar_equipo</span><span class="p">()</span>
+
+    <span class="c">#CRUD LIGA</span></div>
+<div class="viewcode-block" id="Registro.existe_liga"><a class="viewcode-back" href="../../registro.html#src.Registro.Registro.existe_liga">[docs]</a>    <span class="k">def</span> <span class="nf">existe_liga</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nombre</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Metodo existe_liga</span>
+
+<span class="sd">        Comprueba que existe una liga en la lista de ligas del registro</span>
+<span class="sd">        :param nombre: Nombre de la liga</span>
+<span class="sd">        :type nombre: String</span>
+<span class="sd">        :return: liga</span>
+<span class="sd">        :rtype: Liga</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">liga</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">ligas</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">l</span><span class="o">.</span><span class="n">get_nombre</span><span class="p">()</span> <span class="o">==</span> <span class="n">nombre</span><span class="p">:</span>
+                <span class="n">liga</span> <span class="o">=</span> <span class="n">l</span>
+        <span class="k">return</span> <span class="n">liga</span>
+</div>
+<div class="viewcode-block" id="Registro.crear_liga"><a class="viewcode-back" href="../../registro.html#src.Registro.Registro.crear_liga">[docs]</a>    <span class="k">def</span> <span class="nf">crear_liga</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Metodo crear_liga</span>
+
+<span class="sd">        Crea una nueva liga y la aniade a la lista de ligas del registro</span>
+<span class="sd">        :var nombre: Nombre de la liga</span>
+<span class="sd">        :type nombre: String</span>
+<span class="sd">        :var anio: Anio de la liga</span>
+<span class="sd">        :type anio: String</span>
+<span class="sd">        :var pais: Pais de la liga</span>
+<span class="sd">        :type pais: String</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">nombre</span> <span class="o">=</span> <span class="nb">raw_input</span><span class="p">(</span><span class="s">&quot;Indique el nombre de la liga: &quot;</span><span class="p">)</span>
+        <span class="n">anio</span> <span class="o">=</span> <span class="nb">raw_input</span><span class="p">(</span><span class="s">&quot;Indique el anio de la liga: &quot;</span><span class="p">)</span>
+        <span class="n">pais</span> <span class="o">=</span> <span class="nb">raw_input</span><span class="p">(</span><span class="s">&quot;Indique el pais de la liga: &quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">existe_liga</span><span class="p">(</span><span class="n">nombre</span><span class="p">)</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="k">print</span> <span class="p">(</span><span class="s">&quot;La liga ya existe&quot;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">l</span> <span class="o">=</span> <span class="n">Liga</span><span class="p">(</span><span class="n">nombre</span><span class="p">,</span> <span class="n">anio</span><span class="p">,</span> <span class="n">pais</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">aniadir_liga</span><span class="p">(</span><span class="n">l</span><span class="p">)</span>
+</div>
+<div class="viewcode-block" id="Registro.modificar_liga"><a class="viewcode-back" href="../../registro.html#src.Registro.Registro.modificar_liga">[docs]</a>    <span class="k">def</span> <span class="nf">modificar_liga</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Metodo modificar_liga</span>
+
+<span class="sd">        Modifica una liga ya existente en la lista de ligas del registro</span>
+<span class="sd">        :var nombre: Nombre de la liga a modificar</span>
+<span class="sd">        :type nombre: String</span>
+<span class="sd">        :var anio: Nuevo anio de la liga</span>
+<span class="sd">        :type anio: String</span>
+<span class="sd">        :var pais: Nuevo pais de la liga</span>
+<span class="sd">        :type pais: String</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">nombre</span> <span class="o">=</span> <span class="nb">raw_input</span><span class="p">(</span><span class="s">&quot;Introduce el nombre de la liga ha modificar: &quot;</span><span class="p">)</span>
+        <span class="n">l</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">existe_liga</span><span class="p">(</span><span class="n">nombre</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">l</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="k">print</span> <span class="p">(</span><span class="s">&quot;El nombre no se corresponde con ninguna liga&quot;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">print</span> <span class="p">(</span><span class="s">&quot;Introduzca los nuevos datos:&quot;</span><span class="p">)</span>
+            <span class="n">anio</span> <span class="o">=</span> <span class="nb">raw_input</span><span class="p">(</span><span class="s">&quot;Anio: &quot;</span><span class="p">)</span>
+            <span class="n">pais</span> <span class="o">=</span> <span class="nb">raw_input</span><span class="p">(</span><span class="s">&quot;Pais: &quot;</span><span class="p">)</span>
+            <span class="n">l</span><span class="o">.</span><span class="n">set_anio</span><span class="p">(</span><span class="n">anio</span><span class="p">)</span>
+            <span class="n">l</span><span class="o">.</span><span class="n">set_pais</span><span class="p">(</span><span class="n">pais</span><span class="p">)</span>
+            <span class="k">print</span> <span class="p">(</span><span class="s">&quot;Liga modificada correctamente&quot;</span><span class="p">)</span>
+</div>
+<div class="viewcode-block" id="Registro.eliminar_liga"><a class="viewcode-back" href="../../registro.html#src.Registro.Registro.eliminar_liga">[docs]</a>    <span class="k">def</span> <span class="nf">eliminar_liga</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Metodo eliminar_liga</span>
+
+<span class="sd">        Elimina una liga (existente) en la lista de ligas del registro</span>
+<span class="sd">        :var nombre: Nombre de la liga a eliminar</span>
+<span class="sd">        :type nombre: String</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">nombre</span> <span class="o">=</span> <span class="nb">raw_input</span><span class="p">(</span><span class="s">&quot;Introduce el nombre de la liga a eliminar: &quot;</span><span class="p">)</span>
+        <span class="n">l</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">existe_liga</span><span class="p">(</span><span class="n">nombre</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">l</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="k">print</span> <span class="p">(</span><span class="s">&quot;El nombre no se corresponde con ninguna liga&quot;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">ligas</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">l</span><span class="p">)</span>
+            <span class="k">print</span> <span class="p">(</span><span class="s">&quot;Liga eliminada correctamente&quot;</span><span class="p">)</span>
+</div>
+<div class="viewcode-block" id="Registro.consultar_liga"><a class="viewcode-back" href="../../registro.html#src.Registro.Registro.consultar_liga">[docs]</a>    <span class="k">def</span> <span class="nf">consultar_liga</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Metodo consultar_liga</span>
+
+<span class="sd">        Consulta los datos una liga (existente) en la lista de ligas del registro</span>
+<span class="sd">        :var nombre: Nombre de la liga a consultar</span>
+<span class="sd">        :type nombre: String</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">nombre</span> <span class="o">=</span> <span class="nb">raw_input</span><span class="p">(</span><span class="s">&quot;Introduce el nombre de la liga a consultar: &quot;</span><span class="p">)</span>
+        <span class="n">l</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">existe_liga</span><span class="p">(</span><span class="n">nombre</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">l</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="k">print</span> <span class="p">(</span><span class="s">&quot;El nombre no se corresponde con ninguna liga&quot;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">l</span><span class="o">.</span><span class="n">mostrar_liga</span><span class="p">()</span>
+
+    <span class="c">#MOSTRAR LISTAS</span></div>
+<div class="viewcode-block" id="Registro.listar_ligas"><a class="viewcode-back" href="../../registro.html#src.Registro.Registro.listar_ligas">[docs]</a>    <span class="k">def</span> <span class="nf">listar_ligas</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Metodo listar_ligas</span>
+
+<span class="sd">        Muestra todas las ligas de la lista de ligas del registro</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">ligas</span><span class="p">:</span>
+            <span class="n">x</span><span class="o">.</span><span class="n">mostrar_liga</span><span class="p">()</span>
+</div>
+<div class="viewcode-block" id="Registro.listar_equipos"><a class="viewcode-back" href="../../registro.html#src.Registro.Registro.listar_equipos">[docs]</a>    <span class="k">def</span> <span class="nf">listar_equipos</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Metodo listar_ligas</span>
+
+<span class="sd">        Muestra todas las ligas de la lista de ligas del registro</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">equipos</span><span class="p">:</span>
+            <span class="n">x</span><span class="o">.</span><span class="n">mostrar_equipo</span><span class="p">()</span>
+</div>
+<div class="viewcode-block" id="Registro.listar_jugadores"><a class="viewcode-back" href="../../registro.html#src.Registro.Registro.listar_jugadores">[docs]</a>    <span class="k">def</span> <span class="nf">listar_jugadores</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Metodo listar_jugadores</span>
+
+<span class="sd">        Muestra todss los jugadores de la lista de jugadores del registro</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">jugadores</span><span class="p">:</span>
+            <span class="n">x</span><span class="o">.</span><span class="n">mostrar_jugador</span><span class="p">()</span>
+</div>
+<div class="viewcode-block" id="Registro.listar_entrenadores"><a class="viewcode-back" href="../../registro.html#src.Registro.Registro.listar_entrenadores">[docs]</a>    <span class="k">def</span> <span class="nf">listar_entrenadores</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Metodo listar_entrenadores</span>
+
+<span class="sd">        Muestra todos los entrenadores de la lista de entrenadores del registro</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">entrenadores</span><span class="p">:</span>
+            <span class="n">x</span><span class="o">.</span><span class="n">mostrar_entrenador</span><span class="p">()</span>
+</div>
+<div class="viewcode-block" id="Registro.listar_estadios"><a class="viewcode-back" href="../../registro.html#src.Registro.Registro.listar_estadios">[docs]</a>    <span class="k">def</span> <span class="nf">listar_estadios</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Metodo listar_estadios</span>
+
+<span class="sd">        Muestra todos los estadios de la lista de estadios del registro</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">estadios</span><span class="p">:</span>
+            <span class="n">x</span><span class="o">.</span><span class="n">mostrar_estadio</span><span class="p">()</span>
+</div>
+<div class="viewcode-block" id="Registro.aniadir_jugador"><a class="viewcode-back" href="../../registro.html#src.Registro.Registro.aniadir_jugador">[docs]</a>    <span class="k">def</span> <span class="nf">aniadir_jugador</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">j</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Metodo aniadir_jugador</span>
+
+<span class="sd">        Aniade un jugador a la lista de jugadores del registro</span>
+<span class="sd">        :param j: Un jugador</span>
+<span class="sd">        :type j: Jugador</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">jugadores</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">j</span><span class="p">)</span>
+        <span class="k">print</span> <span class="p">(</span><span class="s">&quot;Jugador creado correctamente&quot;</span><span class="p">)</span>
+</div>
+<div class="viewcode-block" id="Registro.aniadir_entrenador"><a class="viewcode-back" href="../../registro.html#src.Registro.Registro.aniadir_entrenador">[docs]</a>    <span class="k">def</span> <span class="nf">aniadir_entrenador</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">j</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Metodo aniadir_entrenador</span>
+
+<span class="sd">        Aniade un entrenador a la lista de entrenadores del registro</span>
+<span class="sd">        :param j: Un entrenador</span>
+<span class="sd">        :type j: Entrenador</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">entrenadores</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">j</span><span class="p">)</span>
+        <span class="k">print</span> <span class="p">(</span><span class="s">&quot;Entrenador creado correctamente&quot;</span><span class="p">)</span>
+</div>
+<div class="viewcode-block" id="Registro.aniadir_equipo"><a class="viewcode-back" href="../../registro.html#src.Registro.Registro.aniadir_equipo">[docs]</a>    <span class="k">def</span> <span class="nf">aniadir_equipo</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">j</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Metodo aniadir_jugador</span>
+
+<span class="sd">        Aniade un equipo a la lista de equipos del registro</span>
+<span class="sd">        :param j: Un equipo</span>
+<span class="sd">        :type j: Equipo</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">equipos</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">j</span><span class="p">)</span>
+        <span class="k">print</span> <span class="p">(</span><span class="s">&quot;Equipo creado correctamente&quot;</span><span class="p">)</span>
+</div>
+<div class="viewcode-block" id="Registro.aniadir_liga"><a class="viewcode-back" href="../../registro.html#src.Registro.Registro.aniadir_liga">[docs]</a>    <span class="k">def</span> <span class="nf">aniadir_liga</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">j</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Metodo aniadir_jugador</span>
+
+<span class="sd">        Aniade una liga a la lista de ligas del registro</span>
+<span class="sd">        :param j: Una liga</span>
+<span class="sd">        :type j: Liga</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ligas</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">j</span><span class="p">)</span>
+        <span class="k">print</span> <span class="p">(</span><span class="s">&quot;Liga creada correctamente&quot;</span><span class="p">)</span>
+</div>
+<div class="viewcode-block" id="Registro.aniadir_estadio"><a class="viewcode-back" href="../../registro.html#src.Registro.Registro.aniadir_estadio">[docs]</a>    <span class="k">def</span> <span class="nf">aniadir_estadio</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">j</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Metodo aniadir_jugador</span>
+
+<span class="sd">        Aniade un estadio a la lista de estadios del registro</span>
+<span class="sd">        :param j: Un estadio</span>
+<span class="sd">        :type j: Estadio</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">estadios</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">j</span><span class="p">)</span>
+        <span class="k">print</span> <span class="p">(</span><span class="s">&quot;Estadio creado correctamente&quot;</span><span class="p">)</span></div></div>
+</pre></div>
+
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2014, Grupo7.
+    </p>
+  </div>
+
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'0.2',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

@@ -1,0 +1,647 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>src.Equipo &mdash; LigaFutbol 0.2 documentation</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="LigaFutbol 0.2 documentation" href="../../index.html"/>
+        <link rel="up" title="Module code" href="../index.html"/> 
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+          <a href="../../index.html" class="fa fa-home"> LigaFutbol</a>
+        
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+        
+            <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../persona.html">Documentacion de Persona</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../jugador.html">Documentacion de Jugador</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../entrenador.html">Documentacion de Entrenador</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../estadio.html">Documentacion de Estadio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../equipo.html">Documentacion de Equipo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../liga.html">Documentacion de Liga</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../partido.html">Documentacion de Partido</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../registro.html">Documentacion de Registro</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../principal.html">Documentacion de Principal</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../test_jugador.html">Documentacion del test de jugador</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../test_equipo.html">Documentacion del test de equipo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../test_liga.html">Documentacion del test de liga</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../test_registro.html">Documentacion del test de registro</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../manual.html">Ver manual de usuario</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../principal.html">Codigo del programa de prueba</a></li>
+</ul>
+</li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../index.html">LigaFutbol</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../index.html">Module code</a> &raquo;</li>
+      
+    <li>src.Equipo</li>
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document">
+            
+  <h1>Source code for src.Equipo</h1><div class="highlight"><pre>
+<span class="n">__author__</span> <span class="o">=</span> <span class="s">&#39;Equipo de Calidad&#39;</span>
+
+
+<div class="viewcode-block" id="Equipo"><a class="viewcode-back" href="../../equipo.html#src.Equipo.Equipo">[docs]</a><span class="k">class</span> <span class="nc">Equipo</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Representacion de un equipo de una liga</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+<div class="viewcode-block" id="Equipo.__init__"><a class="viewcode-back" href="../../equipo.html#src.Equipo.Equipo.__init__">[docs]</a>    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nombre</span><span class="p">,</span> <span class="n">anio_creacion</span><span class="p">,</span> <span class="n">ciudad</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Constructor</span>
+
+<span class="sd">        Inicializa el constructor de Equipo</span>
+<span class="sd">        :param nombre: nombre del equipo</span>
+<span class="sd">        :param anio-creacion: anio de creacion del equipo</span>
+<span class="sd">		:param ciudad: ciudad del equipo</span>
+<span class="sd">        :type nombre: String</span>
+<span class="sd">        :type anio-creacion: String</span>
+<span class="sd">		:type ciudad: String</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">nombre</span> <span class="o">=</span> <span class="n">nombre</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">anioCreacion</span> <span class="o">=</span> <span class="n">anio_creacion</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ciudad</span> <span class="o">=</span> <span class="n">ciudad</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">puntos</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">golesFavor</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">golesContra</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">partidosGanados</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">partidosEmpatados</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">partidosPerdidos</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">estadio</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">entrenador</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">jugadores</span> <span class="o">=</span> <span class="p">[]</span>
+</div>
+<div class="viewcode-block" id="Equipo.get_nombre"><a class="viewcode-back" href="../../equipo.html#src.Equipo.Equipo.get_nombre">[docs]</a>    <span class="k">def</span> <span class="nf">get_nombre</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Metodo consultor del nombre del equipo</span>
+
+<span class="sd">        Devuelve el nombre del equipo</span>
+<span class="sd">        :return: Nombre del equipo</span>
+<span class="sd">		:rtype: String</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">nombre</span>
+</div>
+<div class="viewcode-block" id="Equipo.get_anio_creacion"><a class="viewcode-back" href="../../equipo.html#src.Equipo.Equipo.get_anio_creacion">[docs]</a>    <span class="k">def</span> <span class="nf">get_anio_creacion</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Metodo consultor del anio de creacion</span>
+
+<span class="sd">        Devuelve el anio de creacion del equipo</span>
+<span class="sd">        :return: Anio de creacion del equipo</span>
+<span class="sd">		:rtype: Integer</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">anioCreacion</span>
+</div>
+<div class="viewcode-block" id="Equipo.get_ciudad"><a class="viewcode-back" href="../../equipo.html#src.Equipo.Equipo.get_ciudad">[docs]</a>    <span class="k">def</span> <span class="nf">get_ciudad</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Metodo consultor de la ciudad</span>
+
+<span class="sd">        Devuelve la ciudad del equipo</span>
+<span class="sd">        :return: Ciudad del equipo</span>
+<span class="sd">		:rtype: String</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">ciudad</span>
+</div>
+<div class="viewcode-block" id="Equipo.get_puntos"><a class="viewcode-back" href="../../equipo.html#src.Equipo.Equipo.get_puntos">[docs]</a>    <span class="k">def</span> <span class="nf">get_puntos</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Metodo consultor de los puntos del equipo</span>
+
+<span class="sd">        Devuelve los puntos que tiene el equipo</span>
+<span class="sd">        :return: Puntos del equipo</span>
+<span class="sd">		:rtype: Integer</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">puntos</span>
+</div>
+<div class="viewcode-block" id="Equipo.get_goles_favor"><a class="viewcode-back" href="../../equipo.html#src.Equipo.Equipo.get_goles_favor">[docs]</a>    <span class="k">def</span> <span class="nf">get_goles_favor</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Metodo consultor de los goles a favor del equipo</span>
+
+<span class="sd">        Devuelve los goles a favor del equipo</span>
+<span class="sd">        :return: Goles a favor</span>
+<span class="sd">		:rtype: Integer</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">golesFavor</span>
+</div>
+<div class="viewcode-block" id="Equipo.get_goles_contra"><a class="viewcode-back" href="../../equipo.html#src.Equipo.Equipo.get_goles_contra">[docs]</a>    <span class="k">def</span> <span class="nf">get_goles_contra</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Metodo consultor de los goles en contra del equipo</span>
+
+<span class="sd">        Devuelve los goles en contra del equipo</span>
+<span class="sd">        :return: Goles en contra</span>
+<span class="sd">		:rtype: Integer</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">golesContra</span>
+</div>
+<div class="viewcode-block" id="Equipo.get_partidos_ganados"><a class="viewcode-back" href="../../equipo.html#src.Equipo.Equipo.get_partidos_ganados">[docs]</a>    <span class="k">def</span> <span class="nf">get_partidos_ganados</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Metodo consultor de los partidos ganados del equipo</span>
+
+<span class="sd">        Devuelve el numero de partidos ganados del equipo</span>
+<span class="sd">        :return: Partidos ganados</span>
+<span class="sd">		:rtype: Integer</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">partidosGanados</span>
+</div>
+<div class="viewcode-block" id="Equipo.get_partidos_perdidos"><a class="viewcode-back" href="../../equipo.html#src.Equipo.Equipo.get_partidos_perdidos">[docs]</a>    <span class="k">def</span> <span class="nf">get_partidos_perdidos</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Metodo consultor de los partidos perdidos del equipo</span>
+
+<span class="sd">        Devuelve el numero de partidos perdidos del equipo</span>
+<span class="sd">        :return: Partidos perdidos</span>
+<span class="sd">		:rtype: Integer</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">partidosPerdidos</span>
+</div>
+<div class="viewcode-block" id="Equipo.get_partidos_empatados"><a class="viewcode-back" href="../../equipo.html#src.Equipo.Equipo.get_partidos_empatados">[docs]</a>    <span class="k">def</span> <span class="nf">get_partidos_empatados</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Metodo consultor de los partidos empatados del equipo</span>
+
+<span class="sd">        Devuelve el numero de partidos empatados del equipo</span>
+<span class="sd">        :return: Partidos empatados</span>
+<span class="sd">		:rtype: Integer</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">partidosEmpatados</span>
+</div>
+<div class="viewcode-block" id="Equipo.get_estadio"><a class="viewcode-back" href="../../equipo.html#src.Equipo.Equipo.get_estadio">[docs]</a>    <span class="k">def</span> <span class="nf">get_estadio</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Metodo consultor del estadio del equipo</span>
+
+<span class="sd">        Devuelve el estadio completo</span>
+<span class="sd">        :return: estadio del equipo</span>
+<span class="sd">		:rtype: Estadio</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">estadio</span>
+</div>
+<div class="viewcode-block" id="Equipo.get_entrenador"><a class="viewcode-back" href="../../equipo.html#src.Equipo.Equipo.get_entrenador">[docs]</a>    <span class="k">def</span> <span class="nf">get_entrenador</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Metodo consultor del entrenador del equipo</span>
+
+<span class="sd">        Devuelve el entrenador completo</span>
+<span class="sd">        :return: entrenador del equipo</span>
+<span class="sd">		:rtype: Entrenador</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">entrenador</span>
+</div>
+<div class="viewcode-block" id="Equipo.get_jugadores"><a class="viewcode-back" href="../../equipo.html#src.Equipo.Equipo.get_jugadores">[docs]</a>    <span class="k">def</span> <span class="nf">get_jugadores</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Metodo consultor de la lista de jugadores</span>
+
+<span class="sd">        Devuelve la lista completa con todos los jugadores que tiene el equipo</span>
+<span class="sd">        :return: Lista de jugadores</span>
+<span class="sd">		:rtype: Jugadores[]</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">jugadores</span>
+</div>
+<div class="viewcode-block" id="Equipo.set_nombre"><a class="viewcode-back" href="../../equipo.html#src.Equipo.Equipo.set_nombre">[docs]</a>    <span class="k">def</span> <span class="nf">set_nombre</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nombre</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Metodo modificador del nombre del equipo</span>
+
+<span class="sd">        Modifica el nombre del equipo</span>
+<span class="sd">        :param nombre: nombre del equipo</span>
+<span class="sd">        :type nombre: String</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">nombre</span> <span class="o">=</span> <span class="n">nombre</span>
+</div>
+<div class="viewcode-block" id="Equipo.set_anio_creacion"><a class="viewcode-back" href="../../equipo.html#src.Equipo.Equipo.set_anio_creacion">[docs]</a>    <span class="k">def</span> <span class="nf">set_anio_creacion</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">anio_creacion</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Metodo modificador del anio de creacion del equipo</span>
+
+<span class="sd">        Modifica el anio de creacion del equipo</span>
+<span class="sd">        :param anio_creacion: anio de creacion del equipo</span>
+<span class="sd">        :type anio_creacion: Integer</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">anioCreacion</span> <span class="o">=</span> <span class="n">anio_creacion</span>
+</div>
+<div class="viewcode-block" id="Equipo.set_ciudad"><a class="viewcode-back" href="../../equipo.html#src.Equipo.Equipo.set_ciudad">[docs]</a>    <span class="k">def</span> <span class="nf">set_ciudad</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ciudad</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Metodo modificador de la ciudad del equipo</span>
+
+<span class="sd">        Modifica la ciudad del equipo</span>
+<span class="sd">        :param ciudad: ciudad del equipo</span>
+<span class="sd">        :type ciudad: String</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ciudad</span> <span class="o">=</span> <span class="n">ciudad</span>
+</div>
+<div class="viewcode-block" id="Equipo.set_puntos"><a class="viewcode-back" href="../../equipo.html#src.Equipo.Equipo.set_puntos">[docs]</a>    <span class="k">def</span> <span class="nf">set_puntos</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">puntos</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Metodo modificador de los puntos del equipo</span>
+
+<span class="sd">        Modifica los puntos del equipo</span>
+<span class="sd">        :param puntos: puntos del equipo</span>
+<span class="sd">        :type puntos: Integer</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">puntos</span> <span class="o">=</span> <span class="n">puntos</span>
+</div>
+<div class="viewcode-block" id="Equipo.set_goles_favor"><a class="viewcode-back" href="../../equipo.html#src.Equipo.Equipo.set_goles_favor">[docs]</a>    <span class="k">def</span> <span class="nf">set_goles_favor</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">goles_favor</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Metodo modificador de los goles a favor del equipo</span>
+
+<span class="sd">        Modifica los goles a favor del equipo</span>
+<span class="sd">        :param goles_favor: goles del equipo</span>
+<span class="sd">        :type goles_favor: Integer</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">golesFavor</span> <span class="o">=</span> <span class="n">goles_favor</span>
+</div>
+<div class="viewcode-block" id="Equipo.set_goles_contra"><a class="viewcode-back" href="../../equipo.html#src.Equipo.Equipo.set_goles_contra">[docs]</a>    <span class="k">def</span> <span class="nf">set_goles_contra</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">goles_contra</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Metodo modificador de los goles en contra del equipo</span>
+
+<span class="sd">        Modifica los goles en contra del equipo</span>
+<span class="sd">        :param goles_contra: goles en contra del equipo</span>
+<span class="sd">        :type goles_contra: Integer</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">golesContra</span> <span class="o">=</span> <span class="n">goles_contra</span>
+</div>
+<div class="viewcode-block" id="Equipo.set_partidos_ganados"><a class="viewcode-back" href="../../equipo.html#src.Equipo.Equipo.set_partidos_ganados">[docs]</a>    <span class="k">def</span> <span class="nf">set_partidos_ganados</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">partidos_ganados</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Metodo modificador de los partidos ganados del equipo</span>
+
+<span class="sd">        Modifica los partidos ganados del equipo del equipo</span>
+<span class="sd">        :param partidos_ganados: partidos ganados del equipo</span>
+<span class="sd">        :type partidos_ganados: Integer</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">partidosGanados</span> <span class="o">=</span> <span class="n">partidos_ganados</span>
+</div>
+<div class="viewcode-block" id="Equipo.set_partidos_perdidos"><a class="viewcode-back" href="../../equipo.html#src.Equipo.Equipo.set_partidos_perdidos">[docs]</a>    <span class="k">def</span> <span class="nf">set_partidos_perdidos</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">partidos_perdidos</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Metodo modificador de los partidos perdidos del equipo</span>
+
+<span class="sd">        Modifica los partidos perdidos del equipo</span>
+<span class="sd">        :param partidos_perdidos: partidos perdidos del equipo</span>
+<span class="sd">        :type partidos_perdidos: Integer</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">partidosPerdidos</span> <span class="o">=</span> <span class="n">partidos_perdidos</span>
+</div>
+<div class="viewcode-block" id="Equipo.set_partidos_empatados"><a class="viewcode-back" href="../../equipo.html#src.Equipo.Equipo.set_partidos_empatados">[docs]</a>    <span class="k">def</span> <span class="nf">set_partidos_empatados</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">partidos_empatados</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Metodo modificador de los partidos empatados del equipo</span>
+
+<span class="sd">        Modifica los partidos empatados del equipo</span>
+<span class="sd">        :param partidos_empatados: partidos empatados del equipo</span>
+<span class="sd">        :type partidos_empatados: Integer</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">partidosEmpatados</span> <span class="o">=</span> <span class="n">partidos_empatados</span>
+</div>
+<div class="viewcode-block" id="Equipo.incrementar_puntos"><a class="viewcode-back" href="../../equipo.html#src.Equipo.Equipo.incrementar_puntos">[docs]</a>    <span class="k">def</span> <span class="nf">incrementar_puntos</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">puntos</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Metodo que incrementa los puntos del equipo</span>
+
+<span class="sd">        Incrementa los puntos del equipo tras un partido</span>
+<span class="sd">        :param puntos: puntos a incrementar</span>
+<span class="sd">        :type puntos: Integer</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">puntos</span> <span class="o">+=</span> <span class="n">puntos</span>
+</div>
+<div class="viewcode-block" id="Equipo.incrementar_goles_favor"><a class="viewcode-back" href="../../equipo.html#src.Equipo.Equipo.incrementar_goles_favor">[docs]</a>    <span class="k">def</span> <span class="nf">incrementar_goles_favor</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">goles</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Metodo que incrementa los goles a favor del equipo</span>
+
+<span class="sd">        Incrementa los goles a favor del equipo tras un partido</span>
+<span class="sd">        :param goles: goles a favor a incrementar</span>
+<span class="sd">        :type goles: Integer</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">golesFavor</span> <span class="o">+=</span> <span class="n">goles</span>
+</div>
+<div class="viewcode-block" id="Equipo.incrementar_goles_contra"><a class="viewcode-back" href="../../equipo.html#src.Equipo.Equipo.incrementar_goles_contra">[docs]</a>    <span class="k">def</span> <span class="nf">incrementar_goles_contra</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">goles</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Metodo que incrementa los goles en contra del equipo</span>
+
+<span class="sd">        Incrementa los goles en contra del equipo tras un partido</span>
+<span class="sd">        :param goles: goles en contra a incrementar</span>
+<span class="sd">        :type goles: Integer</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">golesContra</span> <span class="o">+=</span> <span class="n">goles</span>
+</div>
+<div class="viewcode-block" id="Equipo.incrementar_partidos_ganados"><a class="viewcode-back" href="../../equipo.html#src.Equipo.Equipo.incrementar_partidos_ganados">[docs]</a>    <span class="k">def</span> <span class="nf">incrementar_partidos_ganados</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Metodo que incrementa los partidos ganados del equipo</span>
+
+<span class="sd">        Incrementa los partidos ganados del equipo</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">partidosGanados</span> <span class="o">+=</span> <span class="mi">1</span>
+</div>
+<div class="viewcode-block" id="Equipo.incrementar_partidos_empatados"><a class="viewcode-back" href="../../equipo.html#src.Equipo.Equipo.incrementar_partidos_empatados">[docs]</a>    <span class="k">def</span> <span class="nf">incrementar_partidos_empatados</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Metodo que incrementa los partidos empatados del equipo</span>
+
+<span class="sd">        Incrementa los partidos empatados del equipo</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">partidosEmpatados</span> <span class="o">+=</span> <span class="mi">1</span>
+</div>
+<div class="viewcode-block" id="Equipo.incrementar_partidos_perdidos"><a class="viewcode-back" href="../../equipo.html#src.Equipo.Equipo.incrementar_partidos_perdidos">[docs]</a>    <span class="k">def</span> <span class="nf">incrementar_partidos_perdidos</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Metodo que incrementa los partidos perdidos del equipo</span>
+
+<span class="sd">        Incrementa los partidos perdidos del equipo</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">partidosPerdidos</span> <span class="o">+=</span> <span class="mi">1</span>
+</div>
+<div class="viewcode-block" id="Equipo.asignar_estadio"><a class="viewcode-back" href="../../equipo.html#src.Equipo.Equipo.asignar_estadio">[docs]</a>    <span class="k">def</span> <span class="nf">asignar_estadio</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">estadio</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Metodo que asigna un estadio al equipo</span>
+
+<span class="sd">        Asigna un estadio al equipo</span>
+<span class="sd">        :param estadio: estadio a asignar al equipo</span>
+<span class="sd">        :type estadio: Estadio</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">estadio</span> <span class="o">=</span> <span class="n">estadio</span>
+        <span class="k">print</span> <span class="p">(</span><span class="s">&quot;Estadio asignado al equipo correctamente.&quot;</span><span class="p">)</span>
+</div>
+<div class="viewcode-block" id="Equipo.asignar_entrenador"><a class="viewcode-back" href="../../equipo.html#src.Equipo.Equipo.asignar_entrenador">[docs]</a>    <span class="k">def</span> <span class="nf">asignar_entrenador</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">entrenador</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Metodo que asigna un entrenador al equipo</span>
+
+<span class="sd">        Asigna un entrenador al equipo</span>
+<span class="sd">        :param entrenador: entrenador a asignar al equipo</span>
+<span class="sd">        :type entrenador: Entrenador</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">entrenador</span> <span class="o">=</span> <span class="n">entrenador</span>
+        <span class="k">print</span> <span class="p">(</span><span class="s">&quot;Entrenador asignado al equipo correctamente.&quot;</span><span class="p">)</span>
+</div>
+<div class="viewcode-block" id="Equipo.agregar_jugador"><a class="viewcode-back" href="../../equipo.html#src.Equipo.Equipo.agregar_jugador">[docs]</a>    <span class="k">def</span> <span class="nf">agregar_jugador</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">jugador</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Metodo que agrega un jugador al equipo</span>
+
+<span class="sd">        Agrega un jugador al equipo</span>
+<span class="sd">        :param jugador: jugador a agregar al equipo</span>
+<span class="sd">        :type jugador: Jugador</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">jugadores</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">11</span><span class="p">:</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">existe_jugador</span><span class="p">(</span><span class="n">jugador</span><span class="o">.</span><span class="n">get_dni</span><span class="p">())</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">jugadores</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">jugador</span><span class="p">)</span>
+                <span class="k">print</span> <span class="p">(</span><span class="s">&quot;Jugador aniadido al equipo correctamente.&quot;</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">print</span> <span class="p">(</span><span class="s">&quot;El jugador ya pertenece al equipo.&quot;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">print</span> <span class="p">(</span><span class="s">&quot;El equipo ya esta completo.&quot;</span><span class="p">)</span>
+</div>
+<div class="viewcode-block" id="Equipo.pichichi_equipo"><a class="viewcode-back" href="../../equipo.html#src.Equipo.Equipo.pichichi_equipo">[docs]</a>    <span class="k">def</span> <span class="nf">pichichi_equipo</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Metodo que devuelve el pichichi del equipo</span>
+
+<span class="sd">        Devuelve el jugador que mas goles ha metido del equipo</span>
+<span class="sd">        :var maximo: maximo de goles marcados por un jugador</span>
+<span class="sd">        :var pichichi: jugador que mas goles ha marcado del equipo</span>
+<span class="sd">        :var i: jugadores del equipo</span>
+<span class="sd">        :type maximo: Integer</span>
+<span class="sd">        :type pichichi: Jugador</span>
+<span class="sd">        :type i: Jugador</span>
+<span class="sd">        :return: jugador del equipo que mas goles ha marcado</span>
+<span class="sd">        :rtype: Jugador</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">maximo</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">pichichi</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">jugadores</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">i</span><span class="o">.</span><span class="n">get_goles_marcados</span><span class="p">()</span> <span class="o">&gt;</span> <span class="n">maximo</span><span class="p">:</span>
+                <span class="n">maximo</span> <span class="o">=</span> <span class="n">i</span><span class="o">.</span><span class="n">get_goles_marcados</span><span class="p">()</span>
+                <span class="n">pichichi</span> <span class="o">=</span> <span class="n">i</span>
+        <span class="k">return</span> <span class="n">pichichi</span>
+</div>
+<div class="viewcode-block" id="Equipo.consultar_jugador"><a class="viewcode-back" href="../../equipo.html#src.Equipo.Equipo.consultar_jugador">[docs]</a>    <span class="k">def</span> <span class="nf">consultar_jugador</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">jugador</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Metodo que muestra los datos de un jugador del equipo</span>
+
+<span class="sd">        Muestra los datos de un jugador del equipo que se quiera consultar</span>
+<span class="sd">        :param jugador: jugador a consultar del equipo</span>
+<span class="sd">        :var j: jugador a consultar</span>
+<span class="sd">        :type jugador: Jugador</span>
+<span class="sd">        :type j: Jugador</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">j</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">existe_jugador</span><span class="p">(</span><span class="n">jugador</span><span class="o">.</span><span class="n">get_dni</span><span class="p">())</span>
+        <span class="k">if</span> <span class="n">j</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="k">print</span> <span class="p">(</span><span class="s">&quot;El jugador no existe en el equipo.&quot;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">j</span><span class="o">.</span><span class="n">mostrar_jugador</span><span class="p">()</span>
+</div>
+<div class="viewcode-block" id="Equipo.existe_jugador"><a class="viewcode-back" href="../../equipo.html#src.Equipo.Equipo.existe_jugador">[docs]</a>    <span class="k">def</span> <span class="nf">existe_jugador</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dni</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Metodo que comprueba si existe un jugador en el equipo</span>
+
+<span class="sd">        Devuelve al jugador si existe en el equipo</span>
+<span class="sd">        :param dni: dni del jugador a buscar en el equipo</span>
+<span class="sd">        :var jugador: jugador del equipo</span>
+<span class="sd">        :var j: jugador del equipo</span>
+<span class="sd">        :type dni: String</span>
+<span class="sd">        :type jugador: Jugador</span>
+<span class="sd">        :type j: Jugador</span>
+<span class="sd">        :return: devuelve el jugador si existe</span>
+<span class="sd">        :rtype: Jugador</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">jugador</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">jugadores</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">j</span><span class="o">.</span><span class="n">get_dni</span><span class="p">()</span> <span class="o">==</span> <span class="n">dni</span><span class="p">:</span>
+                <span class="n">jugador</span> <span class="o">=</span> <span class="n">j</span>
+        <span class="k">return</span> <span class="n">jugador</span>
+</div>
+<div class="viewcode-block" id="Equipo.listar_jugadores"><a class="viewcode-back" href="../../equipo.html#src.Equipo.Equipo.listar_jugadores">[docs]</a>    <span class="k">def</span> <span class="nf">listar_jugadores</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Metodo que muestra todos los jugadores del equipo</span>
+
+<span class="sd">        Muestra una lista de los datos de los jugadores del equipo</span>
+<span class="sd">        :var i: jugadores del equipo</span>
+<span class="sd">        :type var: Jugador</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">jugadores</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">jugadores</span><span class="p">:</span>
+                <span class="n">i</span><span class="o">.</span><span class="n">mostrar_jugador</span><span class="p">()</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">print</span> <span class="p">(</span><span class="s">&quot;No hay jugadores en el equipo.&quot;</span><span class="p">)</span>
+</div>
+<div class="viewcode-block" id="Equipo.consultar_estadio"><a class="viewcode-back" href="../../equipo.html#src.Equipo.Equipo.consultar_estadio">[docs]</a>    <span class="k">def</span> <span class="nf">consultar_estadio</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Metodo que muestra los datos del estadio del equipo</span>
+
+<span class="sd">        Mustra los datos del estadio del equipo</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">estadio</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">estadio</span><span class="o">.</span><span class="n">mostrar_estadio</span><span class="p">()</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">print</span> <span class="p">(</span><span class="s">&quot;El equipo no tiene un estadio asignado.&quot;</span><span class="p">)</span>
+</div>
+<div class="viewcode-block" id="Equipo.consultar_entrenador"><a class="viewcode-back" href="../../equipo.html#src.Equipo.Equipo.consultar_entrenador">[docs]</a>    <span class="k">def</span> <span class="nf">consultar_entrenador</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Metodo que muestra los datos del entrenador del equipo</span>
+
+<span class="sd">        Mustra los datos del entrenador del equipo</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">entrenador</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">entrenador</span><span class="o">.</span><span class="n">mostrar_entrenador</span><span class="p">()</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">print</span> <span class="p">(</span><span class="s">&quot;El equipo no tiene entrenador asignado.&quot;</span><span class="p">)</span>
+</div>
+<div class="viewcode-block" id="Equipo.mostrar_equipo"><a class="viewcode-back" href="../../equipo.html#src.Equipo.Equipo.mostrar_equipo">[docs]</a>    <span class="k">def</span> <span class="nf">mostrar_equipo</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Metodo que muestra los datos del equipo</span>
+
+<span class="sd">        Muestra los datos del equipo</span>
+<span class="sd">        :var cad: recoge los datos del equipo</span>
+<span class="sd">        :type cad: String</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">cad</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="k">print</span> <span class="p">(</span><span class="n">cad</span><span class="p">)</span>
+</div>
+<div class="viewcode-block" id="Equipo.__str__"><a class="viewcode-back" href="../../equipo.html#src.Equipo.Equipo.__str__">[docs]</a>    <span class="k">def</span> <span class="nf">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Metodo que devuelve los datos del equipo</span>
+
+<span class="sd">        Devuelve los datos del equipo</span>
+<span class="sd">        :return: datos del equipo</span>
+<span class="sd">        :rtype: String</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="s">&quot;EQUIPO:</span><span class="se">\n\t</span><span class="s">Nombre: &quot;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_nombre</span><span class="p">()</span> <span class="o">+</span> <span class="s">&quot;</span><span class="se">\n\t</span><span class="s">Anio creacion: &quot;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_anio_creacion</span><span class="p">()</span> \
+               <span class="o">+</span> <span class="s">&quot;</span><span class="se">\n\t</span><span class="s">Ciudad: &quot;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_ciudad</span><span class="p">()</span> <span class="o">+</span> <span class="s">&quot;</span><span class="se">\n\t</span><span class="s">Puntos: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">get_puntos</span><span class="p">())</span> <span class="o">+</span> <span class="s">&quot;</span><span class="se">\n\t</span><span class="s">Goles a favor: &quot;</span> \
+               <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">get_goles_favor</span><span class="p">())</span> <span class="o">+</span> <span class="s">&quot;</span><span class="se">\n\t</span><span class="s">Goles en contra: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">get_goles_contra</span><span class="p">())</span> \
+               <span class="o">+</span> <span class="s">&quot;</span><span class="se">\n\t</span><span class="s">Partidos ganados: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">get_partidos_ganados</span><span class="p">())</span> <span class="o">+</span> <span class="s">&quot;</span><span class="se">\n\t</span><span class="s">Partidos perdidos: &quot;</span> \
+               <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">get_partidos_perdidos</span><span class="p">())</span> <span class="o">+</span> <span class="s">&quot;</span><span class="se">\n\t</span><span class="s">Partidos empatados: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">get_partidos_empatados</span><span class="p">())</span>
+</div>
+<div class="viewcode-block" id="Equipo.__cmp__"><a class="viewcode-back" href="../../equipo.html#src.Equipo.Equipo.__cmp__">[docs]</a>    <span class="k">def</span> <span class="nf">__cmp__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Metodo que compara dos equipos</span>
+
+<span class="sd">        Compara dos equipos por algun atributo</span>
+<span class="sd">        :param other: el otro equipo con el que este se va a comparar</span>
+<span class="sd">        :type other: Equipo</span>
+<span class="sd">        :var res: resta de los puntos de este equipo y el pasado por parametros</span>
+<span class="sd">        :return: resultado de la resta</span>
+<span class="sd">        :rtype: Integer</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">res</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_puntos</span><span class="p">()</span> <span class="o">-</span> <span class="n">other</span><span class="o">.</span><span class="n">get_puntos</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">res</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">res</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_goles_favor</span><span class="p">()</span> <span class="o">-</span> <span class="n">other</span><span class="o">.</span><span class="n">get_goles_favor</span><span class="p">()</span>
+            <span class="k">if</span> <span class="n">res</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="n">res</span> <span class="o">=</span> <span class="n">other</span><span class="o">.</span><span class="n">get_goles_contra</span><span class="p">()</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_goles_contra</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">res</span></div></div>
+</pre></div>
+
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2014, Grupo7.
+    </p>
+  </div>
+
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'0.2',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

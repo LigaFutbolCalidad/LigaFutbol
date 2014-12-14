@@ -1,0 +1,554 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Documentacion de Liga &mdash; LigaFutbol 0.2 documentation</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="LigaFutbol 0.2 documentation" href="index.html"/>
+        <link rel="next" title="Documentacion de Partido" href="partido.html"/>
+        <link rel="prev" title="Documentacion de Equipo" href="equipo.html"/> 
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+          <a href="index.html" class="fa fa-home"> LigaFutbol</a>
+        
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+        
+            <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="persona.html">Documentacion de Persona</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jugador.html">Documentacion de Jugador</a></li>
+<li class="toctree-l1"><a class="reference internal" href="entrenador.html">Documentacion de Entrenador</a></li>
+<li class="toctree-l1"><a class="reference internal" href="estadio.html">Documentacion de Estadio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="equipo.html">Documentacion de Equipo</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Documentacion de Liga</a></li>
+<li class="toctree-l1"><a class="reference internal" href="partido.html">Documentacion de Partido</a></li>
+<li class="toctree-l1"><a class="reference internal" href="registro.html">Documentacion de Registro</a></li>
+<li class="toctree-l1"><a class="reference internal" href="principal.html">Documentacion de Principal</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="test_jugador.html">Documentacion del test de jugador</a></li>
+<li class="toctree-l1"><a class="reference internal" href="test_equipo.html">Documentacion del test de equipo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="test_liga.html">Documentacion del test de liga</a></li>
+<li class="toctree-l1"><a class="reference internal" href="test_registro.html">Documentacion del test de registro</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="manual.html">Ver manual de usuario</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="principal.html">Codigo del programa de prueba</a></li>
+</ul>
+</li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">LigaFutbol</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>Documentacion de Liga</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="_sources/liga.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document">
+            
+  <div class="section" id="module-src.Liga">
+<span id="documentacion-de-liga"></span><h1>Documentacion de Liga<a class="headerlink" href="#module-src.Liga" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="src.Liga.Liga">
+<em class="property">class </em><tt class="descclassname">src.Liga.</tt><tt class="descname">Liga</tt><big>(</big><em>nombre</em>, <em>anio</em>, <em>pais</em><big>)</big><a class="reference internal" href="_modules/src/Liga.html#Liga"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#src.Liga.Liga" title="Permalink to this definition">¶</a></dt>
+<dd><p>Representacion de una liga de un registro</p>
+<dl class="method">
+<dt id="src.Liga.Liga.__init__">
+<tt class="descname">__init__</tt><big>(</big><em>nombre</em>, <em>anio</em>, <em>pais</em><big>)</big><a class="reference internal" href="_modules/src/Liga.html#Liga.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#src.Liga.Liga.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constructor</p>
+<p>Inicializa el constructor de Liga
+:param nombre: nombre
+:param anio: anio</p>
+<blockquote>
+<div><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">param pais:</th><td class="field-body">pais</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="src.Liga.Liga.__module__">
+<tt class="descname">__module__</tt><em class="property"> = 'src.Liga'</em><a class="headerlink" href="#src.Liga.Liga.__module__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="src.Liga.Liga.__str__">
+<tt class="descname">__str__</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/src/Liga.html#Liga.__str__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#src.Liga.Liga.__str__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Muestra los datos de la liga</p>
+<dl class="docutils">
+<dt>Muestra los atributos de la liga</dt>
+<dd><table class="first last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">return:</th><td class="field-body">Cadena formada por los datos de la liga</td>
+</tr>
+<tr class="field-even field"><th class="field-name">rtype:</th><td class="field-body">String</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="src.Liga.Liga.aniadir_equipo">
+<tt class="descname">aniadir_equipo</tt><big>(</big><em>equipo</em><big>)</big><a class="reference internal" href="_modules/src/Liga.html#Liga.aniadir_equipo"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#src.Liga.Liga.aniadir_equipo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Aniade un nuevo equipo</p>
+<p>Aniade un nuevo equipo a la liga
+:param equipo: equipo que deseamos aniadir
+:type equipo: Equipo</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="src.Liga.Liga.cofig_partido_local">
+<em class="property">static </em><tt class="descname">cofig_partido_local</tt><big>(</big><em>local</em><big>)</big><a class="reference internal" href="_modules/src/Liga.html#Liga.cofig_partido_local"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#src.Liga.Liga.cofig_partido_local" title="Permalink to this definition">¶</a></dt>
+<dd><p>Configura los datos del partido jugado del equipo local</p>
+<p>Aniade los goles al equipo, y a los jugadores
+:param local: equipo local
+:type local: Equipo</p>
+<blockquote>
+<div><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">return:</th><td class="field-body">Numero de goles marcados</td>
+</tr>
+<tr class="field-even field"><th class="field-name">rtype:</th><td class="field-body">Integer</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="src.Liga.Liga.cofig_partido_visitante">
+<em class="property">static </em><tt class="descname">cofig_partido_visitante</tt><big>(</big><em>visitante</em><big>)</big><a class="reference internal" href="_modules/src/Liga.html#Liga.cofig_partido_visitante"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#src.Liga.Liga.cofig_partido_visitante" title="Permalink to this definition">¶</a></dt>
+<dd><p>Configura los datos del partido jugado del equipo visitante</p>
+<p>Aniade los goles al equipo, y a los jugadores
+:param visitante: equipo visitante
+:type visitante: Equipo</p>
+<blockquote>
+<div><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">return:</th><td class="field-body">Numero de goles marcados</td>
+</tr>
+<tr class="field-even field"><th class="field-name">rtype:</th><td class="field-body">Integer</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="src.Liga.Liga.consultar_calendario">
+<tt class="descname">consultar_calendario</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/src/Liga.html#Liga.consultar_calendario"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#src.Liga.Liga.consultar_calendario" title="Permalink to this definition">¶</a></dt>
+<dd><p>Consulta el calenmdario</p>
+<p>Consulta el calenmdario de los partidos no jugados</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="src.Liga.Liga.consultar_clasificacion">
+<tt class="descname">consultar_clasificacion</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/src/Liga.html#Liga.consultar_clasificacion"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#src.Liga.Liga.consultar_clasificacion" title="Permalink to this definition">¶</a></dt>
+<dd><p>Consulta la clasificacion</p>
+<p>Consulta la clasifcicacion de todos los partidos jugados</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="src.Liga.Liga.consultar_equipo">
+<em class="property">static </em><tt class="descname">consultar_equipo</tt><big>(</big><em>equipo</em><big>)</big><a class="reference internal" href="_modules/src/Liga.html#Liga.consultar_equipo"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#src.Liga.Liga.consultar_equipo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Consulta el equipo</p>
+<p>LLama a la funcion mostrar_equipo para mostrar los datos de este
+:param equipo: nombre del equipo a mostrar
+:type equipo: String</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="src.Liga.Liga.consultar_mejor_estadio">
+<tt class="descname">consultar_mejor_estadio</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/src/Liga.html#Liga.consultar_mejor_estadio"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#src.Liga.Liga.consultar_mejor_estadio" title="Permalink to this definition">¶</a></dt>
+<dd><p>Consulta el estadio con mayor capacidad</p>
+<p>Realiza una busqueda entre todos los estadios de cada equipo, mostrando el que mas capacidad dispone</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="src.Liga.Liga.consultar_partido">
+<em class="property">static </em><tt class="descname">consultar_partido</tt><big>(</big><em>partido</em><big>)</big><a class="reference internal" href="_modules/src/Liga.html#Liga.consultar_partido"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#src.Liga.Liga.consultar_partido" title="Permalink to this definition">¶</a></dt>
+<dd><p>Consulta el partido</p>
+<p>LLama a la funcion mostrar_partido para mostrar los datos de este
+:param partido: partido a mostrar
+:type partido: String</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="src.Liga.Liga.crear_partidos">
+<tt class="descname">crear_partidos</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/src/Liga.html#Liga.crear_partidos"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#src.Liga.Liga.crear_partidos" title="Permalink to this definition">¶</a></dt>
+<dd><p>Metodo para crear los partidos</p>
+<blockquote>
+<div>Crea los partidos de forma aleatoria</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="src.Liga.Liga.existe_equipo">
+<tt class="descname">existe_equipo</tt><big>(</big><em>nombre</em><big>)</big><a class="reference internal" href="_modules/src/Liga.html#Liga.existe_equipo"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#src.Liga.Liga.existe_equipo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Consulta si existe el equipo</p>
+<p>Busca en el listado de equipos de toda la liga
+:param nombre: nombre del equipo a buscar
+:type nombre: String</p>
+<blockquote>
+<div><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">return:</th><td class="field-body">equipo</td>
+</tr>
+<tr class="field-even field"><th class="field-name">rtype:</th><td class="field-body">Equipo</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="src.Liga.Liga.existe_partido">
+<tt class="descname">existe_partido</tt><big>(</big><em>jornada</em><big>)</big><a class="reference internal" href="_modules/src/Liga.html#Liga.existe_partido"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#src.Liga.Liga.existe_partido" title="Permalink to this definition">¶</a></dt>
+<dd><p>Consulta si existe el partido</p>
+<p>Busca en el listado de partidos de toda la liga
+:param jornada: nombre de la jornada que desea buscar
+:type jornada: String</p>
+<blockquote>
+<div><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">return:</th><td class="field-body">partido</td>
+</tr>
+<tr class="field-even field"><th class="field-name">rtype:</th><td class="field-body">Partido</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="src.Liga.Liga.get_anio">
+<tt class="descname">get_anio</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/src/Liga.html#Liga.get_anio"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#src.Liga.Liga.get_anio" title="Permalink to this definition">¶</a></dt>
+<dd><p>Metodo consultor del anio de la liga</p>
+<p>Devuelve el anio de la liga
+:return: Anio de la liga</p>
+<blockquote>
+<div><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">rtype:</th><td class="field-body">Integer</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="src.Liga.Liga.get_equipos">
+<tt class="descname">get_equipos</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/src/Liga.html#Liga.get_equipos"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#src.Liga.Liga.get_equipos" title="Permalink to this definition">¶</a></dt>
+<dd><p>Metodo consultor de los equipos de la liga</p>
+<p>Devuelve la lista de equpos
+:return: Equipos del pais</p>
+<blockquote>
+<div><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">rtype:</th><td class="field-body">Equipos</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="src.Liga.Liga.get_nombre">
+<tt class="descname">get_nombre</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/src/Liga.html#Liga.get_nombre"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#src.Liga.Liga.get_nombre" title="Permalink to this definition">¶</a></dt>
+<dd><p>Metodo consultor del nombre de la liga</p>
+<p>Devuelve el nombre de la liga
+:return: Nombre de la liga</p>
+<blockquote>
+<div><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">rtype:</th><td class="field-body">String</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="src.Liga.Liga.get_pais">
+<tt class="descname">get_pais</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/src/Liga.html#Liga.get_pais"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#src.Liga.Liga.get_pais" title="Permalink to this definition">¶</a></dt>
+<dd><p>Metodo consultor del pais de la liga</p>
+<p>Devuelve el nombre del pais de la liga
+:return: Pais de la liga</p>
+<blockquote>
+<div><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">rtype:</th><td class="field-body">Integer</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="src.Liga.Liga.jugar_partido">
+<tt class="descname">jugar_partido</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/src/Liga.html#Liga.jugar_partido"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#src.Liga.Liga.jugar_partido" title="Permalink to this definition">¶</a></dt>
+<dd><p>Es el metodo principal, el cual genera los partidos de forma aleatoria</p>
+<p>Hace uso de varias funciones para dividir el codigo y ser mas sencillo de leer</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="src.Liga.Liga.jugar_partidos_auto">
+<tt class="descname">jugar_partidos_auto</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/src/Liga.html#Liga.jugar_partidos_auto"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#src.Liga.Liga.jugar_partidos_auto" title="Permalink to this definition">¶</a></dt>
+<dd><p>Realiza las operaciones para que se jueguen los partidos de forma automatica</p>
+<p>Se juegan los partidos</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="src.Liga.Liga.listar_equipos">
+<tt class="descname">listar_equipos</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/src/Liga.html#Liga.listar_equipos"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#src.Liga.Liga.listar_equipos" title="Permalink to this definition">¶</a></dt>
+<dd><p>Muestra el listado de equipos</p>
+<p>Muestra el listado de equipos que tiene la liga</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="src.Liga.Liga.listar_partidos">
+<tt class="descname">listar_partidos</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/src/Liga.html#Liga.listar_partidos"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#src.Liga.Liga.listar_partidos" title="Permalink to this definition">¶</a></dt>
+<dd><p>Muestra el listado de partidos</p>
+<p>Muestra el listado de partidos que tiene la liga</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="src.Liga.Liga.listar_pichichis_equipos">
+<tt class="descname">listar_pichichis_equipos</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/src/Liga.html#Liga.listar_pichichis_equipos"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#src.Liga.Liga.listar_pichichis_equipos" title="Permalink to this definition">¶</a></dt>
+<dd><p>Aparece un listado con los pichichis de los equipos</p>
+<p>Recorre todos los equipos, mostrando los pichichis de cada equipo</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="src.Liga.Liga.mostrar_liga">
+<tt class="descname">mostrar_liga</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/src/Liga.html#Liga.mostrar_liga"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#src.Liga.Liga.mostrar_liga" title="Permalink to this definition">¶</a></dt>
+<dd><p>Muestra los datos de la liga</p>
+<p>Mestra todos los datos de la liga, haciendo uso de la funcion str</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="src.Liga.Liga.pichichi_liga">
+<tt class="descname">pichichi_liga</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/src/Liga.html#Liga.pichichi_liga"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#src.Liga.Liga.pichichi_liga" title="Permalink to this definition">¶</a></dt>
+<dd><p>Consulta el pichichi de la liga</p>
+<p>Hace uso del metodo recorrer_equipos para buscar el pichichi de la liga</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="src.Liga.Liga.recorrer_equipos">
+<tt class="descname">recorrer_equipos</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/src/Liga.html#Liga.recorrer_equipos"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#src.Liga.Liga.recorrer_equipos" title="Permalink to this definition">¶</a></dt>
+<dd><p>Recorre el listado de equipos</p>
+<dl class="docutils">
+<dt>Busca en el listado de equipos el pichichi de la liga</dt>
+<dd><table class="first last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">return:</th><td class="field-body">pichichi</td>
+</tr>
+<tr class="field-even field"><th class="field-name">rtype:</th><td class="field-body">Jugador</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="src.Liga.Liga.set_anio">
+<tt class="descname">set_anio</tt><big>(</big><em>anio</em><big>)</big><a class="reference internal" href="_modules/src/Liga.html#Liga.set_anio"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#src.Liga.Liga.set_anio" title="Permalink to this definition">¶</a></dt>
+<dd><p>Metodo modificador del anio de la Liga</p>
+<p>Modifica el anio de la liga
+:param anio: anio de la liga
+:type anio: Integer</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="src.Liga.Liga.set_nombre">
+<tt class="descname">set_nombre</tt><big>(</big><em>nombre</em><big>)</big><a class="reference internal" href="_modules/src/Liga.html#Liga.set_nombre"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#src.Liga.Liga.set_nombre" title="Permalink to this definition">¶</a></dt>
+<dd><p>Metodo modificador del nombre de la Liga</p>
+<p>Modifica el nombre de la liga
+:param nombre: nombre de la liga
+:type nombre: String</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="src.Liga.Liga.set_pais">
+<tt class="descname">set_pais</tt><big>(</big><em>pais</em><big>)</big><a class="reference internal" href="_modules/src/Liga.html#Liga.set_pais"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#src.Liga.Liga.set_pais" title="Permalink to this definition">¶</a></dt>
+<dd><p>Metodo modificador del pais donde se juega la liga</p>
+<p>Modifica el pais de la liga
+:param pais: pais de la liga
+:type pais: String</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="partido.html" class="btn btn-neutral float-right" title="Documentacion de Partido">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="equipo.html" class="btn btn-neutral" title="Documentacion de Equipo"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2014, Grupo7.
+    </p>
+  </div>
+
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.2',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

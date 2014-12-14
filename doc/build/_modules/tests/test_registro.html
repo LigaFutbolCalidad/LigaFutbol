@@ -1,0 +1,301 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>tests.test_registro &mdash; LigaFutbol 0.2 documentation</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="LigaFutbol 0.2 documentation" href="../../index.html"/>
+        <link rel="up" title="Module code" href="../index.html"/> 
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+          <a href="../../index.html" class="fa fa-home"> LigaFutbol</a>
+        
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+        
+            <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../persona.html">Documentacion de Persona</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../jugador.html">Documentacion de Jugador</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../entrenador.html">Documentacion de Entrenador</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../estadio.html">Documentacion de Estadio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../equipo.html">Documentacion de Equipo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../liga.html">Documentacion de Liga</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../partido.html">Documentacion de Partido</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../registro.html">Documentacion de Registro</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../principal.html">Documentacion de Principal</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../test_jugador.html">Documentacion del test de jugador</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../test_equipo.html">Documentacion del test de equipo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../test_liga.html">Documentacion del test de liga</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../test_registro.html">Documentacion del test de registro</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../manual.html">Ver manual de usuario</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../principal.html">Codigo del programa de prueba</a></li>
+</ul>
+</li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../index.html">LigaFutbol</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../index.html">Module code</a> &raquo;</li>
+      
+    <li>tests.test_registro</li>
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document">
+            
+  <h1>Source code for tests.test_registro</h1><div class="highlight"><pre>
+<span class="n">__author__</span> <span class="o">=</span> <span class="s">&#39;Grupo 7&#39;</span>
+
+<span class="kn">from</span> <span class="nn">unittest</span> <span class="kn">import</span> <span class="n">TestCase</span>
+<span class="kn">from</span> <span class="nn">src.Registro</span> <span class="kn">import</span> <span class="o">*</span>
+
+
+<div class="viewcode-block" id="TestRegistro"><a class="viewcode-back" href="../../test_registro.html#tests.test_registro.TestRegistro">[docs]</a><span class="k">class</span> <span class="nc">TestRegistro</span><span class="p">(</span><span class="n">TestCase</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Clase test de un registro</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+<div class="viewcode-block" id="TestRegistro.test_existe_jugador"><a class="viewcode-back" href="../../test_registro.html#tests.test_registro.TestRegistro.test_existe_jugador">[docs]</a>    <span class="k">def</span> <span class="nf">test_existe_jugador</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Test existe jugador</span>
+
+<span class="sd">        Crea un registro y un jugador y lo aniade al registro. Comprueba que devuelve ese jugador</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">r</span> <span class="o">=</span> <span class="n">Registro</span><span class="p">()</span>
+        <span class="n">j1</span> <span class="o">=</span> <span class="n">Jugador</span><span class="p">(</span><span class="s">&quot;Leo&quot;</span><span class="p">,</span> <span class="s">&quot;Messi&quot;</span><span class="p">,</span> <span class="s">&quot;1234M&quot;</span><span class="p">,</span> <span class="s">&quot;23/02/1980&quot;</span><span class="p">,</span> <span class="s">&quot;Argentina&quot;</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="s">&quot;delantero&quot;</span><span class="p">)</span>
+        <span class="n">r</span><span class="o">.</span><span class="n">aniadir_jugador</span><span class="p">(</span><span class="n">j1</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">existe_jugador</span><span class="p">(</span><span class="n">j1</span><span class="o">.</span><span class="n">get_dni</span><span class="p">()),</span> <span class="n">j1</span><span class="p">)</span>
+</div>
+<div class="viewcode-block" id="TestRegistro.test_eliminar_jugador"><a class="viewcode-back" href="../../test_registro.html#tests.test_registro.TestRegistro.test_eliminar_jugador">[docs]</a>    <span class="k">def</span> <span class="nf">test_eliminar_jugador</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Test eliminar jugador</span>
+
+<span class="sd">        Crea un registro y un jugador y lo aniade al registro. Luego borra ese jugador y comprueba que no lo devuelve</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">r</span> <span class="o">=</span> <span class="n">Registro</span><span class="p">()</span>
+        <span class="n">j1</span> <span class="o">=</span> <span class="n">Jugador</span><span class="p">(</span><span class="s">&quot;Leo&quot;</span><span class="p">,</span> <span class="s">&quot;Messi&quot;</span><span class="p">,</span> <span class="s">&quot;1234M&quot;</span><span class="p">,</span> <span class="s">&quot;23/02/1980&quot;</span><span class="p">,</span> <span class="s">&quot;Argentina&quot;</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="s">&quot;delantero&quot;</span><span class="p">)</span>
+        <span class="n">r</span><span class="o">.</span><span class="n">aniadir_jugador</span><span class="p">(</span><span class="n">j1</span><span class="p">)</span>
+        <span class="n">r</span><span class="o">.</span><span class="n">jugadores</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">j1</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">existe_jugador</span><span class="p">(</span><span class="n">j1</span><span class="o">.</span><span class="n">get_dni</span><span class="p">()),</span> <span class="bp">None</span><span class="p">)</span>
+</div>
+<div class="viewcode-block" id="TestRegistro.test_existe_entrenador"><a class="viewcode-back" href="../../test_registro.html#tests.test_registro.TestRegistro.test_existe_entrenador">[docs]</a>    <span class="k">def</span> <span class="nf">test_existe_entrenador</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Test existe entrenador</span>
+
+<span class="sd">        Crea un registro y un entrenador y lo aniade al registro. Comprueba que devuelve ese entrenador</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">r</span> <span class="o">=</span> <span class="n">Registro</span><span class="p">()</span>
+        <span class="n">en1</span> <span class="o">=</span> <span class="n">Entrenador</span><span class="p">(</span><span class="s">&quot;Pep&quot;</span><span class="p">,</span> <span class="s">&quot;Guardiola&quot;</span><span class="p">,</span> <span class="s">&quot;1234P&quot;</span><span class="p">,</span> <span class="s">&quot;22/11/1975&quot;</span><span class="p">,</span> <span class="s">&quot;Espania&quot;</span><span class="p">,</span> <span class="s">&quot;1234L&quot;</span><span class="p">)</span>
+        <span class="n">r</span><span class="o">.</span><span class="n">aniadir_entrenador</span><span class="p">(</span><span class="n">en1</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">existe_entrenador</span><span class="p">(</span><span class="n">en1</span><span class="o">.</span><span class="n">get_dni</span><span class="p">()),</span> <span class="n">en1</span><span class="p">)</span>
+</div>
+<div class="viewcode-block" id="TestRegistro.test_eliminar_entrenador"><a class="viewcode-back" href="../../test_registro.html#tests.test_registro.TestRegistro.test_eliminar_entrenador">[docs]</a>    <span class="k">def</span> <span class="nf">test_eliminar_entrenador</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Test eliminar entrenador</span>
+
+<span class="sd">        Crea un registro y un entrenador y lo aniade al registro. Luego borra ese entrenador y comprueba que no</span>
+<span class="sd">        lo devuelve</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">r</span> <span class="o">=</span> <span class="n">Registro</span><span class="p">()</span>
+        <span class="n">en1</span> <span class="o">=</span> <span class="n">Entrenador</span><span class="p">(</span><span class="s">&quot;Pep&quot;</span><span class="p">,</span> <span class="s">&quot;Guardiola&quot;</span><span class="p">,</span> <span class="s">&quot;1234P&quot;</span><span class="p">,</span> <span class="s">&quot;22/11/1975&quot;</span><span class="p">,</span> <span class="s">&quot;Espania&quot;</span><span class="p">,</span> <span class="s">&quot;1234L&quot;</span><span class="p">)</span>
+        <span class="n">r</span><span class="o">.</span><span class="n">aniadir_entrenador</span><span class="p">(</span><span class="n">en1</span><span class="p">)</span>
+        <span class="n">r</span><span class="o">.</span><span class="n">entrenadores</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">en1</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">existe_entrenador</span><span class="p">(</span><span class="n">en1</span><span class="o">.</span><span class="n">get_dni</span><span class="p">()),</span> <span class="bp">None</span><span class="p">)</span>
+</div>
+<div class="viewcode-block" id="TestRegistro.test_existe_estadio"><a class="viewcode-back" href="../../test_registro.html#tests.test_registro.TestRegistro.test_existe_estadio">[docs]</a>    <span class="k">def</span> <span class="nf">test_existe_estadio</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Test existe estadio</span>
+
+<span class="sd">        Crea un registro y un estadio y lo aniade al registro. Comprueba que devuelve ese estadio</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">r</span> <span class="o">=</span> <span class="n">Registro</span><span class="p">()</span>
+        <span class="n">es1</span> <span class="o">=</span> <span class="n">Estadio</span><span class="p">(</span><span class="s">&quot;Camp Nou&quot;</span><span class="p">,</span> <span class="s">&quot;Barcelona&quot;</span><span class="p">,</span> <span class="mi">1650300</span><span class="p">)</span>
+        <span class="n">r</span><span class="o">.</span><span class="n">aniadir_estadio</span><span class="p">(</span><span class="n">es1</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">existe_estadio</span><span class="p">(</span><span class="n">es1</span><span class="o">.</span><span class="n">get_nombre</span><span class="p">()),</span> <span class="n">es1</span><span class="p">)</span>
+</div>
+<div class="viewcode-block" id="TestRegistro.test_eliminar_estadio"><a class="viewcode-back" href="../../test_registro.html#tests.test_registro.TestRegistro.test_eliminar_estadio">[docs]</a>    <span class="k">def</span> <span class="nf">test_eliminar_estadio</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Test eliminar estadio</span>
+
+<span class="sd">        Crea un registro y un estadio y lo aniade al registro. Luego borra ese estadio y comprueba que no lo devuelve</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">r</span> <span class="o">=</span> <span class="n">Registro</span><span class="p">()</span>
+        <span class="n">es1</span> <span class="o">=</span> <span class="n">Estadio</span><span class="p">(</span><span class="s">&quot;Camp Nou&quot;</span><span class="p">,</span> <span class="s">&quot;Barcelona&quot;</span><span class="p">,</span> <span class="mi">1650300</span><span class="p">)</span>
+        <span class="n">r</span><span class="o">.</span><span class="n">aniadir_estadio</span><span class="p">(</span><span class="n">es1</span><span class="p">)</span>
+        <span class="n">r</span><span class="o">.</span><span class="n">estadios</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">es1</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">existe_estadio</span><span class="p">(</span><span class="n">es1</span><span class="o">.</span><span class="n">get_nombre</span><span class="p">()),</span> <span class="bp">None</span><span class="p">)</span>
+</div>
+<div class="viewcode-block" id="TestRegistro.test_existe_equipo"><a class="viewcode-back" href="../../test_registro.html#tests.test_registro.TestRegistro.test_existe_equipo">[docs]</a>    <span class="k">def</span> <span class="nf">test_existe_equipo</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Test existe equipo</span>
+
+<span class="sd">        Crea un registro y un equipo y lo aniade al registro. Comprueba que devuelve ese equipo</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">r</span> <span class="o">=</span> <span class="n">Registro</span><span class="p">()</span>
+        <span class="n">eq1</span> <span class="o">=</span> <span class="n">Equipo</span><span class="p">(</span><span class="s">&quot;FC Barcelona&quot;</span><span class="p">,</span> <span class="s">&quot;1900&quot;</span><span class="p">,</span> <span class="s">&quot;Barcelona&quot;</span><span class="p">)</span>
+        <span class="n">r</span><span class="o">.</span><span class="n">aniadir_equipo</span><span class="p">(</span><span class="n">eq1</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">existe_equipo</span><span class="p">(</span><span class="n">eq1</span><span class="o">.</span><span class="n">get_nombre</span><span class="p">()),</span> <span class="n">eq1</span><span class="p">)</span>
+</div>
+<div class="viewcode-block" id="TestRegistro.test_eliminar_equipo"><a class="viewcode-back" href="../../test_registro.html#tests.test_registro.TestRegistro.test_eliminar_equipo">[docs]</a>    <span class="k">def</span> <span class="nf">test_eliminar_equipo</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Test eliminar equipo</span>
+
+<span class="sd">        Crea un registro y un equipo y lo aniade al registro. Luego borra ese equipo y comprueba que no lo devuelve</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">r</span> <span class="o">=</span> <span class="n">Registro</span><span class="p">()</span>
+        <span class="n">eq1</span> <span class="o">=</span> <span class="n">Equipo</span><span class="p">(</span><span class="s">&quot;FC Barcelona&quot;</span><span class="p">,</span> <span class="s">&quot;1900&quot;</span><span class="p">,</span> <span class="s">&quot;Barcelona&quot;</span><span class="p">)</span>
+        <span class="n">r</span><span class="o">.</span><span class="n">aniadir_equipo</span><span class="p">(</span><span class="n">eq1</span><span class="p">)</span>
+        <span class="n">r</span><span class="o">.</span><span class="n">equipos</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">eq1</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">existe_equipo</span><span class="p">(</span><span class="n">eq1</span><span class="o">.</span><span class="n">get_nombre</span><span class="p">()),</span> <span class="bp">None</span><span class="p">)</span>
+</div>
+<div class="viewcode-block" id="TestRegistro.test_existe_liga"><a class="viewcode-back" href="../../test_registro.html#tests.test_registro.TestRegistro.test_existe_liga">[docs]</a>    <span class="k">def</span> <span class="nf">test_existe_liga</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Test existe liga</span>
+
+<span class="sd">        Crea un registro y una liga y la aniade al registro. Comprueba que devuelve esa liga</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">r</span> <span class="o">=</span> <span class="n">Registro</span><span class="p">()</span>
+        <span class="n">l</span> <span class="o">=</span> <span class="n">Liga</span><span class="p">(</span><span class="s">&quot;Liga BBVA&quot;</span><span class="p">,</span> <span class="s">&quot;2014&quot;</span><span class="p">,</span> <span class="s">&quot;Espania&quot;</span><span class="p">)</span>
+        <span class="n">r</span><span class="o">.</span><span class="n">aniadir_liga</span><span class="p">(</span><span class="n">l</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">existe_liga</span><span class="p">(</span><span class="n">l</span><span class="o">.</span><span class="n">get_nombre</span><span class="p">()),</span> <span class="n">l</span><span class="p">)</span>
+</div>
+<div class="viewcode-block" id="TestRegistro.test_eliminar_liga"><a class="viewcode-back" href="../../test_registro.html#tests.test_registro.TestRegistro.test_eliminar_liga">[docs]</a>    <span class="k">def</span> <span class="nf">test_eliminar_liga</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Test eliminar liga</span>
+
+<span class="sd">        Crea un registro y una liga y la aniade al registro. Luego borra esa liga y comprueba que no la devuelve</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">r</span> <span class="o">=</span> <span class="n">Registro</span><span class="p">()</span>
+        <span class="n">l</span> <span class="o">=</span> <span class="n">Liga</span><span class="p">(</span><span class="s">&quot;Liga BBVA&quot;</span><span class="p">,</span> <span class="s">&quot;2014&quot;</span><span class="p">,</span> <span class="s">&quot;Espania&quot;</span><span class="p">)</span>
+        <span class="n">r</span><span class="o">.</span><span class="n">aniadir_liga</span><span class="p">(</span><span class="n">l</span><span class="p">)</span>
+        <span class="n">r</span><span class="o">.</span><span class="n">ligas</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">l</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">existe_liga</span><span class="p">(</span><span class="n">l</span><span class="o">.</span><span class="n">get_nombre</span><span class="p">()),</span> <span class="bp">None</span><span class="p">)</span></div></div>
+</pre></div>
+
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2014, Grupo7.
+    </p>
+  </div>
+
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'0.2',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

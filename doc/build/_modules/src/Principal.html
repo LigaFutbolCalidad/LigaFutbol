@@ -1,0 +1,624 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>src.Principal &mdash; LigaFutbol 0.2 documentation</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="LigaFutbol 0.2 documentation" href="../../index.html"/>
+        <link rel="up" title="Module code" href="../index.html"/> 
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+          <a href="../../index.html" class="fa fa-home"> LigaFutbol</a>
+        
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+        
+            <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../persona.html">Documentacion de Persona</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../jugador.html">Documentacion de Jugador</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../entrenador.html">Documentacion de Entrenador</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../estadio.html">Documentacion de Estadio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../equipo.html">Documentacion de Equipo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../liga.html">Documentacion de Liga</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../partido.html">Documentacion de Partido</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../registro.html">Documentacion de Registro</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../principal.html">Documentacion de Principal</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../test_jugador.html">Documentacion del test de jugador</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../test_equipo.html">Documentacion del test de equipo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../test_liga.html">Documentacion del test de liga</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../test_registro.html">Documentacion del test de registro</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../manual.html">Ver manual de usuario</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../principal.html">Codigo del programa de prueba</a></li>
+</ul>
+</li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../index.html">LigaFutbol</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../index.html">Module code</a> &raquo;</li>
+      
+    <li>src.Principal</li>
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document">
+            
+  <h1>Source code for src.Principal</h1><div class="highlight"><pre>
+<span class="kn">from</span> <span class="nn">src.Registro</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="n">__author__</span> <span class="o">=</span> <span class="s">&#39;Grupo 7&#39;</span>
+
+
+<span class="c"># Funciones del menu manual</span>
+<div class="viewcode-block" id="administrar_jugadores"><a class="viewcode-back" href="../../principal.html#src.Principal.administrar_jugadores">[docs]</a><span class="k">def</span> <span class="nf">administrar_jugadores</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Metodo administrar_jugadores</span>
+
+<span class="sd">    Muestra un menu con todas las opciones para administrar un jugador en el registro</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">loop</span> <span class="o">=</span> <span class="bp">False</span>
+    <span class="k">while</span> <span class="ow">not</span> <span class="n">loop</span><span class="p">:</span>
+        <span class="k">print</span> <span class="p">(</span><span class="s">&quot;=&quot;</span> <span class="o">*</span> <span class="mi">20</span><span class="p">)</span>
+        <span class="k">print</span> <span class="p">(</span><span class="s">&quot;ADMINISTRAR JUGADORES&quot;</span><span class="p">)</span>
+        <span class="k">print</span> <span class="p">(</span><span class="s">&quot;Que desea hacer: &quot;</span><span class="p">)</span>
+        <span class="k">print</span> <span class="p">(</span><span class="s">&quot;1 - Crear un jugador&quot;</span><span class="p">)</span>
+        <span class="k">print</span> <span class="p">(</span><span class="s">&quot;2 - Modificar un jugador&quot;</span><span class="p">)</span>
+        <span class="k">print</span> <span class="p">(</span><span class="s">&quot;3 - Eliminar un jugador&quot;</span><span class="p">)</span>
+        <span class="k">print</span> <span class="p">(</span><span class="s">&quot;4 - Consultar un jugador&quot;</span><span class="p">)</span>
+        <span class="k">print</span> <span class="p">(</span><span class="s">&quot;5 - Ver todos los jugadores creados&quot;</span><span class="p">)</span>
+        <span class="k">print</span> <span class="p">(</span><span class="s">&quot;0 - Volver&quot;</span><span class="p">)</span>
+        <span class="n">opc1</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">&quot;Opcion: &quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">opc1</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="n">r</span><span class="o">.</span><span class="n">crear_jugador</span><span class="p">()</span>
+        <span class="k">elif</span> <span class="n">opc1</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+            <span class="n">r</span><span class="o">.</span><span class="n">modificar_jugador</span><span class="p">()</span>
+        <span class="k">elif</span> <span class="n">opc1</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>
+            <span class="n">r</span><span class="o">.</span><span class="n">eliminar_jugador</span><span class="p">()</span>
+        <span class="k">elif</span> <span class="n">opc1</span> <span class="o">==</span> <span class="mi">4</span><span class="p">:</span>
+            <span class="n">r</span><span class="o">.</span><span class="n">consultar_jugador</span><span class="p">()</span>
+        <span class="k">elif</span> <span class="n">opc1</span> <span class="o">==</span> <span class="mi">5</span><span class="p">:</span>
+            <span class="n">r</span><span class="o">.</span><span class="n">listar_jugadores</span><span class="p">()</span>
+        <span class="k">elif</span> <span class="n">opc1</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">break</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">print</span> <span class="p">(</span><span class="s">&quot;Opcion incorrecta&quot;</span><span class="p">)</span>
+
+</div>
+<div class="viewcode-block" id="administrar_entrenadores"><a class="viewcode-back" href="../../principal.html#src.Principal.administrar_entrenadores">[docs]</a><span class="k">def</span> <span class="nf">administrar_entrenadores</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Metodo administrar_entrenadores</span>
+
+<span class="sd">    Muestra un menu con todas las opciones para administrar un entrenador en el registro</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">bucle</span> <span class="o">=</span> <span class="bp">False</span>
+    <span class="k">while</span> <span class="ow">not</span> <span class="n">bucle</span><span class="p">:</span>
+        <span class="k">print</span> <span class="p">(</span><span class="s">&quot;=&quot;</span> <span class="o">*</span> <span class="mi">20</span><span class="p">)</span>
+        <span class="k">print</span> <span class="p">(</span><span class="s">&quot;ADMINISTRAR ENTRENADORES&quot;</span><span class="p">)</span>
+        <span class="k">print</span> <span class="p">(</span><span class="s">&quot;Que desea hacer: &quot;</span><span class="p">)</span>
+        <span class="k">print</span> <span class="p">(</span><span class="s">&quot;1 - Crear entrenador&quot;</span><span class="p">)</span>
+        <span class="k">print</span> <span class="p">(</span><span class="s">&quot;2 - Modificar entrenador&quot;</span><span class="p">)</span>
+        <span class="k">print</span> <span class="p">(</span><span class="s">&quot;3 - Eliminar entrenador&quot;</span><span class="p">)</span>
+        <span class="k">print</span> <span class="p">(</span><span class="s">&quot;4 - Consultar entrenador&quot;</span><span class="p">)</span>
+        <span class="k">print</span> <span class="p">(</span><span class="s">&quot;5 - Ver todos los entrenadores creados&quot;</span><span class="p">)</span>
+        <span class="k">print</span> <span class="p">(</span><span class="s">&quot;0 - Volver&quot;</span><span class="p">)</span>
+        <span class="n">opc1</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">&quot;Opcion: &quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">opc1</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="n">r</span><span class="o">.</span><span class="n">crear_entrenador</span><span class="p">()</span>
+        <span class="k">elif</span> <span class="n">opc1</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+            <span class="n">r</span><span class="o">.</span><span class="n">modificar_entrenador</span><span class="p">()</span>
+        <span class="k">elif</span> <span class="n">opc1</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>
+            <span class="n">r</span><span class="o">.</span><span class="n">eliminar_entrenador</span><span class="p">()</span>
+        <span class="k">elif</span> <span class="n">opc1</span> <span class="o">==</span> <span class="mi">4</span><span class="p">:</span>
+            <span class="n">r</span><span class="o">.</span><span class="n">consultar_entrenador</span><span class="p">()</span>
+        <span class="k">elif</span> <span class="n">opc1</span> <span class="o">==</span> <span class="mi">5</span><span class="p">:</span>
+            <span class="n">r</span><span class="o">.</span><span class="n">listar_entrenadores</span><span class="p">()</span>
+        <span class="k">elif</span> <span class="n">opc1</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">break</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">print</span> <span class="p">(</span><span class="s">&quot;Opcion incorrecta&quot;</span><span class="p">)</span>
+
+</div>
+<div class="viewcode-block" id="administrar_estadios"><a class="viewcode-back" href="../../principal.html#src.Principal.administrar_estadios">[docs]</a><span class="k">def</span> <span class="nf">administrar_estadios</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Metodo administrar_estadios</span>
+
+<span class="sd">    Muestra un menu con todas las opciones para administrar un estadio en el registro</span>
+<span class="sd">    :var bucle: Variable que controla el bucle</span>
+<span class="sd">    :type bucle: bool</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">bucle</span> <span class="o">=</span> <span class="bp">False</span>
+    <span class="k">while</span> <span class="ow">not</span> <span class="n">bucle</span><span class="p">:</span>
+        <span class="k">print</span> <span class="p">(</span><span class="s">&quot;=&quot;</span> <span class="o">*</span> <span class="mi">20</span><span class="p">)</span>
+        <span class="k">print</span> <span class="p">(</span><span class="s">&quot;ADMINISTRAR ESTADIOS&quot;</span><span class="p">)</span>
+        <span class="k">print</span> <span class="p">(</span><span class="s">&quot;Que desea hacer: &quot;</span><span class="p">)</span>
+        <span class="k">print</span> <span class="p">(</span><span class="s">&quot;1 - Crear estadio&quot;</span><span class="p">)</span>
+        <span class="k">print</span> <span class="p">(</span><span class="s">&quot;2 - Modificar estadio&quot;</span><span class="p">)</span>
+        <span class="k">print</span> <span class="p">(</span><span class="s">&quot;3 - Eliminar estadio&quot;</span><span class="p">)</span>
+        <span class="k">print</span> <span class="p">(</span><span class="s">&quot;4 - Consultar estadio&quot;</span><span class="p">)</span>
+        <span class="k">print</span> <span class="p">(</span><span class="s">&quot;5 - Ver todos los estadios creados&quot;</span><span class="p">)</span>
+        <span class="k">print</span> <span class="p">(</span><span class="s">&quot;0 - Volver&quot;</span><span class="p">)</span>
+        <span class="n">opc1</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">&quot;Opcion: &quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">opc1</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="n">r</span><span class="o">.</span><span class="n">crear_estadio</span><span class="p">()</span>
+        <span class="k">elif</span> <span class="n">opc1</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+            <span class="n">r</span><span class="o">.</span><span class="n">modificar_estadio</span><span class="p">()</span>
+        <span class="k">elif</span> <span class="n">opc1</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>
+            <span class="n">r</span><span class="o">.</span><span class="n">eliminar_estadio</span><span class="p">()</span>
+        <span class="k">elif</span> <span class="n">opc1</span> <span class="o">==</span> <span class="mi">4</span><span class="p">:</span>
+            <span class="n">r</span><span class="o">.</span><span class="n">consultar_estadio</span><span class="p">()</span>
+        <span class="k">elif</span> <span class="n">opc1</span> <span class="o">==</span> <span class="mi">5</span><span class="p">:</span>
+            <span class="n">r</span><span class="o">.</span><span class="n">listar_estadios</span><span class="p">()</span>
+        <span class="k">elif</span> <span class="n">opc1</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">break</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">print</span> <span class="p">(</span><span class="s">&quot;Opcion incorrecta&quot;</span><span class="p">)</span>
+
+</div>
+<div class="viewcode-block" id="administrar_equipos"><a class="viewcode-back" href="../../principal.html#src.Principal.administrar_equipos">[docs]</a><span class="k">def</span> <span class="nf">administrar_equipos</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Metodo administrar_equipos</span>
+
+<span class="sd">    Muestra un menu con todas las opciones para administrar un equipo en el registro</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">bucle</span> <span class="o">=</span> <span class="bp">False</span>
+    <span class="k">while</span> <span class="ow">not</span> <span class="n">bucle</span><span class="p">:</span>
+        <span class="k">print</span> <span class="p">(</span><span class="s">&quot;=&quot;</span> <span class="o">*</span> <span class="mi">20</span><span class="p">)</span>
+        <span class="k">print</span> <span class="p">(</span><span class="s">&quot;ADMINISTRAR EQUIPOS&quot;</span><span class="p">)</span>
+        <span class="k">print</span> <span class="p">(</span><span class="s">&quot;Que desea hacer: &quot;</span><span class="p">)</span>
+        <span class="k">print</span> <span class="p">(</span><span class="s">&quot;1 - Crear un equipo&quot;</span><span class="p">)</span>
+        <span class="k">print</span> <span class="p">(</span><span class="s">&quot;2 - Modificar un equipo&quot;</span><span class="p">)</span>
+        <span class="k">print</span> <span class="p">(</span><span class="s">&quot;3 - Eliminar un equipo&quot;</span><span class="p">)</span>
+        <span class="k">print</span> <span class="p">(</span><span class="s">&quot;4 - Consultar un equipo&quot;</span><span class="p">)</span>
+        <span class="k">print</span> <span class="p">(</span><span class="s">&quot;5 - Ver todos los equipos creados&quot;</span><span class="p">)</span>
+        <span class="k">print</span> <span class="p">(</span><span class="s">&quot;0 - Volver&quot;</span><span class="p">)</span>
+        <span class="n">opc1</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">&quot;Opcion: &quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">opc1</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="n">r</span><span class="o">.</span><span class="n">crear_equipo</span><span class="p">()</span>
+        <span class="k">elif</span> <span class="n">opc1</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+            <span class="n">r</span><span class="o">.</span><span class="n">modificar_equipo</span><span class="p">()</span>
+        <span class="k">elif</span> <span class="n">opc1</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>
+            <span class="n">r</span><span class="o">.</span><span class="n">eliminar_equipo</span><span class="p">()</span>
+        <span class="k">elif</span> <span class="n">opc1</span> <span class="o">==</span> <span class="mi">4</span><span class="p">:</span>
+            <span class="n">r</span><span class="o">.</span><span class="n">consultar_equipo</span><span class="p">()</span>
+        <span class="k">elif</span> <span class="n">opc1</span> <span class="o">==</span> <span class="mi">5</span><span class="p">:</span>
+            <span class="n">r</span><span class="o">.</span><span class="n">listar_equipos</span><span class="p">()</span>
+        <span class="k">elif</span> <span class="n">opc1</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">break</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">print</span> <span class="p">(</span><span class="s">&quot;Opcion incorrecta&quot;</span><span class="p">)</span>
+
+</div>
+<div class="viewcode-block" id="administrar_ligas"><a class="viewcode-back" href="../../principal.html#src.Principal.administrar_ligas">[docs]</a><span class="k">def</span> <span class="nf">administrar_ligas</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Metodo administrar_ligas</span>
+
+<span class="sd">    Muestra un menu con todas las opciones para administrar las ligas en el registro</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">bucle</span> <span class="o">=</span> <span class="bp">False</span>
+    <span class="k">while</span> <span class="ow">not</span> <span class="n">bucle</span><span class="p">:</span>
+        <span class="k">print</span> <span class="p">(</span><span class="s">&quot;=&quot;</span> <span class="o">*</span> <span class="mi">20</span><span class="p">)</span>
+        <span class="k">print</span> <span class="p">(</span><span class="s">&quot;ADMINISTRAR LIGAS&quot;</span><span class="p">)</span>
+        <span class="k">print</span> <span class="p">(</span><span class="s">&quot;Que desea hacer: &quot;</span><span class="p">)</span>
+        <span class="k">print</span> <span class="p">(</span><span class="s">&quot;1 - Crear liga&quot;</span><span class="p">)</span>
+        <span class="k">print</span> <span class="p">(</span><span class="s">&quot;2 - Modificar liga&quot;</span><span class="p">)</span>
+        <span class="k">print</span> <span class="p">(</span><span class="s">&quot;3 - Eliminar liga&quot;</span><span class="p">)</span>
+        <span class="k">print</span> <span class="p">(</span><span class="s">&quot;4 - Consultar liga&quot;</span><span class="p">)</span>
+        <span class="k">print</span> <span class="p">(</span><span class="s">&quot;5 - Ver todas las ligas creadas&quot;</span><span class="p">)</span>
+        <span class="k">print</span> <span class="p">(</span><span class="s">&quot;6 - Administrar una liga&quot;</span><span class="p">)</span>
+        <span class="k">print</span> <span class="p">(</span><span class="s">&quot;0 - Volver&quot;</span><span class="p">)</span>
+        <span class="n">opc1</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">&quot;Opcion: &quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">opc1</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="n">r</span><span class="o">.</span><span class="n">crear_liga</span><span class="p">()</span>
+        <span class="k">elif</span> <span class="n">opc1</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+            <span class="n">r</span><span class="o">.</span><span class="n">modificar_liga</span><span class="p">()</span>
+        <span class="k">elif</span> <span class="n">opc1</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>
+            <span class="n">r</span><span class="o">.</span><span class="n">eliminar_liga</span><span class="p">()</span>
+        <span class="k">elif</span> <span class="n">opc1</span> <span class="o">==</span> <span class="mi">4</span><span class="p">:</span>
+            <span class="n">r</span><span class="o">.</span><span class="n">consultar_liga</span><span class="p">()</span>
+        <span class="k">elif</span> <span class="n">opc1</span> <span class="o">==</span> <span class="mi">5</span><span class="p">:</span>
+            <span class="n">r</span><span class="o">.</span><span class="n">listar_ligas</span><span class="p">()</span>
+        <span class="k">elif</span> <span class="n">opc1</span> <span class="o">==</span> <span class="mi">6</span><span class="p">:</span>
+            <span class="n">seleccionar_liga</span><span class="p">()</span>
+        <span class="k">elif</span> <span class="n">opc1</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">break</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">print</span> <span class="p">(</span><span class="s">&quot;Opcion incorrecta&quot;</span><span class="p">)</span>
+
+</div>
+<div class="viewcode-block" id="seleccionar_liga"><a class="viewcode-back" href="../../principal.html#src.Principal.seleccionar_liga">[docs]</a><span class="k">def</span> <span class="nf">seleccionar_liga</span><span class="p">():</span>
+    <span class="n">liga</span> <span class="o">=</span> <span class="nb">raw_input</span><span class="p">(</span><span class="s">&quot;Introduzca el nombre de la liga a administrar: &quot;</span><span class="p">)</span>
+    <span class="n">li</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">existe_liga</span><span class="p">(</span><span class="n">liga</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">li</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="k">print</span> <span class="p">(</span><span class="s">&quot;La liga no existe&quot;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">administrar_liga</span><span class="p">(</span><span class="n">li</span><span class="p">)</span>
+
+</div>
+<div class="viewcode-block" id="administrar_liga"><a class="viewcode-back" href="../../principal.html#src.Principal.administrar_liga">[docs]</a><span class="k">def</span> <span class="nf">administrar_liga</span><span class="p">(</span><span class="n">liga</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Metodo administrar_liga</span>
+
+<span class="sd">    Muestra un menu con todas las opciones para administrar una liga en el registro</span>
+<span class="sd">    :param liga: Una liga</span>
+<span class="sd">    :type liga: Liga</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">bucle1</span> <span class="o">=</span> <span class="bp">False</span>
+    <span class="k">while</span> <span class="ow">not</span> <span class="n">bucle1</span><span class="p">:</span>
+        <span class="n">mostrar_menu</span><span class="p">()</span>
+        <span class="n">opc2</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">&quot;Opcion: &quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">opc2</span> <span class="o">&lt;</span> <span class="mi">6</span><span class="p">:</span>
+            <span class="n">bucle1</span> <span class="o">=</span> <span class="n">seleccionar_opcion_menor</span><span class="p">(</span><span class="n">bucle1</span><span class="p">,</span> <span class="n">liga</span><span class="p">,</span> <span class="n">opc2</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">bucle1</span> <span class="o">=</span> <span class="n">seleccionar_opcion_mayor</span><span class="p">(</span><span class="n">bucle1</span><span class="p">,</span> <span class="n">liga</span><span class="p">,</span> <span class="n">opc2</span><span class="p">)</span>
+
+</div>
+<div class="viewcode-block" id="seleccionar_opcion_menor"><a class="viewcode-back" href="../../principal.html#src.Principal.seleccionar_opcion_menor">[docs]</a><span class="k">def</span> <span class="nf">seleccionar_opcion_menor</span><span class="p">(</span><span class="n">bucle1</span><span class="p">,</span> <span class="n">liga</span><span class="p">,</span> <span class="n">opc2</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">opc2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">bucle1</span> <span class="o">=</span> <span class="bp">True</span>
+    <span class="k">elif</span> <span class="n">opc2</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="n">crear_equipo_liga</span><span class="p">(</span><span class="n">liga</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">opc2</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="n">liga</span><span class="o">.</span><span class="n">listar_equipos</span><span class="p">()</span>
+    <span class="k">elif</span> <span class="n">opc2</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>
+        <span class="n">consultar_equipo_liga</span><span class="p">(</span><span class="n">liga</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">opc2</span> <span class="o">==</span> <span class="mi">4</span><span class="p">:</span>
+        <span class="n">liga</span><span class="o">.</span><span class="n">listar_partidos</span><span class="p">()</span>
+    <span class="k">elif</span> <span class="n">opc2</span> <span class="o">==</span> <span class="mi">5</span><span class="p">:</span>
+        <span class="n">liga</span><span class="o">.</span><span class="n">consultar_calendario</span><span class="p">()</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">print</span> <span class="p">(</span><span class="s">&quot;Opcion incorrecta&quot;</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">bucle1</span>
+
+</div>
+<div class="viewcode-block" id="seleccionar_opcion_mayor"><a class="viewcode-back" href="../../principal.html#src.Principal.seleccionar_opcion_mayor">[docs]</a><span class="k">def</span> <span class="nf">seleccionar_opcion_mayor</span><span class="p">(</span><span class="n">bucle1</span><span class="p">,</span> <span class="n">liga</span><span class="p">,</span> <span class="n">opc2</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">opc2</span> <span class="o">==</span> <span class="mi">6</span><span class="p">:</span>
+        <span class="n">liga</span><span class="o">.</span><span class="n">consultar_clasificacion</span><span class="p">()</span>
+    <span class="k">elif</span> <span class="n">opc2</span> <span class="o">==</span> <span class="mi">7</span><span class="p">:</span>
+        <span class="n">consultar_jornada_liga</span><span class="p">(</span><span class="n">liga</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">opc2</span> <span class="o">==</span> <span class="mi">8</span><span class="p">:</span>
+        <span class="n">liga</span><span class="o">.</span><span class="n">jugar_partido</span><span class="p">()</span>
+    <span class="k">elif</span> <span class="n">opc2</span> <span class="o">==</span> <span class="mi">9</span><span class="p">:</span>
+        <span class="n">liga</span><span class="o">.</span><span class="n">consultar_mejor_estadio</span><span class="p">()</span>
+    <span class="k">elif</span> <span class="n">opc2</span> <span class="o">==</span> <span class="mi">10</span><span class="p">:</span>
+        <span class="n">liga</span><span class="o">.</span><span class="n">pichichi_liga</span><span class="p">()</span>
+    <span class="k">elif</span> <span class="n">opc2</span> <span class="o">==</span> <span class="mi">11</span><span class="p">:</span>
+        <span class="n">consultar_pichichi_liga</span><span class="p">(</span><span class="n">liga</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">print</span> <span class="p">(</span><span class="s">&quot;Opcion incorrecta&quot;</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">bucle1</span>
+
+</div>
+<div class="viewcode-block" id="mostrar_menu"><a class="viewcode-back" href="../../principal.html#src.Principal.mostrar_menu">[docs]</a><span class="k">def</span> <span class="nf">mostrar_menu</span><span class="p">():</span>
+    <span class="k">print</span> <span class="p">(</span><span class="s">&quot;=&quot;</span> <span class="o">*</span> <span class="mi">20</span><span class="p">)</span>
+    <span class="k">print</span> <span class="p">(</span><span class="s">&quot;ADMINISTRAR LIGA: &quot;</span><span class="p">)</span>
+    <span class="k">print</span> <span class="p">(</span><span class="s">&quot;Que desea hacer: &quot;</span><span class="p">)</span>
+    <span class="k">print</span> <span class="p">(</span><span class="s">&quot;1 - Aniadir un equipo a la liga&quot;</span><span class="p">)</span>
+    <span class="k">print</span> <span class="p">(</span><span class="s">&quot;2 - Ver equipos de la liga&quot;</span><span class="p">)</span>
+    <span class="k">print</span> <span class="p">(</span><span class="s">&quot;3 - Consultar un equipo de la liga&quot;</span><span class="p">)</span>
+    <span class="k">print</span> <span class="p">(</span><span class="s">&quot;4 - Ver partidos de la liga&quot;</span><span class="p">)</span>
+    <span class="k">print</span> <span class="p">(</span><span class="s">&quot;5 - Consultar calendario de la liga&quot;</span><span class="p">)</span>
+    <span class="k">print</span> <span class="p">(</span><span class="s">&quot;6 - Consultar clasificacion de la liga&quot;</span><span class="p">)</span>
+    <span class="k">print</span> <span class="p">(</span><span class="s">&quot;7 - Consultar un partido de la liga&quot;</span><span class="p">)</span>
+    <span class="k">print</span> <span class="p">(</span><span class="s">&quot;8 - Jugar un partido de la liga&quot;</span><span class="p">)</span>
+    <span class="k">print</span> <span class="p">(</span><span class="s">&quot;9 - Consultar mejor estadio de la liga&quot;</span><span class="p">)</span>
+    <span class="k">print</span> <span class="p">(</span><span class="s">&quot;10 - Consultar pichichi de la liga&quot;</span><span class="p">)</span>
+    <span class="k">print</span> <span class="p">(</span><span class="s">&quot;11 - Consultar pichichi de un equipo de la liga&quot;</span><span class="p">)</span>
+    <span class="k">print</span> <span class="p">(</span><span class="s">&quot;0 - Volver&quot;</span><span class="p">)</span>
+
+</div>
+<div class="viewcode-block" id="crear_equipo_liga"><a class="viewcode-back" href="../../principal.html#src.Principal.crear_equipo_liga">[docs]</a><span class="k">def</span> <span class="nf">crear_equipo_liga</span><span class="p">(</span><span class="n">liga</span><span class="p">):</span>
+    <span class="n">equipo</span> <span class="o">=</span> <span class="nb">raw_input</span><span class="p">(</span><span class="s">&quot;Introduzca el nombre del equipo que desea aniadir a la liga: &quot;</span><span class="p">)</span>
+    <span class="n">e</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">existe_equipo</span><span class="p">(</span><span class="n">equipo</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">e</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="k">print</span> <span class="p">(</span><span class="s">&quot;El equipo no existe (debe ser creado antes)&quot;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">liga</span><span class="o">.</span><span class="n">aniadir_equipo</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+
+</div>
+<div class="viewcode-block" id="consultar_jornada_liga"><a class="viewcode-back" href="../../principal.html#src.Principal.consultar_jornada_liga">[docs]</a><span class="k">def</span> <span class="nf">consultar_jornada_liga</span><span class="p">(</span><span class="n">liga</span><span class="p">):</span>
+    <span class="n">jornada</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">&quot;Introduzca la jornada del partido a consultar: &quot;</span><span class="p">)</span>
+    <span class="n">p</span> <span class="o">=</span> <span class="n">liga</span><span class="o">.</span><span class="n">existe_partido</span><span class="p">(</span><span class="n">jornada</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">p</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="k">print</span> <span class="p">(</span><span class="s">&quot;La jornada no coincide con ninguna de la liga&quot;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">liga</span><span class="o">.</span><span class="n">consultar_partido</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+
+</div>
+<div class="viewcode-block" id="consultar_pichichi_liga"><a class="viewcode-back" href="../../principal.html#src.Principal.consultar_pichichi_liga">[docs]</a><span class="k">def</span> <span class="nf">consultar_pichichi_liga</span><span class="p">(</span><span class="n">liga</span><span class="p">):</span>
+    <span class="n">equipo</span> <span class="o">=</span> <span class="nb">raw_input</span><span class="p">(</span><span class="s">&quot;Introduzca el nombre del equipo a consultar el pichichi: &quot;</span><span class="p">)</span>
+    <span class="n">e</span> <span class="o">=</span> <span class="n">liga</span><span class="o">.</span><span class="n">existe_equipo</span><span class="p">(</span><span class="n">equipo</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">e</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="k">print</span> <span class="p">(</span><span class="s">&quot;El equipo no esta en la liga&quot;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">pichichi_equipo_liga</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+
+</div>
+<div class="viewcode-block" id="consultar_equipo_liga"><a class="viewcode-back" href="../../principal.html#src.Principal.consultar_equipo_liga">[docs]</a><span class="k">def</span> <span class="nf">consultar_equipo_liga</span><span class="p">(</span><span class="n">liga</span><span class="p">):</span>
+    <span class="n">equipo</span> <span class="o">=</span> <span class="nb">raw_input</span><span class="p">(</span><span class="s">&quot;Introduzca el nombre del equipo a consultar&quot;</span><span class="p">)</span>
+    <span class="n">e</span> <span class="o">=</span> <span class="n">liga</span><span class="o">.</span><span class="n">existe_equipo</span><span class="p">(</span><span class="n">equipo</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">e</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="k">print</span> <span class="p">(</span><span class="s">&quot;El equipo no esta en la liga&quot;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">liga</span><span class="o">.</span><span class="n">consultar_equipo</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+
+</div>
+<div class="viewcode-block" id="pichichi_equipo_liga"><a class="viewcode-back" href="../../principal.html#src.Principal.pichichi_equipo_liga">[docs]</a><span class="k">def</span> <span class="nf">pichichi_equipo_liga</span><span class="p">(</span><span class="n">e</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Metodo pichichi_equipo_liga</span>
+
+<span class="sd">    Metodo que devuelve el pichichi de un equipo de una liga del registro</span>
+<span class="sd">    :param e: Un equipo</span>
+<span class="sd">    :type e: Equipo</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">j</span> <span class="o">=</span> <span class="n">e</span><span class="o">.</span><span class="n">pichichi_equipo</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">j</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="n">j</span><span class="o">.</span><span class="n">mostrar_jugador</span><span class="p">()</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">print</span> <span class="p">(</span><span class="s">&quot;El equipo no tiene pichichi aun.&quot;</span><span class="p">)</span>
+
+</div>
+<span class="n">r</span> <span class="o">=</span> <span class="n">Registro</span><span class="p">()</span>
+<span class="k">print</span> <span class="p">(</span><span class="s">&quot;CARGANDO DATOS...&quot;</span><span class="p">)</span>
+<span class="c"># JUGADORES</span>
+<span class="n">j1</span> <span class="o">=</span> <span class="n">Jugador</span><span class="p">(</span><span class="s">&quot;Leo&quot;</span><span class="p">,</span> <span class="s">&quot;Messi&quot;</span><span class="p">,</span> <span class="s">&quot;1234M&quot;</span><span class="p">,</span> <span class="s">&quot;23/02/1980&quot;</span><span class="p">,</span> <span class="s">&quot;Argentina&quot;</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="s">&quot;delantero&quot;</span><span class="p">)</span>
+<span class="n">j2</span> <span class="o">=</span> <span class="n">Jugador</span><span class="p">(</span><span class="s">&quot;Luis&quot;</span><span class="p">,</span> <span class="s">&quot;Suarez&quot;</span><span class="p">,</span> <span class="s">&quot;1234S&quot;</span><span class="p">,</span> <span class="s">&quot;11/08/1985&quot;</span><span class="p">,</span> <span class="s">&quot;Uruguay&quot;</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="s">&quot;delantero&quot;</span><span class="p">)</span>
+<span class="n">j3</span> <span class="o">=</span> <span class="n">Jugador</span><span class="p">(</span><span class="s">&quot;Neymar&quot;</span><span class="p">,</span> <span class="s">&quot;Junior&quot;</span><span class="p">,</span> <span class="s">&quot;1234J&quot;</span><span class="p">,</span> <span class="s">&quot;19/02/1990&quot;</span><span class="p">,</span> <span class="s">&quot;Brasil&quot;</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="s">&quot;delantero&quot;</span><span class="p">)</span>
+<span class="n">j4</span> <span class="o">=</span> <span class="n">Jugador</span><span class="p">(</span><span class="s">&quot;Cristiano&quot;</span><span class="p">,</span> <span class="s">&quot;Ronaldo&quot;</span><span class="p">,</span> <span class="s">&quot;1235R&quot;</span><span class="p">,</span> <span class="s">&quot;23/02/1980&quot;</span><span class="p">,</span> <span class="s">&quot;Portugal&quot;</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="s">&quot;delantero&quot;</span><span class="p">)</span>
+<span class="n">j5</span> <span class="o">=</span> <span class="n">Jugador</span><span class="p">(</span><span class="s">&quot;Sergio&quot;</span><span class="p">,</span> <span class="s">&quot;Ramos&quot;</span><span class="p">,</span> <span class="s">&quot;1236R&quot;</span><span class="p">,</span> <span class="s">&quot;23/03/1983&quot;</span><span class="p">,</span> <span class="s">&quot;Espania&quot;</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="s">&quot;delantero&quot;</span><span class="p">)</span>
+<span class="n">j6</span> <span class="o">=</span> <span class="n">Jugador</span><span class="p">(</span><span class="s">&quot;Marcelo&quot;</span><span class="p">,</span> <span class="s">&quot;Vieira&quot;</span><span class="p">,</span> <span class="s">&quot;1234V&quot;</span><span class="p">,</span> <span class="s">&quot;24/02/1990&quot;</span><span class="p">,</span> <span class="s">&quot;Brasil&quot;</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="s">&quot;defensa&quot;</span><span class="p">)</span>
+<span class="n">j7</span> <span class="o">=</span> <span class="n">Jugador</span><span class="p">(</span><span class="s">&quot;Alvaro&quot;</span><span class="p">,</span> <span class="s">&quot;Negredo&quot;</span><span class="p">,</span> <span class="s">&quot;1234N&quot;</span><span class="p">,</span> <span class="s">&quot;23/02/1985&quot;</span><span class="p">,</span> <span class="s">&quot;Espania&quot;</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="s">&quot;delantero&quot;</span><span class="p">)</span>
+<span class="n">j8</span> <span class="o">=</span> <span class="n">Jugador</span><span class="p">(</span><span class="s">&quot;Rodrigo&quot;</span><span class="p">,</span> <span class="s">&quot;De Paul&quot;</span><span class="p">,</span> <span class="s">&quot;1234D&quot;</span><span class="p">,</span> <span class="s">&quot;23/02/1991&quot;</span><span class="p">,</span> <span class="s">&quot;Espania&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="s">&quot;centrocampista&quot;</span><span class="p">)</span>
+<span class="n">j9</span> <span class="o">=</span> <span class="n">Jugador</span><span class="p">(</span><span class="s">&quot;Ruben&quot;</span><span class="p">,</span> <span class="s">&quot;Vezo&quot;</span><span class="p">,</span> <span class="s">&quot;1235V&quot;</span><span class="p">,</span> <span class="s">&quot;03/11/1989&quot;</span><span class="p">,</span> <span class="s">&quot;Portugal&quot;</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="s">&quot;defensa&quot;</span><span class="p">)</span>
+<span class="n">j10</span> <span class="o">=</span> <span class="n">Jugador</span><span class="p">(</span><span class="s">&quot;Carlos&quot;</span><span class="p">,</span> <span class="s">&quot;Bacca&quot;</span><span class="p">,</span> <span class="s">&quot;1234B&quot;</span><span class="p">,</span> <span class="s">&quot;11/02/1985&quot;</span><span class="p">,</span> <span class="s">&quot;Colombia&quot;</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="s">&quot;delantero&quot;</span><span class="p">)</span>
+<span class="n">j11</span> <span class="o">=</span> <span class="n">Jugador</span><span class="p">(</span><span class="s">&quot;Denis&quot;</span><span class="p">,</span> <span class="s">&quot;Suarez&quot;</span><span class="p">,</span> <span class="s">&quot;1237S&quot;</span><span class="p">,</span> <span class="s">&quot;14/02/1992&quot;</span><span class="p">,</span> <span class="s">&quot;Espania&quot;</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="s">&quot;centrocampista&quot;</span><span class="p">)</span>
+<span class="n">j12</span> <span class="o">=</span> <span class="n">Jugador</span><span class="p">(</span><span class="s">&quot;Jose Antonio&quot;</span><span class="p">,</span> <span class="s">&quot;Reyes&quot;</span><span class="p">,</span> <span class="s">&quot;1238R&quot;</span><span class="p">,</span> <span class="s">&quot;14/02/1985&quot;</span><span class="p">,</span> <span class="s">&quot;Espania&quot;</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="s">&quot;delantero&quot;</span><span class="p">)</span>
+<span class="n">r</span><span class="o">.</span><span class="n">aniadir_jugador</span><span class="p">(</span><span class="n">j1</span><span class="p">)</span>
+<span class="n">r</span><span class="o">.</span><span class="n">aniadir_jugador</span><span class="p">(</span><span class="n">j2</span><span class="p">)</span>
+<span class="n">r</span><span class="o">.</span><span class="n">aniadir_jugador</span><span class="p">(</span><span class="n">j3</span><span class="p">)</span>
+<span class="n">r</span><span class="o">.</span><span class="n">aniadir_jugador</span><span class="p">(</span><span class="n">j4</span><span class="p">)</span>
+<span class="n">r</span><span class="o">.</span><span class="n">aniadir_jugador</span><span class="p">(</span><span class="n">j5</span><span class="p">)</span>
+<span class="n">r</span><span class="o">.</span><span class="n">aniadir_jugador</span><span class="p">(</span><span class="n">j6</span><span class="p">)</span>
+<span class="n">r</span><span class="o">.</span><span class="n">aniadir_jugador</span><span class="p">(</span><span class="n">j7</span><span class="p">)</span>
+<span class="n">r</span><span class="o">.</span><span class="n">aniadir_jugador</span><span class="p">(</span><span class="n">j8</span><span class="p">)</span>
+<span class="n">r</span><span class="o">.</span><span class="n">aniadir_jugador</span><span class="p">(</span><span class="n">j9</span><span class="p">)</span>
+<span class="n">r</span><span class="o">.</span><span class="n">aniadir_jugador</span><span class="p">(</span><span class="n">j10</span><span class="p">)</span>
+<span class="n">r</span><span class="o">.</span><span class="n">aniadir_jugador</span><span class="p">(</span><span class="n">j11</span><span class="p">)</span>
+<span class="n">r</span><span class="o">.</span><span class="n">aniadir_jugador</span><span class="p">(</span><span class="n">j12</span><span class="p">)</span>
+
+<span class="c"># ENTRENADORES</span>
+<span class="n">en1</span> <span class="o">=</span> <span class="n">Entrenador</span><span class="p">(</span><span class="s">&quot;Pep&quot;</span><span class="p">,</span> <span class="s">&quot;Guardiola&quot;</span><span class="p">,</span> <span class="s">&quot;1234P&quot;</span><span class="p">,</span> <span class="s">&quot;22/11/1975&quot;</span><span class="p">,</span> <span class="s">&quot;Espania&quot;</span><span class="p">,</span> <span class="s">&quot;1234L&quot;</span><span class="p">)</span>
+<span class="n">en2</span> <span class="o">=</span> <span class="n">Entrenador</span><span class="p">(</span><span class="s">&quot;Carlos&quot;</span><span class="p">,</span> <span class="s">&quot;Ancelloti&quot;</span><span class="p">,</span> <span class="s">&quot;1234A&quot;</span><span class="p">,</span> <span class="s">&quot;21/01/1970&quot;</span><span class="p">,</span> <span class="s">&quot;Italia&quot;</span><span class="p">,</span> <span class="s">&quot;1235L&quot;</span><span class="p">)</span>
+<span class="n">en3</span> <span class="o">=</span> <span class="n">Entrenador</span><span class="p">(</span><span class="s">&quot;Nunu&quot;</span><span class="p">,</span> <span class="s">&quot;Espirito Santo&quot;</span><span class="p">,</span> <span class="s">&quot;1235E&quot;</span><span class="p">,</span> <span class="s">&quot;20/11/1970&quot;</span><span class="p">,</span> <span class="s">&quot;Brasil&quot;</span><span class="p">,</span> <span class="s">&quot;1236L&quot;</span><span class="p">)</span>
+<span class="n">en4</span> <span class="o">=</span> <span class="n">Entrenador</span><span class="p">(</span><span class="s">&quot;Unai&quot;</span><span class="p">,</span> <span class="s">&quot;Emery&quot;</span><span class="p">,</span> <span class="s">&quot;1236E&quot;</span><span class="p">,</span> <span class="s">&quot;01/01/1970&quot;</span><span class="p">,</span> <span class="s">&quot;Espania&quot;</span><span class="p">,</span> <span class="s">&quot;1237L&quot;</span><span class="p">)</span>
+<span class="n">r</span><span class="o">.</span><span class="n">aniadir_entrenador</span><span class="p">(</span><span class="n">en1</span><span class="p">)</span>
+<span class="n">r</span><span class="o">.</span><span class="n">aniadir_entrenador</span><span class="p">(</span><span class="n">en2</span><span class="p">)</span>
+<span class="n">r</span><span class="o">.</span><span class="n">aniadir_entrenador</span><span class="p">(</span><span class="n">en3</span><span class="p">)</span>
+<span class="n">r</span><span class="o">.</span><span class="n">aniadir_entrenador</span><span class="p">(</span><span class="n">en4</span><span class="p">)</span>
+
+<span class="c"># ESTADIOS</span>
+<span class="n">es1</span> <span class="o">=</span> <span class="n">Estadio</span><span class="p">(</span><span class="s">&quot;Camp Nou&quot;</span><span class="p">,</span> <span class="s">&quot;Barcelona&quot;</span><span class="p">,</span> <span class="mi">1650300</span><span class="p">)</span>
+<span class="n">es2</span> <span class="o">=</span> <span class="n">Estadio</span><span class="p">(</span><span class="s">&quot;Bernabeu&quot;</span><span class="p">,</span> <span class="s">&quot;Madrid&quot;</span><span class="p">,</span> <span class="mi">1500200</span><span class="p">)</span>
+<span class="n">es3</span> <span class="o">=</span> <span class="n">Estadio</span><span class="p">(</span><span class="s">&quot;Mestalla&quot;</span><span class="p">,</span> <span class="s">&quot;Valencia&quot;</span><span class="p">,</span> <span class="mi">1560200</span><span class="p">)</span>
+<span class="n">es4</span> <span class="o">=</span> <span class="n">Estadio</span><span class="p">(</span><span class="s">&quot;Sanchez-Pizjuan&quot;</span><span class="p">,</span> <span class="s">&quot;Sevilla&quot;</span><span class="p">,</span> <span class="mi">1100250</span><span class="p">)</span>
+<span class="n">r</span><span class="o">.</span><span class="n">aniadir_estadio</span><span class="p">(</span><span class="n">es1</span><span class="p">)</span>
+<span class="n">r</span><span class="o">.</span><span class="n">aniadir_estadio</span><span class="p">(</span><span class="n">es2</span><span class="p">)</span>
+<span class="n">r</span><span class="o">.</span><span class="n">aniadir_estadio</span><span class="p">(</span><span class="n">es3</span><span class="p">)</span>
+<span class="n">r</span><span class="o">.</span><span class="n">aniadir_estadio</span><span class="p">(</span><span class="n">es4</span><span class="p">)</span>
+
+<span class="c"># EQUIPOS</span>
+<span class="n">eq1</span> <span class="o">=</span> <span class="n">Equipo</span><span class="p">(</span><span class="s">&quot;FC Barcelona&quot;</span><span class="p">,</span> <span class="s">&quot;1900&quot;</span><span class="p">,</span> <span class="s">&quot;Barcelona&quot;</span><span class="p">)</span>
+<span class="n">eq1</span><span class="o">.</span><span class="n">agregar_jugador</span><span class="p">(</span><span class="n">j1</span><span class="p">)</span>
+<span class="n">eq1</span><span class="o">.</span><span class="n">agregar_jugador</span><span class="p">(</span><span class="n">j2</span><span class="p">)</span>
+<span class="n">eq1</span><span class="o">.</span><span class="n">agregar_jugador</span><span class="p">(</span><span class="n">j3</span><span class="p">)</span>
+<span class="n">eq1</span><span class="o">.</span><span class="n">asignar_entrenador</span><span class="p">(</span><span class="n">en1</span><span class="p">)</span>
+<span class="n">eq1</span><span class="o">.</span><span class="n">asignar_estadio</span><span class="p">(</span><span class="n">es1</span><span class="p">)</span>
+<span class="n">r</span><span class="o">.</span><span class="n">aniadir_equipo</span><span class="p">(</span><span class="n">eq1</span><span class="p">)</span>
+
+<span class="n">eq2</span> <span class="o">=</span> <span class="n">Equipo</span><span class="p">(</span><span class="s">&quot;Real Madrid&quot;</span><span class="p">,</span> <span class="s">&quot;1902&quot;</span><span class="p">,</span> <span class="s">&quot;Madrid&quot;</span><span class="p">)</span>
+<span class="n">eq2</span><span class="o">.</span><span class="n">agregar_jugador</span><span class="p">(</span><span class="n">j4</span><span class="p">)</span>
+<span class="n">eq2</span><span class="o">.</span><span class="n">agregar_jugador</span><span class="p">(</span><span class="n">j5</span><span class="p">)</span>
+<span class="n">eq2</span><span class="o">.</span><span class="n">agregar_jugador</span><span class="p">(</span><span class="n">j6</span><span class="p">)</span>
+<span class="n">eq2</span><span class="o">.</span><span class="n">asignar_entrenador</span><span class="p">(</span><span class="n">en2</span><span class="p">)</span>
+<span class="n">eq2</span><span class="o">.</span><span class="n">asignar_estadio</span><span class="p">(</span><span class="n">es2</span><span class="p">)</span>
+<span class="n">r</span><span class="o">.</span><span class="n">aniadir_equipo</span><span class="p">(</span><span class="n">eq2</span><span class="p">)</span>
+
+<span class="n">eq3</span> <span class="o">=</span> <span class="n">Equipo</span><span class="p">(</span><span class="s">&quot;FC Valencia&quot;</span><span class="p">,</span> <span class="s">&quot;1901&quot;</span><span class="p">,</span> <span class="s">&quot;Valencia&quot;</span><span class="p">)</span>
+<span class="n">eq3</span><span class="o">.</span><span class="n">agregar_jugador</span><span class="p">(</span><span class="n">j7</span><span class="p">)</span>
+<span class="n">eq3</span><span class="o">.</span><span class="n">agregar_jugador</span><span class="p">(</span><span class="n">j8</span><span class="p">)</span>
+<span class="n">eq3</span><span class="o">.</span><span class="n">agregar_jugador</span><span class="p">(</span><span class="n">j9</span><span class="p">)</span>
+<span class="n">eq3</span><span class="o">.</span><span class="n">asignar_entrenador</span><span class="p">(</span><span class="n">en3</span><span class="p">)</span>
+<span class="n">eq3</span><span class="o">.</span><span class="n">asignar_estadio</span><span class="p">(</span><span class="n">es3</span><span class="p">)</span>
+<span class="n">r</span><span class="o">.</span><span class="n">aniadir_equipo</span><span class="p">(</span><span class="n">eq3</span><span class="p">)</span>
+
+<span class="n">eq4</span> <span class="o">=</span> <span class="n">Equipo</span><span class="p">(</span><span class="s">&quot;Sevilla FC&quot;</span><span class="p">,</span> <span class="s">&quot;1901&quot;</span><span class="p">,</span> <span class="s">&quot;Sevilla&quot;</span><span class="p">)</span>
+<span class="n">eq4</span><span class="o">.</span><span class="n">agregar_jugador</span><span class="p">(</span><span class="n">j10</span><span class="p">)</span>
+<span class="n">eq4</span><span class="o">.</span><span class="n">agregar_jugador</span><span class="p">(</span><span class="n">j11</span><span class="p">)</span>
+<span class="n">eq4</span><span class="o">.</span><span class="n">agregar_jugador</span><span class="p">(</span><span class="n">j12</span><span class="p">)</span>
+<span class="n">eq4</span><span class="o">.</span><span class="n">asignar_entrenador</span><span class="p">(</span><span class="n">en4</span><span class="p">)</span>
+<span class="n">eq4</span><span class="o">.</span><span class="n">asignar_estadio</span><span class="p">(</span><span class="n">es4</span><span class="p">)</span>
+<span class="n">r</span><span class="o">.</span><span class="n">aniadir_equipo</span><span class="p">(</span><span class="n">eq4</span><span class="p">)</span>
+
+<span class="c"># LIGAS</span>
+<span class="n">l</span> <span class="o">=</span> <span class="n">Liga</span><span class="p">(</span><span class="s">&quot;Liga BBVA&quot;</span><span class="p">,</span> <span class="s">&quot;2014&quot;</span><span class="p">,</span> <span class="s">&quot;Espania&quot;</span><span class="p">)</span>
+<span class="n">l</span><span class="o">.</span><span class="n">aniadir_equipo</span><span class="p">(</span><span class="n">eq1</span><span class="p">)</span>
+<span class="n">l</span><span class="o">.</span><span class="n">aniadir_equipo</span><span class="p">(</span><span class="n">eq2</span><span class="p">)</span>
+<span class="n">l</span><span class="o">.</span><span class="n">aniadir_equipo</span><span class="p">(</span><span class="n">eq3</span><span class="p">)</span>
+<span class="n">l</span><span class="o">.</span><span class="n">aniadir_equipo</span><span class="p">(</span><span class="n">eq4</span><span class="p">)</span>
+<span class="n">r</span><span class="o">.</span><span class="n">aniadir_liga</span><span class="p">(</span><span class="n">l</span><span class="p">)</span>
+
+<span class="k">print</span> <span class="p">(</span><span class="s">&quot;</span><span class="se">\n</span><span class="s">Los datos se han cargado, como desea probar la aplicacion?&quot;</span><span class="p">)</span>
+<span class="k">print</span> <span class="p">(</span><span class="s">&quot;1 - AUTO&quot;</span><span class="p">)</span>
+<span class="k">print</span> <span class="p">(</span><span class="s">&quot;0 - MANUAL&quot;</span><span class="p">)</span>
+<span class="n">auto</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">&quot;Eliga: &quot;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">auto</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+    <span class="n">l</span><span class="o">.</span><span class="n">jugar_partidos_auto</span><span class="p">()</span>
+    <span class="k">print</span> <span class="p">(</span><span class="s">&quot;</span><span class="se">\n</span><span class="s">PARTIDOS:</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">)</span>
+    <span class="n">l</span><span class="o">.</span><span class="n">listar_partidos</span><span class="p">()</span>
+    <span class="n">l</span><span class="o">.</span><span class="n">consultar_clasificacion</span><span class="p">()</span>
+    <span class="k">print</span> <span class="p">(</span><span class="s">&quot;</span><span class="se">\n</span><span class="s">PICHICHI LIGA:</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">)</span>
+    <span class="n">l</span><span class="o">.</span><span class="n">pichichi_liga</span><span class="p">()</span>
+    <span class="k">print</span> <span class="p">(</span><span class="s">&quot;</span><span class="se">\n</span><span class="s">PICHICHI EQUIPOS:</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">)</span>
+    <span class="n">l</span><span class="o">.</span><span class="n">listar_pichichis_equipos</span><span class="p">()</span>
+<span class="k">elif</span> <span class="n">auto</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="c"># MENU</span>
+    <span class="n">salir</span> <span class="o">=</span> <span class="bp">False</span>
+    <span class="k">while</span> <span class="ow">not</span> <span class="n">salir</span><span class="p">:</span>
+        <span class="k">print</span> <span class="p">(</span><span class="s">&quot;=&quot;</span> <span class="o">*</span> <span class="mi">20</span><span class="p">)</span>
+        <span class="k">print</span> <span class="p">(</span><span class="s">&quot;MENU PRINCIPAL&quot;</span><span class="p">)</span>
+        <span class="k">print</span> <span class="p">(</span><span class="s">&quot;Que desea hacer: &quot;</span><span class="p">)</span>
+        <span class="k">print</span> <span class="p">(</span><span class="s">&quot;1 - Administrar jugadores&quot;</span><span class="p">)</span>
+        <span class="k">print</span> <span class="p">(</span><span class="s">&quot;2 - Administrar entrenadores&quot;</span><span class="p">)</span>
+        <span class="k">print</span> <span class="p">(</span><span class="s">&quot;3 - Administrar estadios&quot;</span><span class="p">)</span>
+        <span class="k">print</span> <span class="p">(</span><span class="s">&quot;4 - Administrar equipos&quot;</span><span class="p">)</span>
+        <span class="k">print</span> <span class="p">(</span><span class="s">&quot;5 - Administrar ligas&quot;</span><span class="p">)</span>
+        <span class="k">print</span> <span class="p">(</span><span class="s">&quot;0 - Salir&quot;</span><span class="p">)</span>
+        <span class="n">opc</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">&quot;Opcion: &quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">opc</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="n">administrar_jugadores</span><span class="p">()</span>
+        <span class="k">elif</span> <span class="n">opc</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+            <span class="n">administrar_entrenadores</span><span class="p">()</span>
+        <span class="k">elif</span> <span class="n">opc</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>
+            <span class="n">administrar_estadios</span><span class="p">()</span>
+        <span class="k">elif</span> <span class="n">opc</span> <span class="o">==</span> <span class="mi">4</span><span class="p">:</span>
+            <span class="n">administrar_equipos</span><span class="p">()</span>
+        <span class="k">elif</span> <span class="n">opc</span> <span class="o">==</span> <span class="mi">5</span><span class="p">:</span>
+            <span class="n">administrar_ligas</span><span class="p">()</span>
+        <span class="k">elif</span> <span class="n">opc</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">print</span> <span class="p">(</span><span class="s">&quot;Hasta pronto!&quot;</span><span class="p">)</span>
+            <span class="n">salir</span> <span class="o">=</span> <span class="bp">True</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">print</span> <span class="p">(</span><span class="s">&quot;Opcion incorrecta&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">print</span> <span class="p">(</span><span class="s">&quot;Opcion incorrecta&quot;</span><span class="p">)</span>
+</pre></div>
+
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2014, Grupo7.
+    </p>
+  </div>
+
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'0.2',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

@@ -1,0 +1,374 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>tests.test_equipo &mdash; LigaFutbol 0.2 documentation</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="LigaFutbol 0.2 documentation" href="../../index.html"/>
+        <link rel="up" title="Module code" href="../index.html"/> 
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+          <a href="../../index.html" class="fa fa-home"> LigaFutbol</a>
+        
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+        
+            <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../persona.html">Documentacion de Persona</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../jugador.html">Documentacion de Jugador</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../entrenador.html">Documentacion de Entrenador</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../estadio.html">Documentacion de Estadio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../equipo.html">Documentacion de Equipo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../liga.html">Documentacion de Liga</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../partido.html">Documentacion de Partido</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../registro.html">Documentacion de Registro</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../principal.html">Documentacion de Principal</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../test_jugador.html">Documentacion del test de jugador</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../test_equipo.html">Documentacion del test de equipo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../test_liga.html">Documentacion del test de liga</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../test_registro.html">Documentacion del test de registro</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../manual.html">Ver manual de usuario</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../principal.html">Codigo del programa de prueba</a></li>
+</ul>
+</li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../index.html">LigaFutbol</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../index.html">Module code</a> &raquo;</li>
+      
+    <li>tests.test_equipo</li>
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document">
+            
+  <h1>Source code for tests.test_equipo</h1><div class="highlight"><pre>
+<span class="kn">from</span> <span class="nn">unittest</span> <span class="kn">import</span> <span class="n">TestCase</span>
+<span class="kn">from</span> <span class="nn">src.Equipo</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">src.Estadio</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">src.Entrenador</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">src.Jugador</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="n">__author__</span> <span class="o">=</span> <span class="s">&#39;Grupo 7&#39;</span>
+
+
+<div class="viewcode-block" id="TestEquipo"><a class="viewcode-back" href="../../test_equipo.html#tests.test_equipo.TestEquipo">[docs]</a><span class="k">class</span> <span class="nc">TestEquipo</span><span class="p">(</span><span class="n">TestCase</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Clase test de un equipo de una liga</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+<div class="viewcode-block" id="TestEquipo.test_incrementar_puntos"><a class="viewcode-back" href="../../test_equipo.html#tests.test_equipo.TestEquipo.test_incrementar_puntos">[docs]</a>    <span class="k">def</span> <span class="nf">test_incrementar_puntos</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Test incrementar puntos</span>
+
+<span class="sd">        Crea un equipo, le cambia los puntos, los incrementa y comprueba si devuelve los correctos</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">equipo</span> <span class="o">=</span> <span class="n">Equipo</span><span class="p">(</span><span class="s">&quot;Sevilla FC&quot;</span><span class="p">,</span> <span class="s">&quot;1905&quot;</span><span class="p">,</span> <span class="s">&quot;Sevilla&quot;</span><span class="p">)</span>
+        <span class="n">equipo</span><span class="o">.</span><span class="n">set_puntos</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+        <span class="n">equipo</span><span class="o">.</span><span class="n">incrementar_puntos</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">equipo</span><span class="o">.</span><span class="n">get_puntos</span><span class="p">(),</span> <span class="mi">10</span><span class="p">)</span>
+</div>
+<div class="viewcode-block" id="TestEquipo.test_incrementar_goles_favor"><a class="viewcode-back" href="../../test_equipo.html#tests.test_equipo.TestEquipo.test_incrementar_goles_favor">[docs]</a>    <span class="k">def</span> <span class="nf">test_incrementar_goles_favor</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Test incrementar goles a favor</span>
+
+<span class="sd">        Crea un equipo, le cambia los goles a favor, los incrementa y comprueba si devuelve los correctos</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">equipo</span> <span class="o">=</span> <span class="n">Equipo</span><span class="p">(</span><span class="s">&quot;Sevilla FC&quot;</span><span class="p">,</span> <span class="s">&quot;1905&quot;</span><span class="p">,</span> <span class="s">&quot;Sevilla&quot;</span><span class="p">)</span>
+        <span class="n">equipo</span><span class="o">.</span><span class="n">set_goles_favor</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+        <span class="n">equipo</span><span class="o">.</span><span class="n">incrementar_goles_favor</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">equipo</span><span class="o">.</span><span class="n">get_goles_favor</span><span class="p">(),</span> <span class="mi">10</span><span class="p">)</span>
+</div>
+<div class="viewcode-block" id="TestEquipo.test_incrementar_goles_contra"><a class="viewcode-back" href="../../test_equipo.html#tests.test_equipo.TestEquipo.test_incrementar_goles_contra">[docs]</a>    <span class="k">def</span> <span class="nf">test_incrementar_goles_contra</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Test incrementar goles en contra</span>
+
+<span class="sd">        Crea un equipo, le cambia los goles en contra, los incrementa y comprueba si devuelve los correctos</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">equipo</span> <span class="o">=</span> <span class="n">Equipo</span><span class="p">(</span><span class="s">&quot;Sevilla FC&quot;</span><span class="p">,</span> <span class="s">&quot;1905&quot;</span><span class="p">,</span> <span class="s">&quot;Sevilla&quot;</span><span class="p">)</span>
+        <span class="n">equipo</span><span class="o">.</span><span class="n">set_goles_contra</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+        <span class="n">equipo</span><span class="o">.</span><span class="n">incrementar_goles_contra</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">equipo</span><span class="o">.</span><span class="n">get_goles_contra</span><span class="p">(),</span> <span class="mi">6</span><span class="p">)</span>
+</div>
+<div class="viewcode-block" id="TestEquipo.test_incrementar_partidos_ganados"><a class="viewcode-back" href="../../test_equipo.html#tests.test_equipo.TestEquipo.test_incrementar_partidos_ganados">[docs]</a>    <span class="k">def</span> <span class="nf">test_incrementar_partidos_ganados</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Test incrementar partidos ganados</span>
+
+<span class="sd">        Crea un equipo, le cambia los partidos ganados, los incrementa y comprueba si devuelve los correctos</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">equipo</span> <span class="o">=</span> <span class="n">Equipo</span><span class="p">(</span><span class="s">&quot;Sevilla FC&quot;</span><span class="p">,</span> <span class="s">&quot;1905&quot;</span><span class="p">,</span> <span class="s">&quot;Sevilla&quot;</span><span class="p">)</span>
+        <span class="n">equipo</span><span class="o">.</span><span class="n">set_partidos_ganados</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+        <span class="n">equipo</span><span class="o">.</span><span class="n">incrementar_partidos_ganados</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">equipo</span><span class="o">.</span><span class="n">get_partidos_ganados</span><span class="p">(),</span> <span class="mi">3</span><span class="p">)</span>
+</div>
+<div class="viewcode-block" id="TestEquipo.test_incrementar_partidos_empatados"><a class="viewcode-back" href="../../test_equipo.html#tests.test_equipo.TestEquipo.test_incrementar_partidos_empatados">[docs]</a>    <span class="k">def</span> <span class="nf">test_incrementar_partidos_empatados</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Test incrementar partidos empatados</span>
+
+<span class="sd">        Crea un equipo, le cambia los partidos empatados, los incrementa y comprueba si devuelve los correctos</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">equipo</span> <span class="o">=</span> <span class="n">Equipo</span><span class="p">(</span><span class="s">&quot;Sevilla FC&quot;</span><span class="p">,</span> <span class="s">&quot;1905&quot;</span><span class="p">,</span> <span class="s">&quot;Sevilla&quot;</span><span class="p">)</span>
+        <span class="n">equipo</span><span class="o">.</span><span class="n">set_partidos_empatados</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+        <span class="n">equipo</span><span class="o">.</span><span class="n">incrementar_partidos_empatados</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">equipo</span><span class="o">.</span><span class="n">get_partidos_empatados</span><span class="p">(),</span> <span class="mi">2</span><span class="p">)</span>
+</div>
+<div class="viewcode-block" id="TestEquipo.test_incrementar_partidos_perdidos"><a class="viewcode-back" href="../../test_equipo.html#tests.test_equipo.TestEquipo.test_incrementar_partidos_perdidos">[docs]</a>    <span class="k">def</span> <span class="nf">test_incrementar_partidos_perdidos</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Test incrementar partidos empatados</span>
+
+<span class="sd">        Crea un equipo, le cambia los partidos empatados, los incrementa y comprueba si devuelve los correctos</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">equipo</span> <span class="o">=</span> <span class="n">Equipo</span><span class="p">(</span><span class="s">&quot;Sevilla FC&quot;</span><span class="p">,</span> <span class="s">&quot;1905&quot;</span><span class="p">,</span> <span class="s">&quot;Sevilla&quot;</span><span class="p">)</span>
+        <span class="n">equipo</span><span class="o">.</span><span class="n">set_partidos_empatados</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+        <span class="n">equipo</span><span class="o">.</span><span class="n">incrementar_partidos_empatados</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">equipo</span><span class="o">.</span><span class="n">get_partidos_empatados</span><span class="p">(),</span> <span class="mi">6</span><span class="p">)</span>
+</div>
+<div class="viewcode-block" id="TestEquipo.test_asignar_estadio"><a class="viewcode-back" href="../../test_equipo.html#tests.test_equipo.TestEquipo.test_asignar_estadio">[docs]</a>    <span class="k">def</span> <span class="nf">test_asignar_estadio</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Test asignar estadio</span>
+
+<span class="sd">        Crea un estadio y un equipo y le asigna ese estadio. Comprueba si ese equipo devuelve ese estadio</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">es1</span> <span class="o">=</span> <span class="n">Estadio</span><span class="p">(</span><span class="s">&quot;Camp Nou&quot;</span><span class="p">,</span> <span class="s">&quot;Barcelona&quot;</span><span class="p">,</span> <span class="mi">1650300</span><span class="p">)</span>
+        <span class="n">equipo</span> <span class="o">=</span> <span class="n">Equipo</span><span class="p">(</span><span class="s">&quot;Sevilla FC&quot;</span><span class="p">,</span> <span class="s">&quot;1905&quot;</span><span class="p">,</span> <span class="s">&quot;Sevilla&quot;</span><span class="p">)</span>
+        <span class="n">equipo</span><span class="o">.</span><span class="n">asignar_estadio</span><span class="p">(</span><span class="n">es1</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">equipo</span><span class="o">.</span><span class="n">get_estadio</span><span class="p">(),</span> <span class="n">es1</span><span class="p">)</span>
+</div>
+<div class="viewcode-block" id="TestEquipo.test_asignar_entrenador"><a class="viewcode-back" href="../../test_equipo.html#tests.test_equipo.TestEquipo.test_asignar_entrenador">[docs]</a>    <span class="k">def</span> <span class="nf">test_asignar_entrenador</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Test asignar entrenador</span>
+
+<span class="sd">        Crea un entrenador y un equipo y le asigna ese entrenador. Comprueba si ese equipo devuelve ese entrenador</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">en1</span> <span class="o">=</span> <span class="n">Entrenador</span><span class="p">(</span><span class="s">&quot;Pep&quot;</span><span class="p">,</span> <span class="s">&quot;Guardiola&quot;</span><span class="p">,</span> <span class="s">&quot;1234P&quot;</span><span class="p">,</span> <span class="s">&quot;22/11/1975&quot;</span><span class="p">,</span> <span class="s">&quot;Espania&quot;</span><span class="p">,</span> <span class="s">&quot;1234L&quot;</span><span class="p">)</span>
+        <span class="n">equipo</span> <span class="o">=</span> <span class="n">Equipo</span><span class="p">(</span><span class="s">&quot;Sevilla FC&quot;</span><span class="p">,</span> <span class="s">&quot;1905&quot;</span><span class="p">,</span> <span class="s">&quot;Sevilla&quot;</span><span class="p">)</span>
+        <span class="n">equipo</span><span class="o">.</span><span class="n">asignar_entrenador</span><span class="p">(</span><span class="n">en1</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">equipo</span><span class="o">.</span><span class="n">get_entrenador</span><span class="p">(),</span> <span class="n">en1</span><span class="p">)</span>
+</div>
+<div class="viewcode-block" id="TestEquipo.test_agregar_jugador"><a class="viewcode-back" href="../../test_equipo.html#tests.test_equipo.TestEquipo.test_agregar_jugador">[docs]</a>    <span class="k">def</span> <span class="nf">test_agregar_jugador</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Test agregar jugador</span>
+
+<span class="sd">        Crea un jugador y un equipo y le agrega ese jugador. Comprueba si existe ese jugador en ese equipo</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">j1</span> <span class="o">=</span> <span class="n">Jugador</span><span class="p">(</span><span class="s">&quot;Leo&quot;</span><span class="p">,</span> <span class="s">&quot;Messi&quot;</span><span class="p">,</span> <span class="s">&quot;1234M&quot;</span><span class="p">,</span> <span class="s">&quot;23/02/1980&quot;</span><span class="p">,</span> <span class="s">&quot;Argentina&quot;</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="s">&quot;delantero&quot;</span><span class="p">)</span>
+        <span class="n">equipo</span> <span class="o">=</span> <span class="n">Equipo</span><span class="p">(</span><span class="s">&quot;Sevilla FC&quot;</span><span class="p">,</span> <span class="s">&quot;1905&quot;</span><span class="p">,</span> <span class="s">&quot;Sevilla&quot;</span><span class="p">)</span>
+        <span class="n">equipo</span><span class="o">.</span><span class="n">agregar_jugador</span><span class="p">(</span><span class="n">j1</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">equipo</span><span class="o">.</span><span class="n">existe_jugador</span><span class="p">(</span><span class="n">j1</span><span class="o">.</span><span class="n">get_dni</span><span class="p">()),</span> <span class="n">j1</span><span class="p">)</span>
+</div>
+<div class="viewcode-block" id="TestEquipo.test_pichichi_equipo"><a class="viewcode-back" href="../../test_equipo.html#tests.test_equipo.TestEquipo.test_pichichi_equipo">[docs]</a>    <span class="k">def</span> <span class="nf">test_pichichi_equipo</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Test pichichi equipo</span>
+
+<span class="sd">        Crea 3 jugadores y un equipo y le agrega esos jugadores. Cambia los goles de los jugadores y comprueba que</span>
+<span class="sd">        devuelve el que tiene mas goles marcados</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">j1</span> <span class="o">=</span> <span class="n">Jugador</span><span class="p">(</span><span class="s">&quot;Leo&quot;</span><span class="p">,</span> <span class="s">&quot;Messi&quot;</span><span class="p">,</span> <span class="s">&quot;1234M&quot;</span><span class="p">,</span> <span class="s">&quot;23/02/1980&quot;</span><span class="p">,</span> <span class="s">&quot;Argentina&quot;</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="s">&quot;delantero&quot;</span><span class="p">)</span>
+        <span class="n">j2</span> <span class="o">=</span> <span class="n">Jugador</span><span class="p">(</span><span class="s">&quot;Luis&quot;</span><span class="p">,</span> <span class="s">&quot;Suarez&quot;</span><span class="p">,</span> <span class="s">&quot;1234S&quot;</span><span class="p">,</span> <span class="s">&quot;11/08/1985&quot;</span><span class="p">,</span> <span class="s">&quot;Uruguay&quot;</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="s">&quot;delantero&quot;</span><span class="p">)</span>
+        <span class="n">j3</span> <span class="o">=</span> <span class="n">Jugador</span><span class="p">(</span><span class="s">&quot;Neymar&quot;</span><span class="p">,</span> <span class="s">&quot;Junior&quot;</span><span class="p">,</span> <span class="s">&quot;1234J&quot;</span><span class="p">,</span> <span class="s">&quot;19/02/1990&quot;</span><span class="p">,</span> <span class="s">&quot;Brasil&quot;</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="s">&quot;delantero&quot;</span><span class="p">)</span>
+        <span class="n">equipo</span> <span class="o">=</span> <span class="n">Equipo</span><span class="p">(</span><span class="s">&quot;Barsa&quot;</span><span class="p">,</span> <span class="s">&quot;1990&quot;</span><span class="p">,</span> <span class="s">&quot;Barcelona&quot;</span><span class="p">)</span>
+        <span class="n">equipo</span><span class="o">.</span><span class="n">agregar_jugador</span><span class="p">(</span><span class="n">j1</span><span class="p">)</span>
+        <span class="n">equipo</span><span class="o">.</span><span class="n">agregar_jugador</span><span class="p">(</span><span class="n">j2</span><span class="p">)</span>
+        <span class="n">equipo</span><span class="o">.</span><span class="n">agregar_jugador</span><span class="p">(</span><span class="n">j3</span><span class="p">)</span>
+        <span class="n">j1</span><span class="o">.</span><span class="n">set_goles_marcados</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+        <span class="n">j2</span><span class="o">.</span><span class="n">set_goles_marcados</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+        <span class="n">j3</span><span class="o">.</span><span class="n">set_goles_marcados</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">equipo</span><span class="o">.</span><span class="n">pichichi_equipo</span><span class="p">(),</span> <span class="n">j2</span><span class="p">)</span>
+</div>
+<div class="viewcode-block" id="TestEquipo.test_consultar_jugador"><a class="viewcode-back" href="../../test_equipo.html#tests.test_equipo.TestEquipo.test_consultar_jugador">[docs]</a>    <span class="k">def</span> <span class="nf">test_consultar_jugador</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Test consultar jugador</span>
+
+<span class="sd">        Crea un jugador y mustra sus datos</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">j1</span> <span class="o">=</span> <span class="n">Jugador</span><span class="p">(</span><span class="s">&quot;Leo&quot;</span><span class="p">,</span> <span class="s">&quot;Messi&quot;</span><span class="p">,</span> <span class="s">&quot;1234M&quot;</span><span class="p">,</span> <span class="s">&quot;23/02/1980&quot;</span><span class="p">,</span> <span class="s">&quot;Argentina&quot;</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="s">&quot;delantero&quot;</span><span class="p">)</span>
+        <span class="n">eq1</span> <span class="o">=</span> <span class="n">Equipo</span><span class="p">(</span><span class="s">&quot;FC Barcelona&quot;</span><span class="p">,</span> <span class="s">&quot;1900&quot;</span><span class="p">,</span> <span class="s">&quot;Barcelona&quot;</span><span class="p">)</span>
+        <span class="n">eq1</span><span class="o">.</span><span class="n">agregar_jugador</span><span class="p">(</span><span class="n">j1</span><span class="p">)</span>
+        <span class="n">eq1</span><span class="o">.</span><span class="n">consultar_jugador</span><span class="p">(</span><span class="n">j1</span><span class="p">)</span>
+</div>
+<div class="viewcode-block" id="TestEquipo.test_existe_jugador"><a class="viewcode-back" href="../../test_equipo.html#tests.test_equipo.TestEquipo.test_existe_jugador">[docs]</a>    <span class="k">def</span> <span class="nf">test_existe_jugador</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Test para comprobar si existe un jugador</span>
+
+<span class="sd">        Compruieba si existe el jugador creado</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">j1</span> <span class="o">=</span> <span class="n">Jugador</span><span class="p">(</span><span class="s">&quot;Leo&quot;</span><span class="p">,</span> <span class="s">&quot;Messi&quot;</span><span class="p">,</span> <span class="s">&quot;1234M&quot;</span><span class="p">,</span> <span class="s">&quot;23/02/1980&quot;</span><span class="p">,</span> <span class="s">&quot;Argentina&quot;</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="s">&quot;delantero&quot;</span><span class="p">)</span>
+        <span class="n">eq1</span> <span class="o">=</span> <span class="n">Equipo</span><span class="p">(</span><span class="s">&quot;FC Barcelona&quot;</span><span class="p">,</span> <span class="s">&quot;1900&quot;</span><span class="p">,</span> <span class="s">&quot;Barcelona&quot;</span><span class="p">)</span>
+        <span class="n">eq1</span><span class="o">.</span><span class="n">agregar_jugador</span><span class="p">(</span><span class="n">j1</span><span class="p">)</span>
+        <span class="n">eq1</span><span class="o">.</span><span class="n">existe_jugador</span><span class="p">(</span><span class="s">&quot;1234M&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">mostrar_jugador</span><span class="p">()</span>
+</div>
+<div class="viewcode-block" id="TestEquipo.test_listar_jugadores"><a class="viewcode-back" href="../../test_equipo.html#tests.test_equipo.TestEquipo.test_listar_jugadores">[docs]</a>    <span class="k">def</span> <span class="nf">test_listar_jugadores</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Test de listar jugadores</span>
+
+<span class="sd">        Comprueba que se muestra la lista de los jugadores aniadidos a un equipo</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">j1</span> <span class="o">=</span> <span class="n">Jugador</span><span class="p">(</span><span class="s">&quot;Leo&quot;</span><span class="p">,</span> <span class="s">&quot;Messi&quot;</span><span class="p">,</span> <span class="s">&quot;1234M&quot;</span><span class="p">,</span> <span class="s">&quot;23/02/1980&quot;</span><span class="p">,</span> <span class="s">&quot;Argentina&quot;</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="s">&quot;delantero&quot;</span><span class="p">)</span>
+        <span class="n">j2</span> <span class="o">=</span> <span class="n">Jugador</span><span class="p">(</span><span class="s">&quot;Luis&quot;</span><span class="p">,</span> <span class="s">&quot;Suarez&quot;</span><span class="p">,</span> <span class="s">&quot;1234S&quot;</span><span class="p">,</span> <span class="s">&quot;11/08/1985&quot;</span><span class="p">,</span> <span class="s">&quot;Uruguay&quot;</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="s">&quot;delantero&quot;</span><span class="p">)</span>
+        <span class="n">j3</span> <span class="o">=</span> <span class="n">Jugador</span><span class="p">(</span><span class="s">&quot;Neymar&quot;</span><span class="p">,</span> <span class="s">&quot;Junior&quot;</span><span class="p">,</span> <span class="s">&quot;1234J&quot;</span><span class="p">,</span> <span class="s">&quot;19/02/1990&quot;</span><span class="p">,</span> <span class="s">&quot;Brasil&quot;</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="s">&quot;delantero&quot;</span><span class="p">)</span>
+        <span class="n">eq1</span> <span class="o">=</span> <span class="n">Equipo</span><span class="p">(</span><span class="s">&quot;FC Barcelona&quot;</span><span class="p">,</span> <span class="s">&quot;1900&quot;</span><span class="p">,</span> <span class="s">&quot;Barcelona&quot;</span><span class="p">)</span>
+        <span class="n">eq1</span><span class="o">.</span><span class="n">agregar_jugador</span><span class="p">(</span><span class="n">j1</span><span class="p">)</span>
+        <span class="n">eq1</span><span class="o">.</span><span class="n">agregar_jugador</span><span class="p">(</span><span class="n">j2</span><span class="p">)</span>
+        <span class="n">eq1</span><span class="o">.</span><span class="n">agregar_jugador</span><span class="p">(</span><span class="n">j3</span><span class="p">)</span>
+        <span class="n">eq1</span><span class="o">.</span><span class="n">listar_jugadores</span><span class="p">()</span>
+</div>
+<div class="viewcode-block" id="TestEquipo.test_consultar_estadio"><a class="viewcode-back" href="../../test_equipo.html#tests.test_equipo.TestEquipo.test_consultar_estadio">[docs]</a>    <span class="k">def</span> <span class="nf">test_consultar_estadio</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Test de consultar estadio</span>
+
+<span class="sd">        Comprueba que muestra los datos del estadio creado</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">es1</span> <span class="o">=</span> <span class="n">Estadio</span><span class="p">(</span><span class="s">&quot;Camp Nou&quot;</span><span class="p">,</span> <span class="s">&quot;Barcelona&quot;</span><span class="p">,</span> <span class="mi">1650300</span><span class="p">)</span>
+        <span class="n">eq1</span> <span class="o">=</span> <span class="n">Equipo</span><span class="p">(</span><span class="s">&quot;FC Barcelona&quot;</span><span class="p">,</span> <span class="s">&quot;1900&quot;</span><span class="p">,</span> <span class="s">&quot;Barcelona&quot;</span><span class="p">)</span>
+        <span class="n">eq1</span><span class="o">.</span><span class="n">asignar_estadio</span><span class="p">(</span><span class="n">es1</span><span class="p">)</span>
+        <span class="n">eq1</span><span class="o">.</span><span class="n">consultar_estadio</span><span class="p">()</span>
+</div>
+<div class="viewcode-block" id="TestEquipo.test_consultar_entrenador"><a class="viewcode-back" href="../../test_equipo.html#tests.test_equipo.TestEquipo.test_consultar_entrenador">[docs]</a>    <span class="k">def</span> <span class="nf">test_consultar_entrenador</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Test de consultar entrenador</span>
+
+<span class="sd">        Comprueba que muestra los datos del entrenador creado</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">en1</span> <span class="o">=</span> <span class="n">Entrenador</span><span class="p">(</span><span class="s">&quot;Pep&quot;</span><span class="p">,</span> <span class="s">&quot;Guardiola&quot;</span><span class="p">,</span> <span class="s">&quot;1234P&quot;</span><span class="p">,</span> <span class="s">&quot;22/11/1975&quot;</span><span class="p">,</span> <span class="s">&quot;Espania&quot;</span><span class="p">,</span> <span class="s">&quot;1234L&quot;</span><span class="p">)</span>
+        <span class="n">eq1</span> <span class="o">=</span> <span class="n">Equipo</span><span class="p">(</span><span class="s">&quot;FC Barcelona&quot;</span><span class="p">,</span> <span class="s">&quot;1900&quot;</span><span class="p">,</span> <span class="s">&quot;Barcelona&quot;</span><span class="p">)</span>
+        <span class="n">eq1</span><span class="o">.</span><span class="n">asignar_entrenador</span><span class="p">(</span><span class="n">en1</span><span class="p">)</span>
+        <span class="n">eq1</span><span class="o">.</span><span class="n">consultar_entrenador</span><span class="p">()</span>
+</div>
+<div class="viewcode-block" id="TestEquipo.test_mostrar_equipo"><a class="viewcode-back" href="../../test_equipo.html#tests.test_equipo.TestEquipo.test_mostrar_equipo">[docs]</a>    <span class="k">def</span> <span class="nf">test_mostrar_equipo</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Test de mostrar equipo</span>
+
+<span class="sd">        Comprueba que muestra los datos del equipo</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">eq1</span> <span class="o">=</span> <span class="n">Equipo</span><span class="p">(</span><span class="s">&quot;FC Barcelona&quot;</span><span class="p">,</span> <span class="s">&quot;1900&quot;</span><span class="p">,</span> <span class="s">&quot;Barcelona&quot;</span><span class="p">)</span>
+        <span class="n">eq1</span><span class="o">.</span><span class="n">mostrar_equipo</span><span class="p">()</span></div></div>
+</pre></div>
+
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2014, Grupo7.
+    </p>
+  </div>
+
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'0.2',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

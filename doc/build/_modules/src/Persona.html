@@ -1,0 +1,305 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>src.Persona &mdash; LigaFutbol 0.2 documentation</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="LigaFutbol 0.2 documentation" href="../../index.html"/>
+        <link rel="up" title="Module code" href="../index.html"/> 
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+          <a href="../../index.html" class="fa fa-home"> LigaFutbol</a>
+        
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+        
+            <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../persona.html">Documentacion de Persona</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../jugador.html">Documentacion de Jugador</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../entrenador.html">Documentacion de Entrenador</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../estadio.html">Documentacion de Estadio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../equipo.html">Documentacion de Equipo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../liga.html">Documentacion de Liga</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../partido.html">Documentacion de Partido</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../registro.html">Documentacion de Registro</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../principal.html">Documentacion de Principal</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../test_jugador.html">Documentacion del test de jugador</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../test_equipo.html">Documentacion del test de equipo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../test_liga.html">Documentacion del test de liga</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../test_registro.html">Documentacion del test de registro</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../manual.html">Ver manual de usuario</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../principal.html">Codigo del programa de prueba</a></li>
+</ul>
+</li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../index.html">LigaFutbol</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../index.html">Module code</a> &raquo;</li>
+      
+    <li>src.Persona</li>
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document">
+            
+  <h1>Source code for src.Persona</h1><div class="highlight"><pre>
+<span class="n">__author__</span> <span class="o">=</span> <span class="s">&#39;Grupo 7&#39;</span>
+
+
+<div class="viewcode-block" id="Persona"><a class="viewcode-back" href="../../persona.html#src.Persona.Persona">[docs]</a><span class="k">class</span> <span class="nc">Persona</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Representacion de una persona</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+<div class="viewcode-block" id="Persona.__init__"><a class="viewcode-back" href="../../persona.html#src.Persona.Persona.__init__">[docs]</a>    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nombre</span><span class="p">,</span> <span class="n">apellidos</span><span class="p">,</span> <span class="n">dni</span><span class="p">,</span> <span class="n">fecha_nac</span><span class="p">,</span> <span class="n">pais_nac</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Constructor</span>
+
+<span class="sd">        Inicializa el constructor de Persona</span>
+<span class="sd">        :param nombre: nombre</span>
+<span class="sd">        :param apellidos: apellidos</span>
+<span class="sd">		:param dni: dni</span>
+<span class="sd">		:param fecha_nac: fecha de nacimiento</span>
+<span class="sd">		:param fecha_nac: pais de nacimiento</span>
+<span class="sd">        :type nombre: String</span>
+<span class="sd">        :type apellidos: String</span>
+<span class="sd">		:type dni: String</span>
+<span class="sd">		:type fecha_nac: String</span>
+<span class="sd">		:type pais_nac: String</span>
+<span class="sd">        :return:</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">nombre</span> <span class="o">=</span> <span class="n">nombre</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">apellidos</span> <span class="o">=</span> <span class="n">apellidos</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">dni</span> <span class="o">=</span> <span class="n">dni</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">fecha_nac</span> <span class="o">=</span> <span class="n">fecha_nac</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">pais_nac</span> <span class="o">=</span> <span class="n">pais_nac</span>
+</div>
+<div class="viewcode-block" id="Persona.get_nombre"><a class="viewcode-back" href="../../persona.html#src.Persona.Persona.get_nombre">[docs]</a>    <span class="k">def</span> <span class="nf">get_nombre</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Metodo consultor del nombre</span>
+
+<span class="sd">        Devuelve el nombre de la persona</span>
+<span class="sd">        :return: Nombre de la persona</span>
+<span class="sd">		:rtype: String</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">nombre</span>
+</div>
+<div class="viewcode-block" id="Persona.get_apellidos"><a class="viewcode-back" href="../../persona.html#src.Persona.Persona.get_apellidos">[docs]</a>    <span class="k">def</span> <span class="nf">get_apellidos</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Metodo consultor del apellido</span>
+
+<span class="sd">        Devuelve el apellido de la persona</span>
+<span class="sd">        :return: Apellido de la persona</span>
+<span class="sd">		:rtype: String</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">apellidos</span>
+</div>
+<div class="viewcode-block" id="Persona.get_dni"><a class="viewcode-back" href="../../persona.html#src.Persona.Persona.get_dni">[docs]</a>    <span class="k">def</span> <span class="nf">get_dni</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Metodo consultor del dni</span>
+
+<span class="sd">        Devuelve el dni de la persona</span>
+<span class="sd">        :return: Dni de la persona</span>
+<span class="sd">		:rtype: String</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">dni</span>
+</div>
+<div class="viewcode-block" id="Persona.get_fecha_nac"><a class="viewcode-back" href="../../persona.html#src.Persona.Persona.get_fecha_nac">[docs]</a>    <span class="k">def</span> <span class="nf">get_fecha_nac</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Metodo consultor de la fecha de nacimiento</span>
+
+<span class="sd">        Devuelve la fecha de nacimiento de la persona</span>
+<span class="sd">        :return: Fecha de nacimiento de la persona</span>
+<span class="sd">		:rtype: String</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">fecha_nac</span>
+</div>
+<div class="viewcode-block" id="Persona.get_pais_nac"><a class="viewcode-back" href="../../persona.html#src.Persona.Persona.get_pais_nac">[docs]</a>    <span class="k">def</span> <span class="nf">get_pais_nac</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Metodo consultor del pais de nacimiento</span>
+
+<span class="sd">        Devuelve el pais de nacimiento de la persona</span>
+<span class="sd">        :return: Pais de nacimiento de la persona</span>
+<span class="sd">		:rtype: String</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">pais_nac</span>
+</div>
+<div class="viewcode-block" id="Persona.set_nombre"><a class="viewcode-back" href="../../persona.html#src.Persona.Persona.set_nombre">[docs]</a>    <span class="k">def</span> <span class="nf">set_nombre</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nombre</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Metodo modificador del nombre</span>
+
+<span class="sd">        Modifica el nombre de la persona</span>
+<span class="sd">        :param nombre: nombre</span>
+<span class="sd">        :type nombre: String</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">nombre</span> <span class="o">=</span> <span class="n">nombre</span>
+</div>
+<div class="viewcode-block" id="Persona.set_apellidos"><a class="viewcode-back" href="../../persona.html#src.Persona.Persona.set_apellidos">[docs]</a>    <span class="k">def</span> <span class="nf">set_apellidos</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">apellidos</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Metodo modificador de los apellidos</span>
+
+<span class="sd">        Modifica los apellidos de la persona</span>
+<span class="sd">        :param apellidos: apelldios</span>
+<span class="sd">        :type apellidos: String</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">apellidos</span> <span class="o">=</span> <span class="n">apellidos</span>
+</div>
+<div class="viewcode-block" id="Persona.set_dni"><a class="viewcode-back" href="../../persona.html#src.Persona.Persona.set_dni">[docs]</a>    <span class="k">def</span> <span class="nf">set_dni</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dni</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Metodo modificador el dni</span>
+
+<span class="sd">        Modifica el dni de la persona</span>
+<span class="sd">        :param dni: dni</span>
+<span class="sd">        :type dni: String</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">dni</span> <span class="o">=</span> <span class="n">dni</span>
+</div>
+<div class="viewcode-block" id="Persona.set_fecha_nac"><a class="viewcode-back" href="../../persona.html#src.Persona.Persona.set_fecha_nac">[docs]</a>    <span class="k">def</span> <span class="nf">set_fecha_nac</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fecha_nac</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Metodo modificador de la fecha nacimiento</span>
+
+<span class="sd">        Modifica la fecha de nacimiento de la persona</span>
+<span class="sd">        :param fecha_nac: fecha de nacimiento</span>
+<span class="sd">        :type fecha_nac: String</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">fecha_nac</span> <span class="o">=</span> <span class="n">fecha_nac</span>
+</div>
+<div class="viewcode-block" id="Persona.set_pais_nac"><a class="viewcode-back" href="../../persona.html#src.Persona.Persona.set_pais_nac">[docs]</a>    <span class="k">def</span> <span class="nf">set_pais_nac</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pais_nac</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Metodo modificador del pais de nacimiento</span>
+
+<span class="sd">        Modifica el pais de la persona</span>
+<span class="sd">        :param pais_nac: pais de nacimiento</span>
+<span class="sd">        :type pais_nac: String</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">pais_nac</span> <span class="o">=</span> <span class="n">pais_nac</span></div></div>
+</pre></div>
+
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2014, Grupo7.
+    </p>
+  </div>
+
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'0.2',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

@@ -1,0 +1,690 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Documentacion de Equipo &mdash; LigaFutbol 0.2 documentation</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="LigaFutbol 0.2 documentation" href="index.html"/>
+        <link rel="next" title="Documentacion de Liga" href="liga.html"/>
+        <link rel="prev" title="Documentacion de Estadio" href="estadio.html"/> 
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+          <a href="index.html" class="fa fa-home"> LigaFutbol</a>
+        
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+        
+            <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="persona.html">Documentacion de Persona</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jugador.html">Documentacion de Jugador</a></li>
+<li class="toctree-l1"><a class="reference internal" href="entrenador.html">Documentacion de Entrenador</a></li>
+<li class="toctree-l1"><a class="reference internal" href="estadio.html">Documentacion de Estadio</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Documentacion de Equipo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="liga.html">Documentacion de Liga</a></li>
+<li class="toctree-l1"><a class="reference internal" href="partido.html">Documentacion de Partido</a></li>
+<li class="toctree-l1"><a class="reference internal" href="registro.html">Documentacion de Registro</a></li>
+<li class="toctree-l1"><a class="reference internal" href="principal.html">Documentacion de Principal</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="test_jugador.html">Documentacion del test de jugador</a></li>
+<li class="toctree-l1"><a class="reference internal" href="test_equipo.html">Documentacion del test de equipo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="test_liga.html">Documentacion del test de liga</a></li>
+<li class="toctree-l1"><a class="reference internal" href="test_registro.html">Documentacion del test de registro</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="manual.html">Ver manual de usuario</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="principal.html">Codigo del programa de prueba</a></li>
+</ul>
+</li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">LigaFutbol</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>Documentacion de Equipo</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="_sources/equipo.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document">
+            
+  <div class="section" id="module-src.Equipo">
+<span id="documentacion-de-equipo"></span><h1>Documentacion de Equipo<a class="headerlink" href="#module-src.Equipo" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="src.Equipo.Equipo">
+<em class="property">class </em><tt class="descclassname">src.Equipo.</tt><tt class="descname">Equipo</tt><big>(</big><em>nombre</em>, <em>anio_creacion</em>, <em>ciudad</em><big>)</big><a class="reference internal" href="_modules/src/Equipo.html#Equipo"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#src.Equipo.Equipo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Representacion de un equipo de una liga</p>
+<dl class="method">
+<dt id="src.Equipo.Equipo.__cmp__">
+<tt class="descname">__cmp__</tt><big>(</big><em>other</em><big>)</big><a class="reference internal" href="_modules/src/Equipo.html#Equipo.__cmp__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#src.Equipo.Equipo.__cmp__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Metodo que compara dos equipos</p>
+<p>Compara dos equipos por algun atributo
+:param other: el otro equipo con el que este se va a comparar
+:type other: Equipo
+:var res: resta de los puntos de este equipo y el pasado por parametros
+:return: resultado de la resta
+:rtype: Integer</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="src.Equipo.Equipo.__init__">
+<tt class="descname">__init__</tt><big>(</big><em>nombre</em>, <em>anio_creacion</em>, <em>ciudad</em><big>)</big><a class="reference internal" href="_modules/src/Equipo.html#Equipo.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#src.Equipo.Equipo.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constructor</p>
+<p>Inicializa el constructor de Equipo
+:param nombre: nombre del equipo
+:param anio-creacion: anio de creacion del equipo</p>
+<blockquote>
+<div><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">param ciudad:</th><td class="field-body">ciudad del equipo</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="src.Equipo.Equipo.__module__">
+<tt class="descname">__module__</tt><em class="property"> = 'src.Equipo'</em><a class="headerlink" href="#src.Equipo.Equipo.__module__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="src.Equipo.Equipo.__str__">
+<tt class="descname">__str__</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/src/Equipo.html#Equipo.__str__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#src.Equipo.Equipo.__str__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Metodo que devuelve los datos del equipo</p>
+<p>Devuelve los datos del equipo
+:return: datos del equipo
+:rtype: String</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="src.Equipo.Equipo.agregar_jugador">
+<tt class="descname">agregar_jugador</tt><big>(</big><em>jugador</em><big>)</big><a class="reference internal" href="_modules/src/Equipo.html#Equipo.agregar_jugador"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#src.Equipo.Equipo.agregar_jugador" title="Permalink to this definition">¶</a></dt>
+<dd><p>Metodo que agrega un jugador al equipo</p>
+<p>Agrega un jugador al equipo
+:param jugador: jugador a agregar al equipo
+:type jugador: Jugador</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="src.Equipo.Equipo.asignar_entrenador">
+<tt class="descname">asignar_entrenador</tt><big>(</big><em>entrenador</em><big>)</big><a class="reference internal" href="_modules/src/Equipo.html#Equipo.asignar_entrenador"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#src.Equipo.Equipo.asignar_entrenador" title="Permalink to this definition">¶</a></dt>
+<dd><p>Metodo que asigna un entrenador al equipo</p>
+<p>Asigna un entrenador al equipo
+:param entrenador: entrenador a asignar al equipo
+:type entrenador: Entrenador</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="src.Equipo.Equipo.asignar_estadio">
+<tt class="descname">asignar_estadio</tt><big>(</big><em>estadio</em><big>)</big><a class="reference internal" href="_modules/src/Equipo.html#Equipo.asignar_estadio"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#src.Equipo.Equipo.asignar_estadio" title="Permalink to this definition">¶</a></dt>
+<dd><p>Metodo que asigna un estadio al equipo</p>
+<p>Asigna un estadio al equipo
+:param estadio: estadio a asignar al equipo
+:type estadio: Estadio</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="src.Equipo.Equipo.consultar_entrenador">
+<tt class="descname">consultar_entrenador</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/src/Equipo.html#Equipo.consultar_entrenador"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#src.Equipo.Equipo.consultar_entrenador" title="Permalink to this definition">¶</a></dt>
+<dd><p>Metodo que muestra los datos del entrenador del equipo</p>
+<p>Mustra los datos del entrenador del equipo</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="src.Equipo.Equipo.consultar_estadio">
+<tt class="descname">consultar_estadio</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/src/Equipo.html#Equipo.consultar_estadio"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#src.Equipo.Equipo.consultar_estadio" title="Permalink to this definition">¶</a></dt>
+<dd><p>Metodo que muestra los datos del estadio del equipo</p>
+<p>Mustra los datos del estadio del equipo</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="src.Equipo.Equipo.consultar_jugador">
+<tt class="descname">consultar_jugador</tt><big>(</big><em>jugador</em><big>)</big><a class="reference internal" href="_modules/src/Equipo.html#Equipo.consultar_jugador"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#src.Equipo.Equipo.consultar_jugador" title="Permalink to this definition">¶</a></dt>
+<dd><p>Metodo que muestra los datos de un jugador del equipo</p>
+<p>Muestra los datos de un jugador del equipo que se quiera consultar
+:param jugador: jugador a consultar del equipo
+:var j: jugador a consultar
+:type jugador: Jugador
+:type j: Jugador</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="src.Equipo.Equipo.existe_jugador">
+<tt class="descname">existe_jugador</tt><big>(</big><em>dni</em><big>)</big><a class="reference internal" href="_modules/src/Equipo.html#Equipo.existe_jugador"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#src.Equipo.Equipo.existe_jugador" title="Permalink to this definition">¶</a></dt>
+<dd><p>Metodo que comprueba si existe un jugador en el equipo</p>
+<p>Devuelve al jugador si existe en el equipo
+:param dni: dni del jugador a buscar en el equipo
+:var jugador: jugador del equipo
+:var j: jugador del equipo
+:type dni: String
+:type jugador: Jugador
+:type j: Jugador
+:return: devuelve el jugador si existe
+:rtype: Jugador</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="src.Equipo.Equipo.get_anio_creacion">
+<tt class="descname">get_anio_creacion</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/src/Equipo.html#Equipo.get_anio_creacion"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#src.Equipo.Equipo.get_anio_creacion" title="Permalink to this definition">¶</a></dt>
+<dd><p>Metodo consultor del anio de creacion</p>
+<p>Devuelve el anio de creacion del equipo
+:return: Anio de creacion del equipo</p>
+<blockquote>
+<div><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">rtype:</th><td class="field-body">Integer</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="src.Equipo.Equipo.get_ciudad">
+<tt class="descname">get_ciudad</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/src/Equipo.html#Equipo.get_ciudad"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#src.Equipo.Equipo.get_ciudad" title="Permalink to this definition">¶</a></dt>
+<dd><p>Metodo consultor de la ciudad</p>
+<p>Devuelve la ciudad del equipo
+:return: Ciudad del equipo</p>
+<blockquote>
+<div><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">rtype:</th><td class="field-body">String</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="src.Equipo.Equipo.get_entrenador">
+<tt class="descname">get_entrenador</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/src/Equipo.html#Equipo.get_entrenador"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#src.Equipo.Equipo.get_entrenador" title="Permalink to this definition">¶</a></dt>
+<dd><p>Metodo consultor del entrenador del equipo</p>
+<p>Devuelve el entrenador completo
+:return: entrenador del equipo</p>
+<blockquote>
+<div><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">rtype:</th><td class="field-body">Entrenador</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="src.Equipo.Equipo.get_estadio">
+<tt class="descname">get_estadio</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/src/Equipo.html#Equipo.get_estadio"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#src.Equipo.Equipo.get_estadio" title="Permalink to this definition">¶</a></dt>
+<dd><p>Metodo consultor del estadio del equipo</p>
+<p>Devuelve el estadio completo
+:return: estadio del equipo</p>
+<blockquote>
+<div><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">rtype:</th><td class="field-body">Estadio</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="src.Equipo.Equipo.get_goles_contra">
+<tt class="descname">get_goles_contra</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/src/Equipo.html#Equipo.get_goles_contra"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#src.Equipo.Equipo.get_goles_contra" title="Permalink to this definition">¶</a></dt>
+<dd><p>Metodo consultor de los goles en contra del equipo</p>
+<p>Devuelve los goles en contra del equipo
+:return: Goles en contra</p>
+<blockquote>
+<div><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">rtype:</th><td class="field-body">Integer</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="src.Equipo.Equipo.get_goles_favor">
+<tt class="descname">get_goles_favor</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/src/Equipo.html#Equipo.get_goles_favor"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#src.Equipo.Equipo.get_goles_favor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Metodo consultor de los goles a favor del equipo</p>
+<p>Devuelve los goles a favor del equipo
+:return: Goles a favor</p>
+<blockquote>
+<div><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">rtype:</th><td class="field-body">Integer</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="src.Equipo.Equipo.get_jugadores">
+<tt class="descname">get_jugadores</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/src/Equipo.html#Equipo.get_jugadores"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#src.Equipo.Equipo.get_jugadores" title="Permalink to this definition">¶</a></dt>
+<dd><p>Metodo consultor de la lista de jugadores</p>
+<p>Devuelve la lista completa con todos los jugadores que tiene el equipo
+:return: Lista de jugadores</p>
+<blockquote>
+<div><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">rtype:</th><td class="field-body">Jugadores[]</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="src.Equipo.Equipo.get_nombre">
+<tt class="descname">get_nombre</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/src/Equipo.html#Equipo.get_nombre"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#src.Equipo.Equipo.get_nombre" title="Permalink to this definition">¶</a></dt>
+<dd><p>Metodo consultor del nombre del equipo</p>
+<p>Devuelve el nombre del equipo
+:return: Nombre del equipo</p>
+<blockquote>
+<div><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">rtype:</th><td class="field-body">String</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="src.Equipo.Equipo.get_partidos_empatados">
+<tt class="descname">get_partidos_empatados</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/src/Equipo.html#Equipo.get_partidos_empatados"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#src.Equipo.Equipo.get_partidos_empatados" title="Permalink to this definition">¶</a></dt>
+<dd><p>Metodo consultor de los partidos empatados del equipo</p>
+<p>Devuelve el numero de partidos empatados del equipo
+:return: Partidos empatados</p>
+<blockquote>
+<div><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">rtype:</th><td class="field-body">Integer</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="src.Equipo.Equipo.get_partidos_ganados">
+<tt class="descname">get_partidos_ganados</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/src/Equipo.html#Equipo.get_partidos_ganados"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#src.Equipo.Equipo.get_partidos_ganados" title="Permalink to this definition">¶</a></dt>
+<dd><p>Metodo consultor de los partidos ganados del equipo</p>
+<p>Devuelve el numero de partidos ganados del equipo
+:return: Partidos ganados</p>
+<blockquote>
+<div><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">rtype:</th><td class="field-body">Integer</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="src.Equipo.Equipo.get_partidos_perdidos">
+<tt class="descname">get_partidos_perdidos</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/src/Equipo.html#Equipo.get_partidos_perdidos"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#src.Equipo.Equipo.get_partidos_perdidos" title="Permalink to this definition">¶</a></dt>
+<dd><p>Metodo consultor de los partidos perdidos del equipo</p>
+<p>Devuelve el numero de partidos perdidos del equipo
+:return: Partidos perdidos</p>
+<blockquote>
+<div><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">rtype:</th><td class="field-body">Integer</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="src.Equipo.Equipo.get_puntos">
+<tt class="descname">get_puntos</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/src/Equipo.html#Equipo.get_puntos"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#src.Equipo.Equipo.get_puntos" title="Permalink to this definition">¶</a></dt>
+<dd><p>Metodo consultor de los puntos del equipo</p>
+<p>Devuelve los puntos que tiene el equipo
+:return: Puntos del equipo</p>
+<blockquote>
+<div><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">rtype:</th><td class="field-body">Integer</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="src.Equipo.Equipo.incrementar_goles_contra">
+<tt class="descname">incrementar_goles_contra</tt><big>(</big><em>goles</em><big>)</big><a class="reference internal" href="_modules/src/Equipo.html#Equipo.incrementar_goles_contra"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#src.Equipo.Equipo.incrementar_goles_contra" title="Permalink to this definition">¶</a></dt>
+<dd><p>Metodo que incrementa los goles en contra del equipo</p>
+<p>Incrementa los goles en contra del equipo tras un partido
+:param goles: goles en contra a incrementar
+:type goles: Integer</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="src.Equipo.Equipo.incrementar_goles_favor">
+<tt class="descname">incrementar_goles_favor</tt><big>(</big><em>goles</em><big>)</big><a class="reference internal" href="_modules/src/Equipo.html#Equipo.incrementar_goles_favor"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#src.Equipo.Equipo.incrementar_goles_favor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Metodo que incrementa los goles a favor del equipo</p>
+<p>Incrementa los goles a favor del equipo tras un partido
+:param goles: goles a favor a incrementar
+:type goles: Integer</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="src.Equipo.Equipo.incrementar_partidos_empatados">
+<tt class="descname">incrementar_partidos_empatados</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/src/Equipo.html#Equipo.incrementar_partidos_empatados"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#src.Equipo.Equipo.incrementar_partidos_empatados" title="Permalink to this definition">¶</a></dt>
+<dd><p>Metodo que incrementa los partidos empatados del equipo</p>
+<p>Incrementa los partidos empatados del equipo</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="src.Equipo.Equipo.incrementar_partidos_ganados">
+<tt class="descname">incrementar_partidos_ganados</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/src/Equipo.html#Equipo.incrementar_partidos_ganados"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#src.Equipo.Equipo.incrementar_partidos_ganados" title="Permalink to this definition">¶</a></dt>
+<dd><p>Metodo que incrementa los partidos ganados del equipo</p>
+<p>Incrementa los partidos ganados del equipo</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="src.Equipo.Equipo.incrementar_partidos_perdidos">
+<tt class="descname">incrementar_partidos_perdidos</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/src/Equipo.html#Equipo.incrementar_partidos_perdidos"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#src.Equipo.Equipo.incrementar_partidos_perdidos" title="Permalink to this definition">¶</a></dt>
+<dd><p>Metodo que incrementa los partidos perdidos del equipo</p>
+<p>Incrementa los partidos perdidos del equipo</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="src.Equipo.Equipo.incrementar_puntos">
+<tt class="descname">incrementar_puntos</tt><big>(</big><em>puntos</em><big>)</big><a class="reference internal" href="_modules/src/Equipo.html#Equipo.incrementar_puntos"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#src.Equipo.Equipo.incrementar_puntos" title="Permalink to this definition">¶</a></dt>
+<dd><p>Metodo que incrementa los puntos del equipo</p>
+<p>Incrementa los puntos del equipo tras un partido
+:param puntos: puntos a incrementar
+:type puntos: Integer</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="src.Equipo.Equipo.listar_jugadores">
+<tt class="descname">listar_jugadores</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/src/Equipo.html#Equipo.listar_jugadores"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#src.Equipo.Equipo.listar_jugadores" title="Permalink to this definition">¶</a></dt>
+<dd><p>Metodo que muestra todos los jugadores del equipo</p>
+<p>Muestra una lista de los datos de los jugadores del equipo
+:var i: jugadores del equipo
+:type var: Jugador</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="src.Equipo.Equipo.mostrar_equipo">
+<tt class="descname">mostrar_equipo</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/src/Equipo.html#Equipo.mostrar_equipo"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#src.Equipo.Equipo.mostrar_equipo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Metodo que muestra los datos del equipo</p>
+<p>Muestra los datos del equipo
+:var cad: recoge los datos del equipo
+:type cad: String</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="src.Equipo.Equipo.pichichi_equipo">
+<tt class="descname">pichichi_equipo</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/src/Equipo.html#Equipo.pichichi_equipo"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#src.Equipo.Equipo.pichichi_equipo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Metodo que devuelve el pichichi del equipo</p>
+<p>Devuelve el jugador que mas goles ha metido del equipo
+:var maximo: maximo de goles marcados por un jugador
+:var pichichi: jugador que mas goles ha marcado del equipo
+:var i: jugadores del equipo
+:type maximo: Integer
+:type pichichi: Jugador
+:type i: Jugador
+:return: jugador del equipo que mas goles ha marcado
+:rtype: Jugador</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="src.Equipo.Equipo.set_anio_creacion">
+<tt class="descname">set_anio_creacion</tt><big>(</big><em>anio_creacion</em><big>)</big><a class="reference internal" href="_modules/src/Equipo.html#Equipo.set_anio_creacion"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#src.Equipo.Equipo.set_anio_creacion" title="Permalink to this definition">¶</a></dt>
+<dd><p>Metodo modificador del anio de creacion del equipo</p>
+<p>Modifica el anio de creacion del equipo
+:param anio_creacion: anio de creacion del equipo
+:type anio_creacion: Integer</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="src.Equipo.Equipo.set_ciudad">
+<tt class="descname">set_ciudad</tt><big>(</big><em>ciudad</em><big>)</big><a class="reference internal" href="_modules/src/Equipo.html#Equipo.set_ciudad"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#src.Equipo.Equipo.set_ciudad" title="Permalink to this definition">¶</a></dt>
+<dd><p>Metodo modificador de la ciudad del equipo</p>
+<p>Modifica la ciudad del equipo
+:param ciudad: ciudad del equipo
+:type ciudad: String</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="src.Equipo.Equipo.set_goles_contra">
+<tt class="descname">set_goles_contra</tt><big>(</big><em>goles_contra</em><big>)</big><a class="reference internal" href="_modules/src/Equipo.html#Equipo.set_goles_contra"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#src.Equipo.Equipo.set_goles_contra" title="Permalink to this definition">¶</a></dt>
+<dd><p>Metodo modificador de los goles en contra del equipo</p>
+<p>Modifica los goles en contra del equipo
+:param goles_contra: goles en contra del equipo
+:type goles_contra: Integer</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="src.Equipo.Equipo.set_goles_favor">
+<tt class="descname">set_goles_favor</tt><big>(</big><em>goles_favor</em><big>)</big><a class="reference internal" href="_modules/src/Equipo.html#Equipo.set_goles_favor"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#src.Equipo.Equipo.set_goles_favor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Metodo modificador de los goles a favor del equipo</p>
+<p>Modifica los goles a favor del equipo
+:param goles_favor: goles del equipo
+:type goles_favor: Integer</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="src.Equipo.Equipo.set_nombre">
+<tt class="descname">set_nombre</tt><big>(</big><em>nombre</em><big>)</big><a class="reference internal" href="_modules/src/Equipo.html#Equipo.set_nombre"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#src.Equipo.Equipo.set_nombre" title="Permalink to this definition">¶</a></dt>
+<dd><p>Metodo modificador del nombre del equipo</p>
+<p>Modifica el nombre del equipo
+:param nombre: nombre del equipo
+:type nombre: String</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="src.Equipo.Equipo.set_partidos_empatados">
+<tt class="descname">set_partidos_empatados</tt><big>(</big><em>partidos_empatados</em><big>)</big><a class="reference internal" href="_modules/src/Equipo.html#Equipo.set_partidos_empatados"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#src.Equipo.Equipo.set_partidos_empatados" title="Permalink to this definition">¶</a></dt>
+<dd><p>Metodo modificador de los partidos empatados del equipo</p>
+<p>Modifica los partidos empatados del equipo
+:param partidos_empatados: partidos empatados del equipo
+:type partidos_empatados: Integer</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="src.Equipo.Equipo.set_partidos_ganados">
+<tt class="descname">set_partidos_ganados</tt><big>(</big><em>partidos_ganados</em><big>)</big><a class="reference internal" href="_modules/src/Equipo.html#Equipo.set_partidos_ganados"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#src.Equipo.Equipo.set_partidos_ganados" title="Permalink to this definition">¶</a></dt>
+<dd><p>Metodo modificador de los partidos ganados del equipo</p>
+<p>Modifica los partidos ganados del equipo del equipo
+:param partidos_ganados: partidos ganados del equipo
+:type partidos_ganados: Integer</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="src.Equipo.Equipo.set_partidos_perdidos">
+<tt class="descname">set_partidos_perdidos</tt><big>(</big><em>partidos_perdidos</em><big>)</big><a class="reference internal" href="_modules/src/Equipo.html#Equipo.set_partidos_perdidos"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#src.Equipo.Equipo.set_partidos_perdidos" title="Permalink to this definition">¶</a></dt>
+<dd><p>Metodo modificador de los partidos perdidos del equipo</p>
+<p>Modifica los partidos perdidos del equipo
+:param partidos_perdidos: partidos perdidos del equipo
+:type partidos_perdidos: Integer</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="src.Equipo.Equipo.set_puntos">
+<tt class="descname">set_puntos</tt><big>(</big><em>puntos</em><big>)</big><a class="reference internal" href="_modules/src/Equipo.html#Equipo.set_puntos"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#src.Equipo.Equipo.set_puntos" title="Permalink to this definition">¶</a></dt>
+<dd><p>Metodo modificador de los puntos del equipo</p>
+<p>Modifica los puntos del equipo
+:param puntos: puntos del equipo
+:type puntos: Integer</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="liga.html" class="btn btn-neutral float-right" title="Documentacion de Liga">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="estadio.html" class="btn btn-neutral" title="Documentacion de Estadio"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2014, Grupo7.
+    </p>
+  </div>
+
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.2',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

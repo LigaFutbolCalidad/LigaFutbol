@@ -1,0 +1,599 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Documentacion de Registro &mdash; LigaFutbol 0.2 documentation</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="LigaFutbol 0.2 documentation" href="index.html"/>
+        <link rel="next" title="Programa principal" href="principal.html"/>
+        <link rel="prev" title="Documentacion de Partido" href="partido.html"/> 
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+          <a href="index.html" class="fa fa-home"> LigaFutbol</a>
+        
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+        
+            <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="persona.html">Documentacion de Persona</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jugador.html">Documentacion de Jugador</a></li>
+<li class="toctree-l1"><a class="reference internal" href="entrenador.html">Documentacion de Entrenador</a></li>
+<li class="toctree-l1"><a class="reference internal" href="estadio.html">Documentacion de Estadio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="equipo.html">Documentacion de Equipo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="liga.html">Documentacion de Liga</a></li>
+<li class="toctree-l1"><a class="reference internal" href="partido.html">Documentacion de Partido</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Documentacion de Registro</a></li>
+<li class="toctree-l1"><a class="reference internal" href="principal.html">Documentacion de Principal</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="test_jugador.html">Documentacion del test de jugador</a></li>
+<li class="toctree-l1"><a class="reference internal" href="test_equipo.html">Documentacion del test de equipo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="test_liga.html">Documentacion del test de liga</a></li>
+<li class="toctree-l1"><a class="reference internal" href="test_registro.html">Documentacion del test de registro</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="manual.html">Ver manual de usuario</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="principal.html">Codigo del programa de prueba</a></li>
+</ul>
+</li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">LigaFutbol</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>Documentacion de Registro</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="_sources/registro.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document">
+            
+  <div class="section" id="module-src.Registro">
+<span id="documentacion-de-registro"></span><h1>Documentacion de Registro<a class="headerlink" href="#module-src.Registro" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="src.Registro.Registro">
+<em class="property">class </em><tt class="descclassname">src.Registro.</tt><tt class="descname">Registro</tt><a class="reference internal" href="_modules/src/Registro.html#Registro"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#src.Registro.Registro" title="Permalink to this definition">¶</a></dt>
+<dd><p>Representacion de un registro que administra muchas ligas</p>
+<dl class="method">
+<dt id="src.Registro.Registro.__init__">
+<tt class="descname">__init__</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/src/Registro.html#Registro.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#src.Registro.Registro.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constructor</p>
+<p>Inicializa el constructor de Registro
+:param ligas: Lista que contiene ligas
+:type ligas: list
+:param equipos: Lista que contiene equipos
+:type equipos: list
+:param jugadores: Lista que contiene jugadores
+:type jugadores: list
+:param entrenadores: Lista que contiene entrenadores
+:type estadios: list
+:param estadios: Lista que contiene estadios
+:type estadios: list</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="src.Registro.Registro.__module__">
+<tt class="descname">__module__</tt><em class="property"> = 'src.Registro'</em><a class="headerlink" href="#src.Registro.Registro.__module__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="src.Registro.Registro.aniadir_entrenador">
+<tt class="descname">aniadir_entrenador</tt><big>(</big><em>j</em><big>)</big><a class="reference internal" href="_modules/src/Registro.html#Registro.aniadir_entrenador"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#src.Registro.Registro.aniadir_entrenador" title="Permalink to this definition">¶</a></dt>
+<dd><p>Metodo aniadir_entrenador</p>
+<p>Aniade un entrenador a la lista de entrenadores del registro
+:param j: Un entrenador
+:type j: Entrenador</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="src.Registro.Registro.aniadir_equipo">
+<tt class="descname">aniadir_equipo</tt><big>(</big><em>j</em><big>)</big><a class="reference internal" href="_modules/src/Registro.html#Registro.aniadir_equipo"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#src.Registro.Registro.aniadir_equipo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Metodo aniadir_jugador</p>
+<p>Aniade un equipo a la lista de equipos del registro
+:param j: Un equipo
+:type j: Equipo</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="src.Registro.Registro.aniadir_estadio">
+<tt class="descname">aniadir_estadio</tt><big>(</big><em>j</em><big>)</big><a class="reference internal" href="_modules/src/Registro.html#Registro.aniadir_estadio"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#src.Registro.Registro.aniadir_estadio" title="Permalink to this definition">¶</a></dt>
+<dd><p>Metodo aniadir_jugador</p>
+<p>Aniade un estadio a la lista de estadios del registro
+:param j: Un estadio
+:type j: Estadio</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="src.Registro.Registro.aniadir_jugador">
+<tt class="descname">aniadir_jugador</tt><big>(</big><em>j</em><big>)</big><a class="reference internal" href="_modules/src/Registro.html#Registro.aniadir_jugador"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#src.Registro.Registro.aniadir_jugador" title="Permalink to this definition">¶</a></dt>
+<dd><p>Metodo aniadir_jugador</p>
+<p>Aniade un jugador a la lista de jugadores del registro
+:param j: Un jugador
+:type j: Jugador</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="src.Registro.Registro.aniadir_liga">
+<tt class="descname">aniadir_liga</tt><big>(</big><em>j</em><big>)</big><a class="reference internal" href="_modules/src/Registro.html#Registro.aniadir_liga"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#src.Registro.Registro.aniadir_liga" title="Permalink to this definition">¶</a></dt>
+<dd><p>Metodo aniadir_jugador</p>
+<p>Aniade una liga a la lista de ligas del registro
+:param j: Una liga
+:type j: Liga</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="src.Registro.Registro.consultar_entrenador">
+<tt class="descname">consultar_entrenador</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/src/Registro.html#Registro.consultar_entrenador"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#src.Registro.Registro.consultar_entrenador" title="Permalink to this definition">¶</a></dt>
+<dd><p>Metodo consultar_entrenador</p>
+<p>Consulta los datos un entrenador (existente) en la lista de entrenadores del registro
+:var dni: Dni del entrenador a consultar
+:type dni: String</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="src.Registro.Registro.consultar_equipo">
+<tt class="descname">consultar_equipo</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/src/Registro.html#Registro.consultar_equipo"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#src.Registro.Registro.consultar_equipo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Metodo consultar_equipo</p>
+<p>Consulta los datos un equipo (existente) en la lista de equipos del registro
+:var nombre: Nombre del equipo a consultar
+:type nombre: String</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="src.Registro.Registro.consultar_estadio">
+<tt class="descname">consultar_estadio</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/src/Registro.html#Registro.consultar_estadio"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#src.Registro.Registro.consultar_estadio" title="Permalink to this definition">¶</a></dt>
+<dd><p>Metodo consultar_estadio</p>
+<p>Consulta los datos un estadio (existente) en la lista de estadios del registro
+:var nombre: Nombre del estadio a consultar
+:type nombre: String</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="src.Registro.Registro.consultar_jugador">
+<tt class="descname">consultar_jugador</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/src/Registro.html#Registro.consultar_jugador"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#src.Registro.Registro.consultar_jugador" title="Permalink to this definition">¶</a></dt>
+<dd><p>Metodo consultar_jugador</p>
+<p>Consulta los datos un jugador (existente) en la lista de jugadores del registro
+:var dni: Dni del jugador a consultar
+:type dni: String</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="src.Registro.Registro.consultar_liga">
+<tt class="descname">consultar_liga</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/src/Registro.html#Registro.consultar_liga"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#src.Registro.Registro.consultar_liga" title="Permalink to this definition">¶</a></dt>
+<dd><p>Metodo consultar_liga</p>
+<p>Consulta los datos una liga (existente) en la lista de ligas del registro
+:var nombre: Nombre de la liga a consultar
+:type nombre: String</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="src.Registro.Registro.crear_entrenador">
+<tt class="descname">crear_entrenador</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/src/Registro.html#Registro.crear_entrenador"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#src.Registro.Registro.crear_entrenador" title="Permalink to this definition">¶</a></dt>
+<dd><p>Metodo crear_entrenador</p>
+<p>Crea un nuevo entrenador y lo aniade a la lista de entrenadores del registro
+:var nombre: Nombre del entrenador
+:type nombre: String
+:var apellidos: Apellidos del entrenador
+:type apellidos: String
+:var dni: Dni del entrenador
+:type dni: String
+:var fecha_nac: Fecha de nacimiento del entrenador
+:type fecha_nac: String
+:var pais_nac: Pais de nacimiento del entrenador
+:type pais_nac: String
+:var licencia: Licencia del entrenador
+:type licencia: String</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="src.Registro.Registro.crear_equipo">
+<tt class="descname">crear_equipo</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/src/Registro.html#Registro.crear_equipo"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#src.Registro.Registro.crear_equipo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Metodo crear_equipo</p>
+<p>Crea un nuevo equipo y lo aniade a la lista de equipos del registro
+:var nombre: Nombre del equipo
+:type nombre: String
+:var anio_creacion: Anio de creacion del equipo
+:type anio_creacion: String
+:var ciudad: Ciudad del equipo
+:type ciudad: String</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="src.Registro.Registro.crear_estadio">
+<tt class="descname">crear_estadio</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/src/Registro.html#Registro.crear_estadio"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#src.Registro.Registro.crear_estadio" title="Permalink to this definition">¶</a></dt>
+<dd><p>Metodo crear_estadio</p>
+<p>Crea un nuevo estadio y lo aniade a la lista de estadios del registro
+:var nombre: Nombre del estadio
+:type nombre: String
+:var ciudad: Ciudad del estadio
+:type ciudad: String
+:var capacidad: Capacidad del estadio
+:type capacidad: String</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="src.Registro.Registro.crear_jugador">
+<tt class="descname">crear_jugador</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/src/Registro.html#Registro.crear_jugador"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#src.Registro.Registro.crear_jugador" title="Permalink to this definition">¶</a></dt>
+<dd><p>Metodo crear_jugador</p>
+<p>Crea un nuevo jugador y lo aniade a la lista de jugadores del registro
+:var nombre: Nombre del jugador
+:type nombre: String
+:var apellidos: Apellidos del jugador
+:type apellidos: String
+:var dni: Dni del jugador
+:type dni: String
+:var fecha_nac: Fecha de nacimiento del jugador
+:type fecha_nac: String
+:var pais_nac: Pais de nacimiento del jugador
+:type pais_nac: String
+:var dorsal: Dorsal del jugador
+:type dorsal: int
+:var posicion: Posicion de juego del jugador
+:type posicion: String</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="src.Registro.Registro.crear_liga">
+<tt class="descname">crear_liga</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/src/Registro.html#Registro.crear_liga"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#src.Registro.Registro.crear_liga" title="Permalink to this definition">¶</a></dt>
+<dd><p>Metodo crear_liga</p>
+<p>Crea una nueva liga y la aniade a la lista de ligas del registro
+:var nombre: Nombre de la liga
+:type nombre: String
+:var anio: Anio de la liga
+:type anio: String
+:var pais: Pais de la liga
+:type pais: String</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="src.Registro.Registro.eliminar_entrenador">
+<tt class="descname">eliminar_entrenador</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/src/Registro.html#Registro.eliminar_entrenador"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#src.Registro.Registro.eliminar_entrenador" title="Permalink to this definition">¶</a></dt>
+<dd><p>Metodo eliminar_entrenador</p>
+<p>Elimina un entrenador (existente) en la lista de entrenadores del registro
+:var dni: Dni del entrenador a eliminar
+:type dni: String</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="src.Registro.Registro.eliminar_equipo">
+<tt class="descname">eliminar_equipo</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/src/Registro.html#Registro.eliminar_equipo"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#src.Registro.Registro.eliminar_equipo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Metodo eliminar_equipo</p>
+<p>Elimina un equipo (existente) en la lista de equipos del registro
+:var nombre: Nombre del equipo a eliminar
+:type nombre: String</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="src.Registro.Registro.eliminar_estadio">
+<tt class="descname">eliminar_estadio</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/src/Registro.html#Registro.eliminar_estadio"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#src.Registro.Registro.eliminar_estadio" title="Permalink to this definition">¶</a></dt>
+<dd><p>Metodo eliminar_estadio</p>
+<p>Elimina un estadio (existente) en la lista de estadios del registro
+:var nombre: Nombre del estadio a eliminar
+:type nombre: String</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="src.Registro.Registro.eliminar_jugador">
+<tt class="descname">eliminar_jugador</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/src/Registro.html#Registro.eliminar_jugador"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#src.Registro.Registro.eliminar_jugador" title="Permalink to this definition">¶</a></dt>
+<dd><p>Metodo eliminar_jugador</p>
+<p>Elimina un jugador (existente) en la lista de jugadores del registro
+:var dni: Dni del jugador a eliminar
+:type dni: String</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="src.Registro.Registro.eliminar_liga">
+<tt class="descname">eliminar_liga</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/src/Registro.html#Registro.eliminar_liga"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#src.Registro.Registro.eliminar_liga" title="Permalink to this definition">¶</a></dt>
+<dd><p>Metodo eliminar_liga</p>
+<p>Elimina una liga (existente) en la lista de ligas del registro
+:var nombre: Nombre de la liga a eliminar
+:type nombre: String</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="src.Registro.Registro.existe_entrenador">
+<tt class="descname">existe_entrenador</tt><big>(</big><em>dni</em><big>)</big><a class="reference internal" href="_modules/src/Registro.html#Registro.existe_entrenador"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#src.Registro.Registro.existe_entrenador" title="Permalink to this definition">¶</a></dt>
+<dd><p>Metodo existe_entrenador</p>
+<p>Comprueba que existe un entrenador en la lista de entrenadores del registro
+:param dni: Dni del entrenador
+:type dni: String
+:return: entrenador
+:rtype: Entrenador</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="src.Registro.Registro.existe_equipo">
+<tt class="descname">existe_equipo</tt><big>(</big><em>nombre</em><big>)</big><a class="reference internal" href="_modules/src/Registro.html#Registro.existe_equipo"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#src.Registro.Registro.existe_equipo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Metodo existe_equipo</p>
+<p>Comprueba que existe un equipo en la lista de equipos del registro
+:param nombre: Nombre del equipo
+:type nombre: String
+:return: equipo
+:rtype: Equipo</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="src.Registro.Registro.existe_estadio">
+<tt class="descname">existe_estadio</tt><big>(</big><em>nombre</em><big>)</big><a class="reference internal" href="_modules/src/Registro.html#Registro.existe_estadio"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#src.Registro.Registro.existe_estadio" title="Permalink to this definition">¶</a></dt>
+<dd><p>Metodo existe_estadio</p>
+<p>Comprueba que existe un estadio en la lista de estadios del registro
+:param nombre: Nombre del estadio
+:type nombre: String
+:return: estadio
+:rtype: Estadio</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="src.Registro.Registro.existe_jugador">
+<tt class="descname">existe_jugador</tt><big>(</big><em>dni</em><big>)</big><a class="reference internal" href="_modules/src/Registro.html#Registro.existe_jugador"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#src.Registro.Registro.existe_jugador" title="Permalink to this definition">¶</a></dt>
+<dd><p>Metodo existe_jugador</p>
+<p>Comprueba que existe un jugador en la lista de jugadores del registro
+:param dni: Dni del jugador
+:type dni: String
+:return: jugador
+:rtype: Jugador</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="src.Registro.Registro.existe_liga">
+<tt class="descname">existe_liga</tt><big>(</big><em>nombre</em><big>)</big><a class="reference internal" href="_modules/src/Registro.html#Registro.existe_liga"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#src.Registro.Registro.existe_liga" title="Permalink to this definition">¶</a></dt>
+<dd><p>Metodo existe_liga</p>
+<p>Comprueba que existe una liga en la lista de ligas del registro
+:param nombre: Nombre de la liga
+:type nombre: String
+:return: liga
+:rtype: Liga</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="src.Registro.Registro.listar_entrenadores">
+<tt class="descname">listar_entrenadores</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/src/Registro.html#Registro.listar_entrenadores"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#src.Registro.Registro.listar_entrenadores" title="Permalink to this definition">¶</a></dt>
+<dd><p>Metodo listar_entrenadores</p>
+<p>Muestra todos los entrenadores de la lista de entrenadores del registro</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="src.Registro.Registro.listar_equipos">
+<tt class="descname">listar_equipos</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/src/Registro.html#Registro.listar_equipos"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#src.Registro.Registro.listar_equipos" title="Permalink to this definition">¶</a></dt>
+<dd><p>Metodo listar_ligas</p>
+<p>Muestra todas las ligas de la lista de ligas del registro</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="src.Registro.Registro.listar_estadios">
+<tt class="descname">listar_estadios</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/src/Registro.html#Registro.listar_estadios"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#src.Registro.Registro.listar_estadios" title="Permalink to this definition">¶</a></dt>
+<dd><p>Metodo listar_estadios</p>
+<p>Muestra todos los estadios de la lista de estadios del registro</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="src.Registro.Registro.listar_jugadores">
+<tt class="descname">listar_jugadores</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/src/Registro.html#Registro.listar_jugadores"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#src.Registro.Registro.listar_jugadores" title="Permalink to this definition">¶</a></dt>
+<dd><p>Metodo listar_jugadores</p>
+<p>Muestra todss los jugadores de la lista de jugadores del registro</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="src.Registro.Registro.listar_ligas">
+<tt class="descname">listar_ligas</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/src/Registro.html#Registro.listar_ligas"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#src.Registro.Registro.listar_ligas" title="Permalink to this definition">¶</a></dt>
+<dd><p>Metodo listar_ligas</p>
+<p>Muestra todas las ligas de la lista de ligas del registro</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="src.Registro.Registro.modificar_entrenador">
+<tt class="descname">modificar_entrenador</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/src/Registro.html#Registro.modificar_entrenador"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#src.Registro.Registro.modificar_entrenador" title="Permalink to this definition">¶</a></dt>
+<dd><p>Metodo modificar_entrenador</p>
+<p>Modifica un entrenador ya existente en la lista de entrenadores del registro
+:var dni: Dni del entrenador a modificar
+:type dni: String
+:var nombre: Nuevo nombre del entrenador
+:type nombre: String
+:var apellidos: Nuevos apellidos del entrenador
+:type apellidos: String
+:var fecha_nac: Nueva fecha de nacimiento del entrenador
+:type fecha_nac: String
+:var pais_nac: Nuevo pais de nacimiento del entrenador
+:type pais_nac: String
+:var licencia: Nueva licencia del entrenador
+:type licencia: String</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="src.Registro.Registro.modificar_equipo">
+<tt class="descname">modificar_equipo</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/src/Registro.html#Registro.modificar_equipo"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#src.Registro.Registro.modificar_equipo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Metodo modificar_equipo</p>
+<p>Modifica un equipo ya existente en la lista de equipos del registro
+:var nombre: Nombre del equipo a modificar
+:type nombre: String
+:var anio_creacion: Nuevo anio de creacion del equipo
+:type anio_creacion: String
+:var ciudad: Nueva ciudad del equipo
+:type ciudad: String</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="src.Registro.Registro.modificar_estadio">
+<tt class="descname">modificar_estadio</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/src/Registro.html#Registro.modificar_estadio"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#src.Registro.Registro.modificar_estadio" title="Permalink to this definition">¶</a></dt>
+<dd><p>Metodo modificar_estadio</p>
+<p>Modifica un estadio ya existente en la lista de estadios del registro
+:var nombre: Nombre del estadio a modificar
+:type nombre: String
+:var ciudad: Nueva ciudad del estadio
+:type ciudad: String
+:var capacidad: Nueva capacidad del estadio
+:type capacidad: int</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="src.Registro.Registro.modificar_jugador">
+<tt class="descname">modificar_jugador</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/src/Registro.html#Registro.modificar_jugador"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#src.Registro.Registro.modificar_jugador" title="Permalink to this definition">¶</a></dt>
+<dd><p>Metodo modificar_jugador</p>
+<p>Modifica un jugador ya existente en la lista de jugadores del registro
+:var dni: Dni del jugador a modificar
+:type dni: String
+:var nombre: Nuevo nombre del jugador
+:type nombre: String
+:var apellidos: Nuevos apellidos del jugador
+:type apellidos: String
+:var fecha_nac: Nueva fecha de nacimiento del jugador
+:type fecha_nac: String
+:var pais_nac: Nuevo pais de nacimiento del jugador
+:type pais_nac: String
+:var dorsal: Nuevo dorsal del jugador
+:type dorsal: int
+:var posicion: Nueva posicion de juego del jugador
+:type posicion: String</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="src.Registro.Registro.modificar_liga">
+<tt class="descname">modificar_liga</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/src/Registro.html#Registro.modificar_liga"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#src.Registro.Registro.modificar_liga" title="Permalink to this definition">¶</a></dt>
+<dd><p>Metodo modificar_liga</p>
+<p>Modifica una liga ya existente en la lista de ligas del registro
+:var nombre: Nombre de la liga a modificar
+:type nombre: String
+:var anio: Nuevo anio de la liga
+:type anio: String
+:var pais: Nuevo pais de la liga
+:type pais: String</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="principal.html" class="btn btn-neutral float-right" title="Programa principal">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="partido.html" class="btn btn-neutral" title="Documentacion de Partido"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2014, Grupo7.
+    </p>
+  </div>
+
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.2',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

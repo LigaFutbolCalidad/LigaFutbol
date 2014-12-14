@@ -1,0 +1,303 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>src.Estadio &mdash; LigaFutbol 0.2 documentation</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="LigaFutbol 0.2 documentation" href="../../index.html"/>
+        <link rel="up" title="Module code" href="../index.html"/> 
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+          <a href="../../index.html" class="fa fa-home"> LigaFutbol</a>
+        
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+        
+            <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../persona.html">Documentacion de Persona</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../jugador.html">Documentacion de Jugador</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../entrenador.html">Documentacion de Entrenador</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../estadio.html">Documentacion de Estadio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../equipo.html">Documentacion de Equipo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../liga.html">Documentacion de Liga</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../partido.html">Documentacion de Partido</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../registro.html">Documentacion de Registro</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../principal.html">Documentacion de Principal</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../test_jugador.html">Documentacion del test de jugador</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../test_equipo.html">Documentacion del test de equipo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../test_liga.html">Documentacion del test de liga</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../test_registro.html">Documentacion del test de registro</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../manual.html">Ver manual de usuario</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../principal.html">Codigo del programa de prueba</a></li>
+</ul>
+</li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../index.html">LigaFutbol</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../index.html">Module code</a> &raquo;</li>
+      
+    <li>src.Estadio</li>
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document">
+            
+  <h1>Source code for src.Estadio</h1><div class="highlight"><pre>
+<span class="n">__author__</span> <span class="o">=</span> <span class="s">&#39;Grupo 7&#39;</span>
+
+
+<div class="viewcode-block" id="Estadio"><a class="viewcode-back" href="../../estadio.html#src.Estadio.Estadio">[docs]</a><span class="k">class</span> <span class="nc">Estadio</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Representacion de un estadio de una liga</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+<div class="viewcode-block" id="Estadio.__init__"><a class="viewcode-back" href="../../estadio.html#src.Estadio.Estadio.__init__">[docs]</a>    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nombre</span><span class="p">,</span> <span class="n">ciudad</span><span class="p">,</span> <span class="n">capacidad</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Constructor</span>
+
+<span class="sd">        Inicializa el constructor de Estadio</span>
+<span class="sd">        :param nombre: Nombre del estadio</span>
+<span class="sd">        :type nombre: String</span>
+<span class="sd">        :param ciudad: Ciudad del estadio</span>
+<span class="sd">        :type ciudad: String</span>
+<span class="sd">        :param capacidad: Capacidad del estadio</span>
+<span class="sd">        :type capacidad: Integer</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">nombre</span> <span class="o">=</span> <span class="n">nombre</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ciudad</span> <span class="o">=</span> <span class="n">ciudad</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">capacidad</span> <span class="o">=</span> <span class="n">capacidad</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">nombre_equipo</span> <span class="o">=</span> <span class="bp">None</span>
+</div>
+<div class="viewcode-block" id="Estadio.get_nombre"><a class="viewcode-back" href="../../estadio.html#src.Estadio.Estadio.get_nombre">[docs]</a>    <span class="k">def</span> <span class="nf">get_nombre</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Metodo consultor del nombre del estadio</span>
+
+<span class="sd">        Devuelve el nombre del estadio</span>
+<span class="sd">        :return: Nombre del estadio</span>
+<span class="sd">        :rtype: String</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">nombre</span>
+</div>
+<div class="viewcode-block" id="Estadio.get_ciudad"><a class="viewcode-back" href="../../estadio.html#src.Estadio.Estadio.get_ciudad">[docs]</a>    <span class="k">def</span> <span class="nf">get_ciudad</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Metodo consultor de la ciudad del estadio</span>
+
+<span class="sd">        Devuelve la ciudad del estadio</span>
+<span class="sd">        :return: Ciudad del estadio</span>
+<span class="sd">        :rtype: String</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">ciudad</span>
+</div>
+<div class="viewcode-block" id="Estadio.get_capacidad"><a class="viewcode-back" href="../../estadio.html#src.Estadio.Estadio.get_capacidad">[docs]</a>    <span class="k">def</span> <span class="nf">get_capacidad</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Metodo consultor de la capacidad del estadio</span>
+
+<span class="sd">        Devuelve la capacidad del estadio</span>
+<span class="sd">        :return: Capacidad del estadio</span>
+<span class="sd">        :rtype: String</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">capacidad</span>
+</div>
+<div class="viewcode-block" id="Estadio.set_nombre"><a class="viewcode-back" href="../../estadio.html#src.Estadio.Estadio.set_nombre">[docs]</a>    <span class="k">def</span> <span class="nf">set_nombre</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nombre</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Metodo modificador del nombre del estadio</span>
+
+<span class="sd">        Modifica el nombre del estadio</span>
+<span class="sd">        :param nombre: Nombre del estadio</span>
+<span class="sd">        :type nombre: String</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">nombre</span> <span class="o">=</span> <span class="n">nombre</span>
+</div>
+<div class="viewcode-block" id="Estadio.set_ciudad"><a class="viewcode-back" href="../../estadio.html#src.Estadio.Estadio.set_ciudad">[docs]</a>    <span class="k">def</span> <span class="nf">set_ciudad</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ciudad</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Metodo modificador de la ciudad del estadio</span>
+
+<span class="sd">        Modifica la ciudad del estadio</span>
+<span class="sd">        :param ciudad: Ciudad del estadio</span>
+<span class="sd">        :type ciudad: String</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ciudad</span> <span class="o">=</span> <span class="n">ciudad</span>
+</div>
+<div class="viewcode-block" id="Estadio.set_capacidad"><a class="viewcode-back" href="../../estadio.html#src.Estadio.Estadio.set_capacidad">[docs]</a>    <span class="k">def</span> <span class="nf">set_capacidad</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">capacidad</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Metodo modificador de la capacidad del estadio</span>
+
+<span class="sd">        Modifica la capacidad del estadio</span>
+<span class="sd">        :param capacidad: Capacidad del estadio</span>
+<span class="sd">        :type capacidad: String</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">capacidad</span> <span class="o">=</span> <span class="n">capacidad</span>
+</div>
+<div class="viewcode-block" id="Estadio.get_nombre_equipo"><a class="viewcode-back" href="../../estadio.html#src.Estadio.Estadio.get_nombre_equipo">[docs]</a>    <span class="k">def</span> <span class="nf">get_nombre_equipo</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Metodo consultor del nombre del equipo que posee el estadio</span>
+
+<span class="sd">        Devuelve el nombre del equipo</span>
+<span class="sd">        :return: Nombre del equipo</span>
+<span class="sd">        :rtype: String</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">nombre_equipo</span>
+</div>
+<div class="viewcode-block" id="Estadio.set_nombre_equipo"><a class="viewcode-back" href="../../estadio.html#src.Estadio.Estadio.set_nombre_equipo">[docs]</a>    <span class="k">def</span> <span class="nf">set_nombre_equipo</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nombre_equipo</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Metodo modificador del nombre del equipo que posee el estadio</span>
+
+<span class="sd">        Modifica el nombre del equipo</span>
+<span class="sd">        :param nombre_equipo: Nombre del equipo</span>
+<span class="sd">        :type nombre_equipo: String</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">nombre_equipo</span> <span class="o">=</span> <span class="n">nombre_equipo</span>
+</div>
+<div class="viewcode-block" id="Estadio.mostrar_estadio"><a class="viewcode-back" href="../../estadio.html#src.Estadio.Estadio.mostrar_estadio">[docs]</a>    <span class="k">def</span> <span class="nf">mostrar_estadio</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Metodo que muestra los datos de la clase Estadio</span>
+
+<span class="sd">        Muestra los datos del Estadio</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">cad</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="k">print</span> <span class="p">(</span><span class="n">cad</span><span class="p">)</span>
+</div>
+<div class="viewcode-block" id="Estadio.__str__"><a class="viewcode-back" href="../../estadio.html#src.Estadio.Estadio.__str__">[docs]</a>    <span class="k">def</span> <span class="nf">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Metodo que devuelve los datos del Estadio</span>
+
+<span class="sd">        Devuelve los datos del Estadio y el nombre de su equipo dependiendo si lo tiene o no</span>
+<span class="sd">        :return: datos del Estadio</span>
+<span class="sd">        :rtype: String</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_nombre_equipo</span><span class="p">()</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="k">return</span> <span class="s">&quot;ESTADIO: </span><span class="se">\n\t</span><span class="s">Nombre: &quot;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_nombre</span><span class="p">()</span> <span class="o">+</span> <span class="s">&quot;</span><span class="se">\n\t</span><span class="s">Ciudad: &quot;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_ciudad</span><span class="p">()</span> <span class="o">+</span> \
+                   <span class="s">&quot;</span><span class="se">\n\t</span><span class="s">Capacidad: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">get_capacidad</span><span class="p">())</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="s">&quot;ESTADIO: </span><span class="se">\n\t</span><span class="s">Nombre: &quot;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_nombre</span><span class="p">()</span> <span class="o">+</span> <span class="s">&quot;</span><span class="se">\n\t</span><span class="s">Ciudad: &quot;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_ciudad</span><span class="p">()</span> <span class="o">+</span> \
+                   <span class="s">&quot;</span><span class="se">\n\t</span><span class="s">Capacidad: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">get_capacidad</span><span class="p">())</span> <span class="o">+</span> <span class="s">&quot;</span><span class="se">\n\t</span><span class="s">Nombre del equipo: &quot;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_nombre_equipo</span><span class="p">()</span></div></div>
+</pre></div>
+
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2014, Grupo7.
+    </p>
+  </div>
+
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'0.2',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
