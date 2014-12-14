@@ -235,7 +235,7 @@ def seleccionar_opcion_mayor(bucle1, liga, opc2):
     elif opc2 == 10:
         liga.pichichi_liga()
     elif opc2 == 11:
-        consultar_pichichi_liga()
+        consultar_pichichi_liga(liga)
     elif opc2 == 0:
         bucle1 = True
     else:
@@ -296,6 +296,7 @@ def consultar_equipo_liga(liga):
         print ("El equipo no esta en la liga")
     else:
         liga.consultar_equipo(e)
+
 
 def pichichi_equipo_liga(e):
     """

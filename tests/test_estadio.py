@@ -4,7 +4,6 @@ from src.Estadio import *
 __author__ = 'Grupo 7'
 
 
-
 class TestEstadio(TestCase):
     def test_mostrar_estadio(self):
         """

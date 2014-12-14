@@ -12,6 +12,7 @@ class TestLiga(TestCase):
     """
     Clase test de una liga
     """
+
     def test_existe_equipo(self):
         """
         Test existe equipo
@@ -62,9 +63,9 @@ class TestLiga(TestCase):
         Crea unos equipos con unos jugadores y una liga a la que los aniade. Comprueba que devuelve el jugador
          que mas goles tiene
         """
-        j1=mock(Jugador)
-        j2=mock(Jugador)
-        j3=mock(Jugador)
+        j1 = mock(Jugador)
+        j2 = mock(Jugador)
+        j3 = mock(Jugador)
         when(j1).get_goles_marcados().thenReturn(3)
         when(j2).get_goles_marcados().thenReturn(5)
         when(j3).get_goles_marcados().thenReturn(9)
@@ -78,8 +79,7 @@ class TestLiga(TestCase):
         liga.aniadir_equipo(eq1)
         liga.aniadir_equipo(eq2)
         liga.aniadir_equipo(eq3)
-        self.assertEqual(liga.recorrer_equipos().get_goles_marcados(),9)
-
+        self.assertEqual(liga.recorrer_equipos().get_goles_marcados(), 9)
 
     def test_aniadir_equipo(self):
         """
@@ -124,8 +124,8 @@ class TestLiga(TestCase):
 
         Imprime los datos de los partidos aniadidos como prueba
         """
-        p1 = Partido(1,"FC Barcelona","Real madrid")
-        p2 = Partido(2,"FC Valencia","FC Barcelona")
+        p1 = Partido(1, "FC Barcelona", "Real madrid")
+        p2 = Partido(2, "FC Valencia", "FC Barcelona")
         l = Liga("Liga BBVA", "2014", "Espania")
         l.partidos.append(p1)
         l.partidos.append(p2)
@@ -137,8 +137,8 @@ class TestLiga(TestCase):
 
         Imprime los datos de los partidos que aun no se han jugado dado los datos de prueba
         """
-        p1 = Partido(1,"FC Barcelona","Real madrid")
-        p2 = Partido(2,"FC Valencia","FC Barcelona")
+        p1 = Partido(1, "FC Barcelona", "Real madrid")
+        p2 = Partido(2, "FC Valencia", "FC Barcelona")
         p2.set_jugado(True)
         l = Liga("Liga BBVA", "2014", "Espania")
         l.partidos.append(p1)
@@ -177,7 +177,7 @@ class TestLiga(TestCase):
 
         Imprime los datos del partido que se introducen como prueba
         """
-        p1 = Partido(1,"FC Barcelona","Real madrid")
+        p1 = Partido(1, "FC Barcelona", "Real madrid")
         l = Liga("Liga BBVA", "2014", "Espania")
         l.partidos.append(p1)
         l.consultar_partido(p1)
