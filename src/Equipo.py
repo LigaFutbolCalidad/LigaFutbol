@@ -3,6 +3,7 @@ __author__ = 'Equipo de Calidad'
 
 class Equipo:
     """ Clase Equipo """
+
     def __init__(self, nombre, anio_creacion, ciudad):
         """
         Constructor
@@ -336,20 +337,20 @@ class Equipo:
         Metodo que devuelve el pichichi del equipo
 
         Devuelve el jugador que mas goles ha metido del equipo
-        :var max: maximo de goles marcados por un jugador
+        :var maximo: maximo de goles marcados por un jugador
         :var pichichi: jugador que mas goles ha marcado del equipo
         :var i: jugadores del equipo
-        :type max: Integer
+        :type maximo: Integer
         :type pichichi: Jugador
         :type i: Jugador
         :return: jugador del equipo que mas goles ha marcado
         :rtype: Jugador
         """
-        max = 0
+        maximo = 0
         pichichi = None
         for i in self.jugadores:
-            if i.get_golesMarcados() > max:
-                max = i.get_golesMarcados()
+            if i.get_goles_marcados() > maximo:
+                maximo = i.get_goles_marcados()
                 pichichi = i
         return pichichi
 
@@ -463,7 +464,7 @@ class Equipo:
         """
         res = self.get_puntos() - other.get_puntos()
         if res == 0:
-            res = self.get_goles_favor() - other.get_golesFavor()
+            res = self.get_goles_favor() - other.get_goles_favor()
             if res == 0:
-                res = other.get_golesContra() - self.get_goles_contra()
+                res = other.get_goles_contra() - self.get_goles_contra()
         return res

@@ -6,6 +6,7 @@ import random
 
 class Liga:
     """ Clase Liga """
+
     def __init__(self, nombre, anio, pais):
         """
         Constructor
@@ -101,7 +102,7 @@ class Liga:
 
         Busca en el listado de equipos de toda la liga
         :param nombre: nombre del equipo a buscar
-        :type pais: String
+        :type nombre: String
 		:return: equipo
 		:rtype: Equipo
         """
@@ -199,9 +200,9 @@ class Liga:
         for e in self.equipos:
             tam = len(e.get_nombre())
             space = " " * (20 - tam)
-            cadena = e.get_nombre() + space + str(e.get_partidosGanados()) + "\t" + str(e.get_partidosEmpatados())
-            cadena += "\t" + str(e.get_partidosPerdidos()) + "\t" + str(e.get_golesFavor())
-            cadena += "\t" + str(e.get_golesContra()) + "\t" + str(e.get_puntos())
+            cadena = e.get_nombre() + space + str(e.get_partidos_ganados()) + "\t" + str(e.get_partidos_empatados())
+            cadena += "\t" + str(e.get_partidos_perdidos()) + "\t" + str(e.get_goles_favor())
+            cadena += "\t" + str(e.get_goles_contra()) + "\t" + str(e.get_puntos())
             print (cadena)
 
     def existe_partido(self, jornada):
@@ -211,8 +212,8 @@ class Liga:
         Busca en el listado de partidos de toda la liga
         :param jornada: nombre de la jornada que desea buscar
         :type jornada: String
-		:return: equipo
-		:rtype: Equipo
+		:return: partido
+		:rtype: Partido
         """
         partido = None
         for p in self.partidos:
@@ -245,8 +246,8 @@ class Liga:
             if p.get_jugado():
                 print ("El partido ya se ha jugado")
             else:
-                local = self.existe_equipo(p.get_equipoLocal())
-                visitante = self.existe_equipo(p.get_equipoVisitante())
+                local = self.existe_equipo(p.get_equipo_local())
+                visitante = self.existe_equipo(p.get_equipo_visitante())
                 p.mostrar_partido()
 
                 goles_local = self.cofig_partido_local(local)
@@ -268,8 +269,8 @@ class Liga:
                     visitante.incrementar_puntos(3)
                     visitante.incrementar_partidos_ganados()
                     local.incrementar_partidos_perdidos()
-                p.set_golesLocales(goles_local)
-                p.set_golesVisitantes(goles_visitante)
+                p.set_goles_locales(goles_local)
+                p.set_goles_visitantes(goles_visitante)
                 p.set_jugado(True)
 
     @staticmethod
@@ -292,7 +293,7 @@ class Liga:
         while x <= goles_local:
             dni = raw_input(
                 "Inserte el dni del jugador que ha marcado el gol " + str(x) + " del equipo local: ")
-            j = local.existeJugador(dni)
+            j = local.existe_jugador(dni)
             if j is None:
                 print ("El jugador no existe")
             else:
@@ -321,11 +322,11 @@ class Liga:
         while x <= goles_visitante:
             dni = raw_input(
                 "Inserte el dni del jugador que ha marcado el gol " + str(x) + " del equipo visitante:")
-            j = visitante.existeJugador(dni)
+            j = visitante.existe_jugador(dni)
             if j is None:
                 print ("El jugador no existe")
             else:
-                j.incrementar_goles(1)
+                j.incrementar_goles()
                 x += 1
         visitante.incrementar_goles_favor(goles_visitante)
         return goles_visitante
@@ -339,15 +340,15 @@ class Liga:
         for p in self.partidos:
             if not p.get_jugado():
                 g1 = random.randint(0, 5)
-                l = self.existe_equipo(p.get_equipoLocal())
-                p.set_golesLocales(g1)
+                l = self.existe_equipo(p.get_equipo_local())
+                p.set_goles_locales(g1)
                 for i in range(0, g1):
                     indice = random.randint(0, len(l.get_jugadores()) - 1)
                     l.get_jugadores()[indice].incrementar_goles()
 
                 g2 = random.randint(0, 5)
-                v = self.existe_equipo(p.get_equipoVisitante())
-                p.set_golesVisitantes(g2)
+                v = self.existe_equipo(p.get_equipo_visitante())
+                p.set_goles_visitantes(g2)
                 for i in range(0, g2):
                     indice = random.randint(0, len(v.get_jugadores()) - 1)
                     v.get_jugadores()[indice].incrementar_goles()
@@ -377,7 +378,7 @@ class Liga:
         """
         Consulta el estadio con mayor capacidad
 
-        Realiza una busqueda entre todos los estadios de cada equipo, mostrando el que más capacidad dispone
+        Realiza una busqueda entre todos los estadios de cada equipo, mostrando el que mas capacidad dispone
         """
         capacidad_estadio = 0
         mayor_estadio = None
@@ -397,32 +398,30 @@ class Liga:
 
         Hace uso del metodo recorrer_equipos para buscar el pichichi de la liga
         """
-        pichichi = None
         if len(self.equipos) > 0:
-            self.recorrer_equipos(pichichi)
+            pichichi = self.recorrer_equipos()
             if pichichi is not None:
-                print ("El pichichi de la liga con " + str(pichichi.get_golesMarcados()) + " goles marcados es: ")
+                print ("El pichichi de la liga con " + str(pichichi.get_goles_marcados()) + " goles marcados es: ")
                 pichichi.mostrar_jugador()
             else:
                 print ("La liga no tiene pichichi aun.")
         else:
             print ("La liga no tiene equipos aun.")
 
-    def recorrer_equipos(self, pichichi):
+    def recorrer_equipos(self):
         """
         Recorre el listado de equipos
 
         Busca en el listado de equipos el pichichi de la liga
-        :param nombre: nombre del equipo a buscar
-        :type pichichi: String
 		:return: pichichi
 		:rtype: Jugador
         """
         goles = 0
+        pichichi = None
         for equipo in self.equipos:
             jugador = equipo.pichichi_equipo()
-            if jugador is not None and jugador.get_golesMarcados() > goles:
-                goles = jugador.get_golesMarcados()
+            if jugador is not None and jugador.get_goles_marcados() > goles:
+                goles = jugador.get_goles_marcados()
                 pichichi = jugador
         return pichichi
 

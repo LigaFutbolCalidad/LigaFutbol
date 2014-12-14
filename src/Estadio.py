@@ -52,7 +52,7 @@ class Estadio:
         """
         return self.capacidad
 
-    def set_nombre(self,nombre):
+    def set_nombre(self, nombre):
         """
         Metodo modificador del nombre del estadio
 
@@ -62,7 +62,7 @@ class Estadio:
         """
         self.nombre = nombre
 
-    def set_ciudad(self,ciudad):
+    def set_ciudad(self, ciudad):
         """
         Metodo modificador de la ciudad del estadio
 
@@ -72,7 +72,7 @@ class Estadio:
         """
         self.ciudad = ciudad
 
-    def set_capacidad(self,capacidad):
+    def set_capacidad(self, capacidad):
         """
         Metodo modificador de la capacidad del estadio
 
@@ -108,7 +108,7 @@ class Estadio:
 
         Muestra los datos del Estadio
         """
-        cad=str(self)
+        cad = str(self)
         print (cad)
 
     def __str__(self):

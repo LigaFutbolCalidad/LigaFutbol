@@ -4,6 +4,7 @@ from src.Persona import *
 
 class Jugador(Persona):
     """ Clase Jugador la cual hereda de Persona """
+
     def __init__(self, nombre, apellidos, dni, fecha_nac, pais_nac, dorsal, posicion):
         """
         Constructor
@@ -117,6 +118,6 @@ class Jugador(Persona):
         :rtype: String
         """
         return "JUGADOR: \n\tNombre: " + self.get_nombre() + "\n\tApellidos: " + self.get_apellidos() + "\n\tDni: " \
-               + self.get_dni() + "\n\tFecha de nacimiento: " + self.get_fechaNac() + "\n\tPais de nacimiento: " \
-               + self.get_paisNac() + "\n\tDorsal: " + str(self.get_dorsal()) + "\n\tPosicion de juego: " \
+               + self.get_dni() + "\n\tFecha de nacimiento: " + self.get_fecha_nac() + "\n\tPais de nacimiento: " \
+               + self.get_pais_nac() + "\n\tDorsal: " + str(self.get_dorsal()) + "\n\tPosicion de juego: " \
                + self.get_posicion()

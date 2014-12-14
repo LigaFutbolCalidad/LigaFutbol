@@ -3,6 +3,7 @@ __author__ = 'Equipo de Calidad'
 
 class Partido:
     """ Clase Partido """
+
     def __init__(self, jornada, equipo_local, equipo_visitante):
         """
         Constructor
@@ -88,7 +89,7 @@ class Partido:
 
         Modifica si el partido ha sido jugado
         :param jornada: jornada del partido
-        :type nombre: Integer
+        :type jornada: Integer
         """
         self.jornada = jornada
 
@@ -138,7 +139,7 @@ class Partido:
 
         Modifica si el partido ha sido jugado o no
         :param jug: True or False
-        :type jug: Boolean
+        :type jug: bool
         """
         self.jugado = jug
 
@@ -168,5 +169,5 @@ class Partido:
         else:
             return "PARTIDO:\n\tJornada: " + str(
                 self.get_jornada()) + "\n\tEquipo local: " + self.get_equipo_local() + "\n\tEquipo visitante: " \
-                   + self.get_equipo_visitante() + "\n\tGoles local: " + str(
+                + self.get_equipo_visitante() + "\n\tGoles local: " + str(
                 self.get_goles_locales()) + "\n\tGoles visitante: " + str(self.get_goles_visitantes())
