@@ -1,7 +1,7 @@
+__author__ = 'Grupo 7'
+
 from unittest import TestCase
 from src.Registro import *
-
-__author__ = 'Patry'
 
 
 class TestRegistro(TestCase):

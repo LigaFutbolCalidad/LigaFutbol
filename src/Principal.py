@@ -172,16 +172,20 @@ def administrar_ligas():
         elif opc1 == 5:
             r.listar_ligas()
         elif opc1 == 6:
-            liga = raw_input("Introduzca el nombre de la liga a administrar: ")
-            li = r.existe_liga(liga)
-            if li is None:
-                print ("La liga no existe")
-            else:
-                administrar_liga(liga)
+            seleccionar_liga()
         elif opc1 == 0:
             break
         else:
             print ("Opcion incorrecta")
+
+
+def seleccionar_liga():
+    liga = raw_input("Introduzca el nombre de la liga a administrar: ")
+    li = r.existe_liga(liga)
+    if li is None:
+        print ("La liga no existe")
+    else:
+        administrar_liga(liga)
 
 
 def administrar_liga(liga):
@@ -194,69 +198,104 @@ def administrar_liga(liga):
     """
     bucle1 = False
     while not bucle1:
-        print ("=" * 20)
-        print ("ADMINISTRAR LIGA: ")
-        print ("Que desea hacer: ")
-        print ("1 - Aniadir un equipo a la liga")
-        print ("2 - Ver equipos de la liga")
-        print ("3 - Consultar un equipo de la liga")
-        print ("4 - Ver partidos de la liga")
-        print ("5 - Consultar calendario de la liga")
-        print ("6 - Consultar clasificacion de la liga")
-        print ("7 - Consultar un partido de la liga")
-        print ("8 - Jugar un partido de la liga")
-        print ("9 - Consultar mejor estadio de la liga")
-        print ("10 - Consultar pichichi de la liga")
-        print ("11 - Consultar pichichi de un equipo de la liga")
-        print ("0 - Volver")
+        mostrar_menu()
         opc2 = input("Opcion: ")
-        if opc2 == 1:
-            equipo = raw_input("Introduzca el nombre del equipo que desea aniadir a la liga: ")
-            e = r.existe_equipo(equipo)
-            if e is None:
-                print ("El equipo no existe (debe ser creado antes)")
-            else:
-                liga.aniadir_equipo(e)
-        elif opc2 == 2:
-            liga.listar_equipos()
-        elif opc2 == 3:
-            equipo = raw_input("Introduzca el nombre del equipo a consultar")
-            e = liga.existe_equipo(equipo)
-            if e is None:
-                print ("El equipo no esta en la liga")
-            else:
-                liga.consultar_equipo(e)
-        elif opc2 == 4:
-            liga.listar_partidos()
-        elif opc2 == 5:
-            liga.consultar_calendario()
-        elif opc2 == 6:
-            liga.consultar_clasificacion()
-        elif opc2 == 7:
-            jornada = input("Introduzca la jornada del partido a consultar: ")
-            p = liga.existe_partido(jornada)
-            if p is None:
-                print ("La jornada no coincide con ninguna de la liga")
-            else:
-                liga.consultar_partido(p)
-        elif opc2 == 8:
-            liga.jugar_partido()
-        elif opc2 == 9:
-            liga.consultar_mejor_estadio()
-        elif opc2 == 10:
-            liga.pichichi_liga()
-        elif opc2 == 11:
-            equipo = raw_input("Introduzca el nombre del equipo a consultar el pichichi: ")
-            e = liga.existe_equipo(equipo)
-            if e is None:
-                print ("El equipo no esta en la liga")
-            else:
-                pichichi_equipo_liga(e)
-        elif opc2 == 0:
-            break
+        if opc2 < 6:
+            bucle1 = seleccionar_opcion_menor(bucle1, liga, opc2)
         else:
-            print ("Opcion incorrecta")
+            bucle1 = seleccionar_opcion_mayor(bucle1, liga, opc2)
 
+
+def seleccionar_opcion_menor(bucle1, liga, opc2):
+    if opc2 == 1:
+        crear_equipo_liga(liga)
+    elif opc2 == 2:
+        liga.listar_equipos()
+    elif opc2 == 3:
+        consultar_equipo_liga(liga)
+    elif opc2 == 4:
+        liga.listar_partidos()
+    elif opc2 == 5:
+        liga.consultar_calendario()
+    else:
+        print ("Opcion incorrecta")
+
+    return bucle1
+
+
+def seleccionar_opcion_mayor(bucle1, liga, opc2):
+    if opc2 == 6:
+        liga.consultar_clasificacion()
+    elif opc2 == 7:
+        consultar_jornada_liga(liga)
+    elif opc2 == 8:
+        liga.jugar_partido()
+    elif opc2 == 9:
+        liga.consultar_mejor_estadio()
+    elif opc2 == 10:
+        liga.pichichi_liga()
+    elif opc2 == 11:
+        consultar_pichichi_liga()
+    elif opc2 == 0:
+        bucle1 = True
+    else:
+        print ("Opcion incorrecta")
+
+    return bucle1
+
+
+def mostrar_menu():
+    print ("=" * 20)
+    print ("ADMINISTRAR LIGA: ")
+    print ("Que desea hacer: ")
+    print ("1 - Aniadir un equipo a la liga")
+    print ("2 - Ver equipos de la liga")
+    print ("3 - Consultar un equipo de la liga")
+    print ("4 - Ver partidos de la liga")
+    print ("5 - Consultar calendario de la liga")
+    print ("6 - Consultar clasificacion de la liga")
+    print ("7 - Consultar un partido de la liga")
+    print ("8 - Jugar un partido de la liga")
+    print ("9 - Consultar mejor estadio de la liga")
+    print ("10 - Consultar pichichi de la liga")
+    print ("11 - Consultar pichichi de un equipo de la liga")
+    print ("0 - Volver")
+
+
+def crear_equipo_liga(liga):
+    equipo = raw_input("Introduzca el nombre del equipo que desea aniadir a la liga: ")
+    e = r.existe_equipo(equipo)
+    if e is None:
+        print ("El equipo no existe (debe ser creado antes)")
+    else:
+        liga.aniadir_equipo(e)
+
+
+def consultar_jornada_liga(liga):
+    jornada = input("Introduzca la jornada del partido a consultar: ")
+    p = liga.existe_partido(jornada)
+    if p is None:
+        print ("La jornada no coincide con ninguna de la liga")
+    else:
+        liga.consultar_partido(p)
+
+
+def consultar_pichichi_liga(liga):
+    equipo = raw_input("Introduzca el nombre del equipo a consultar el pichichi: ")
+    e = liga.existe_equipo(equipo)
+    if e is None:
+        print ("El equipo no esta en la liga")
+    else:
+        pichichi_equipo_liga(e)
+
+
+def consultar_equipo_liga(liga):
+    equipo = raw_input("Introduzca el nombre del equipo a consultar")
+    e = liga.existe_equipo(equipo)
+    if e is None:
+        print ("El equipo no esta en la liga")
+    else:
+        liga.consultar_equipo(e)
 
 def pichichi_equipo_liga(e):
     """

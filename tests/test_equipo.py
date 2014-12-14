@@ -4,7 +4,7 @@ from src.Estadio import *
 from src.Entrenador import *
 from src.Jugador import *
 
-__author__ = 'Administrador'
+__author__ = 'Grupo 7'
 
 
 class TestEquipo(TestCase):
@@ -128,3 +128,71 @@ class TestEquipo(TestCase):
         j2.set_goles_marcados(4)
         j3.set_goles_marcados(3)
         self.assertEqual(equipo.pichichi_equipo(), j2)
+
+    def test_consultar_jugador(self):
+        """
+        Test consultar jugador
+
+        Crea un jugador y mustra sus datos
+        """
+        j1 = Jugador("Leo", "Messi", "1234M", "23/02/1980", "Argentina", 5, "delantero")
+        eq1 = Equipo("FC Barcelona", "1900", "Barcelona")
+        eq1.agregar_jugador(j1)
+        eq1.consultar_jugador(j1)
+
+    def test_existe_jugador(self):
+        """
+        Test para comprobar si existe un jugador
+
+        Compruieba si existe el jugador creado
+        """
+        j1 = Jugador("Leo", "Messi", "1234M", "23/02/1980", "Argentina", 5, "delantero")
+        eq1 = Equipo("FC Barcelona", "1900", "Barcelona")
+        eq1.agregar_jugador(j1)
+        eq1.existe_jugador("1234M").mostrar_jugador()
+
+    def test_listar_jugadores(self):
+        """
+        Test de listar jugadores
+
+        Comprueba que se muestra la lista de los jugadores aniadidos a un equipo
+        """
+        j1 = Jugador("Leo", "Messi", "1234M", "23/02/1980", "Argentina", 5, "delantero")
+        j2 = Jugador("Luis", "Suarez", "1234S", "11/08/1985", "Uruguay", 12, "delantero")
+        j3 = Jugador("Neymar", "Junior", "1234J", "19/02/1990", "Brasil", 15, "delantero")
+        eq1 = Equipo("FC Barcelona", "1900", "Barcelona")
+        eq1.agregar_jugador(j1)
+        eq1.agregar_jugador(j2)
+        eq1.agregar_jugador(j3)
+        eq1.listar_jugadores()
+
+    def test_consultar_estadio(self):
+        """
+        Test de consultar estadio
+
+        Comprueba que muestra los datos del estadio creado
+        """
+        es1 = Estadio("Camp Nou", "Barcelona", 1650300)
+        eq1 = Equipo("FC Barcelona", "1900", "Barcelona")
+        eq1.asignar_estadio(es1)
+        eq1.consultar_estadio()
+
+    def test_consultar_entrenador(self):
+        """
+        Test de consultar entrenador
+
+        Comprueba que muestra los datos del entrenador creado
+        """
+        en1 = Entrenador("Pep", "Guardiola", "1234P", "22/11/1975", "Espania", "1234L")
+        eq1 = Equipo("FC Barcelona", "1900", "Barcelona")
+        eq1.asignar_entrenador(en1)
+        eq1.consultar_entrenador()
+
+    def test_mostrar_equipo(self):
+        """
+        Test de mostrar equipo
+
+        Comprueba que muestra los datos del equipo
+        """
+        eq1 = Equipo("FC Barcelona", "1900", "Barcelona")
+        eq1.mostrar_equipo()
