@@ -8,7 +8,7 @@ from src.Liga import *
 
 class Registro:
     """
-    Clase Registro
+    Representacion de un registro que administra muchas ligas
     """
     def __init__(self):
         """

@@ -5,8 +5,9 @@ import random
 
 
 class Liga:
-    """ Clase Liga """
-
+    """
+    Representacion de una liga de un registro
+    """
     def __init__(self, nombre, anio, pais):
         """
         Constructor

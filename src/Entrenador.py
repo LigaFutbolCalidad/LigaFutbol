@@ -3,8 +3,9 @@ from src.Persona import *
 
 
 class Entrenador(Persona):
-    """ Clase Entrenador la cual hereda de Persona """
-
+    """
+    Representacion de un entrenador el cual hereda de Persona
+    """
     def __init__(self, nombre, apellidos, dni, fecha_nac, pais_nac, licencia):
         """
         Constructor

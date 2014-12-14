@@ -216,38 +216,38 @@ def administrar_liga(liga):
             if e is None:
                 print ("El equipo no existe (debe ser creado antes)")
             else:
-                l.aniadir_equipo(e)
+                liga.aniadir_equipo(e)
         elif opc2 == 2:
-            l.listar_equipos()
+            liga.listar_equipos()
         elif opc2 == 3:
             equipo = raw_input("Introduzca el nombre del equipo a consultar")
-            e = l.existe_equipo(equipo)
+            e = liga.existe_equipo(equipo)
             if e is None:
                 print ("El equipo no esta en la liga")
             else:
-                l.consultar_equipo(e)
+                liga.consultar_equipo(e)
         elif opc2 == 4:
-            l.listar_partidos()
+            liga.listar_partidos()
         elif opc2 == 5:
-            l.consultar_calendario()
+            liga.consultar_calendario()
         elif opc2 == 6:
-            l.consultar_clasificacion()
+            liga.consultar_clasificacion()
         elif opc2 == 7:
             jornada = input("Introduzca la jornada del partido a consultar: ")
-            p = l.existe_partido(jornada)
+            p = liga.existe_partido(jornada)
             if p is None:
                 print ("La jornada no coincide con ninguna de la liga")
             else:
-                l.consultar_partido(p)
+                liga.consultar_partido(p)
         elif opc2 == 8:
-            l.jugar_partido()
+            liga.jugar_partido()
         elif opc2 == 9:
-            l.consultar_mejor_estadio()
+            liga.consultar_mejor_estadio()
         elif opc2 == 10:
-            l.pichichi_liga()
+            liga.pichichi_liga()
         elif opc2 == 11:
             equipo = raw_input("Introduzca el nombre del equipo a consultar el pichichi: ")
-            e = l.existe_equipo(equipo)
+            e = liga.existe_equipo(equipo)
             if e is None:
                 print ("El equipo no esta en la liga")
             else:

@@ -2,8 +2,9 @@ __author__ = 'Grupo 7'
 
 
 class Persona:
-    """ Clase Persona """
-
+    """
+    Representacion de una persona
+    """
     def __init__(self, nombre, apellidos, dni, fecha_nac, pais_nac):
         """
         Constructor

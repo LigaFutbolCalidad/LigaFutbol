@@ -2,8 +2,9 @@ __author__ = 'Equipo de Calidad'
 
 
 class Equipo:
-    """ Clase Equipo """
-
+    """
+    Representacion de un equipo de una liga
+    """
     def __init__(self, nombre, anio_creacion, ciudad):
         """
         Constructor

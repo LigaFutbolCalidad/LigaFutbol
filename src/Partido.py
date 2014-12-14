@@ -2,8 +2,9 @@ __author__ = 'Equipo de Calidad'
 
 
 class Partido:
-    """ Clase Partido """
-
+    """
+    Representacion de un partido de una liga
+    """
     def __init__(self, jornada, equipo_local, equipo_visitante):
         """
         Constructor
