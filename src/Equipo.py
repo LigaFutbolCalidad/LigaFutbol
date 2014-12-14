@@ -99,21 +99,21 @@ class Equipo:
 
     def asignar_estadio(self, estadio):
         self.estadio = estadio
-        print "Estadio asignado al equipo correctamente."
+        print ("Estadio asignado al equipo correctamente.")
 
     def asignar_entrenador(self, entrenador):
         self.entrenador = entrenador
-        print "Entrenador asignado al equipo correctamente."
+        print ("Entrenador asignado al equipo correctamente.")
 
     def agregar_jugador(self, jugador):
         if len(self.jugadores) < 11:
             if self.existe_jugador(jugador.get_dni()) is None:
                 self.jugadores.append(jugador)
-                print "Jugador aniadido al equipo correctamente."
+                print ("Jugador aniadido al equipo correctamente.")
             else:
-                print "El jugador ya pertenece al equipo."
+                print ("El jugador ya pertenece al equipo.")
         else:
-            print "El equipo ya esta completo."
+            print ("El equipo ya esta completo.")
 
     def pichichi_equipo(self):
         max = 0
@@ -127,7 +127,7 @@ class Equipo:
     def consultar_jugador(self, jugador):
         j = self.existe_jugador(jugador.get_dni())
         if j is None:
-            print "El jugador no existe en el equipo."
+            print ("El jugador no existe en el equipo.")
         else:
             j.mostrar_jugador()
 
@@ -143,23 +143,23 @@ class Equipo:
             for i in self.jugadores:
                 i.mostrar_jugador()
         else:
-            print "No hay jugadores en el equipo."
+            print ("No hay jugadores en el equipo.")
 
     def consultar_estadio(self):
         if self.estadio is not None:
             self.estadio.mostrar_estadio()
         else:
-            print "El equipo no tiene un estadio asignado."
+            print ("El equipo no tiene un estadio asignado.")
 
     def consultar_entrenador(self):
         if self.entrenador is not None:
             self.entrenador.mostrar_entrenador()
         else:
-            print "El equipo no tiene entrenador asignado."
+            print ("El equipo no tiene entrenador asignado.")
 
     def mostrar_equipo(self):
         cad = str(self)
-        print cad
+        print (cad)
 
     def __str__(self):
         return "EQUIPO:\n\tNombre: " + self.get_nombre() + "\n\tAnio creacion: " + self.get_anio_creacion() \

@@ -32,7 +32,7 @@ class Jugador(Persona):
 
     def mostrar_jugador(self):
         cad = str(self)
-        print cad
+        print (cad)
 
     def __str__(self):
         return "JUGADOR: \n\tNombre: " + self.get_nombre() + "\n\tApellidos: " + self.get_apellidos() + "\n\tDni: " \

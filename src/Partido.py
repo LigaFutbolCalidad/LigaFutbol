@@ -48,7 +48,7 @@ class Partido:
 
     def mostrar_partido(self):
         cad = str(self)
-        print cad
+        print (cad)
 
     def __str__(self):
         if not self.jugado:
