@@ -185,7 +185,7 @@ def seleccionar_liga():
     if li is None:
         print ("La liga no existe")
     else:
-        administrar_liga(liga)
+        administrar_liga(li)
 
 
 def administrar_liga(liga):
@@ -207,7 +207,9 @@ def administrar_liga(liga):
 
 
 def seleccionar_opcion_menor(bucle1, liga, opc2):
-    if opc2 == 1:
+    if opc2 == 0:
+        bucle1 = True
+    elif opc2 == 1:
         crear_equipo_liga(liga)
     elif opc2 == 2:
         liga.listar_equipos()
@@ -236,8 +238,6 @@ def seleccionar_opcion_mayor(bucle1, liga, opc2):
         liga.pichichi_liga()
     elif opc2 == 11:
         consultar_pichichi_liga(liga)
-    elif opc2 == 0:
-        bucle1 = True
     else:
         print ("Opcion incorrecta")
 
