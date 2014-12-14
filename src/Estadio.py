@@ -104,18 +104,20 @@ class Estadio:
 
     def mostrar_estadio(self):
         """
-        Metodo que llama al metodo string de la clase Estadio
+        Metodo que muestra los datos de la clase Estadio
 
-        Muestra el resultado de ese metodo
+        Muestra los datos del Estadio
         """
         cad=str(self)
         print (cad)
 
     def __str__(self):
         """
-        Metodo que muestra los datos de la clase Estadio
+        Metodo que devuelve los datos del Estadio
 
-        Muestra los datos de la clase Estadio y el nombre de su equipo dependiendo si lo tiene o no
+        Devuelve los datos del Estadio y el nombre de su equipo dependiendo si lo tiene o no
+        :return: datos del Estadio
+        :rtype: String
         """
         if self.get_nombre_equipo() is None:
             return "ESTADIO: \n\tNombre: " + self.get_nombre() + "\n\tCiudad: " + self.get_ciudad() + \
