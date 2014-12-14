@@ -5,7 +5,20 @@ import random
 
 
 class Liga:
+    """ Clase Liga """
     def __init__(self, nombre, anio, pais):
+        """
+        Constructor
+
+        Inicializa el constructor de Liga
+        :param nombre: nombre
+        :param anio: anio
+		:param pais: pais
+        :type nombre: String
+        :type anio: Integer
+		:type pais: String
+        :return:
+        """
         self.nombre = nombre
         self.anio = anio
         self.pais = pais
@@ -13,27 +26,85 @@ class Liga:
         self.partidos = []
 
     def get_nombre(self):
+        """
+        Metodo consultor del nombre de la liga
+
+        Devuelve el nombre de la liga
+        :return: Nombre de la liga
+		:rtype: String
+        """
         return self.nombre
 
     def set_nombre(self, nombre):
+        """
+        Metodo modificador del nombre de la Liga
+
+        Modifica el nombre de la liga
+        :param nombre: nombre de la liga
+        :type nombre: String
+        """
         self.nombre = nombre
 
     def get_anio(self):
+        """
+        Metodo consultor del anio de la liga
+
+        Devuelve el anio de la liga
+        :return: Anio de la liga
+		:rtype: Integer
+        """
         return self.anio
 
     def set_anio(self, anio):
+        """
+        Metodo modificador del anio de la Liga
+
+        Modifica el anio de la liga
+        :param anio: anio de la liga
+        :type anio: Integer
+        """
         self.anio = anio
 
     def get_pais(self):
+        """
+        Metodo consultor del pais de la liga
+
+        Devuelve el nombre del pais de la liga
+        :return: Pais de la liga
+		:rtype: Integer
+        """
         return self.pais
 
     def set_pais(self, pais):
+        """
+        Metodo modificador del pais donde se juega la liga
+
+        Modifica el pais de la liga
+        :param pais: pais de la liga
+        :type pais: String
+        """
         self.pais = pais
 
     def get_equipos(self):
+        """
+        Metodo consultor de los equipos de la liga
+
+        Devuelve la lista de equpos
+        :return: Equipos del pais
+		:rtype: Equipos
+        """
         return self.equipos
 
     def existe_equipo(self, nombre):
+        """
+        Consulta si existe el equipo
+
+        Busca en el listado de equipos de toda la liga
+        :param nombre: nombre del equipo a buscar
+        :type pais: String
+		:return: equipo
+		:rtype: Equipo
+        """
         equipo = None
         for e in self.equipos:
             if e.get_nombre() == nombre:
@@ -41,6 +112,13 @@ class Liga:
         return equipo
 
     def aniadir_equipo(self, equipo):
+        """
+        Aniade un nuevo equipo
+
+        Aniade un nuevo equipo a la liga
+        :param equipo: equipo que deseamos aniadir
+        :type equipo: Equipo
+        """
         if self.existe_equipo(equipo.get_nombre()) is None:
             if len(self.equipos) == 4:
                 print ("No se pueden aniadir mas equipos a la liga.")
@@ -53,6 +131,11 @@ class Liga:
             print ("El equipo ya esta aniadido en la liga.")
 
     def crear_partidos(self):
+        """
+        Metodo para crear los partidos
+
+		Crea los partidos de forma aleatoria
+        """
         i = 0
         for x in self.equipos:
             for y in self.equipos:
@@ -64,23 +147,50 @@ class Liga:
                     self.partidos.append(p)
 
     def listar_equipos(self):
+        """
+        Muestra el listado de equipos
+
+        Muestra el listado de equipos que tiene la liga
+        """
         for equipo in self.equipos:
             equipo.mostrar_equipo()
 
     @staticmethod
     def consultar_equipo(equipo):
+        """
+        Consulta el equipo
+
+        LLama a la funcion mostrar_equipo para mostrar los datos de este
+        :param equipo: nombre del equipo a mostrar
+        :type equipo: String
+        """
         equipo.mostrar_equipo()
 
     def listar_partidos(self):
+        """
+        Muestra el listado de partidos
+
+        Muestra el listado de partidos que tiene la liga
+        """
         for partido in self.partidos:
             partido.mostrar_partido()
 
     def consultar_calendario(self):
+        """
+        Consulta el calenmdario
+
+        Consulta el calenmdario de los partidos no jugados
+        """
         for partido in self.partidos:
             if not partido.get_jugado():
                 partido.mostrar_partido()
 
     def consultar_clasificacion(self):
+        """
+        Consulta la clasificacion
+
+        Consulta la clasifcicacion de todos los partidos jugados
+        """
         self.get_equipos().sort(reverse=True)
         igual = "=" * 20
         lin = "-" * 53
@@ -95,6 +205,15 @@ class Liga:
             print (cadena)
 
     def existe_partido(self, jornada):
+        """
+        Consulta si existe el partido
+
+        Busca en el listado de partidos de toda la liga
+        :param jornada: nombre de la jornada que desea buscar
+        :type jornada: String
+		:return: equipo
+		:rtype: Equipo
+        """
         partido = None
         for p in self.partidos:
             if p.get_jornada() == jornada:
@@ -103,9 +222,21 @@ class Liga:
 
     @staticmethod
     def consultar_partido(partido):
+        """
+        Consulta el partido
+
+        LLama a la funcion mostrar_partido para mostrar los datos de este
+        :param partido: partido a mostrar
+        :type partido: String
+        """
         partido.mostrar_partido()
 
     def jugar_partido(self):
+        """
+        Es el metodo principal, el cual genera los partidos de forma aleatoria
+
+        Hace uso de varias funciones para dividir el codigo y ser mas sencillo de leer
+        """
         jornada = input("Seleccione la jornada: ")
         p = self.existe_partido(jornada)
         if p is None:
@@ -143,6 +274,15 @@ class Liga:
 
     @staticmethod
     def cofig_partido_local(local):
+        """
+        Configura los datos del partido jugado del equipo local
+
+        Aniade los goles al equipo, y a los jugadores
+        :param local: equipo local
+        :type local: Equipo
+		:return: Numero de goles marcados
+		:rtype: Integer
+        """
         goles_local = -1
         while goles_local < 0:
             goles_local = input("Inserte los goles marcados del equipo local: ")
@@ -163,6 +303,15 @@ class Liga:
 
     @staticmethod
     def cofig_partido_visitante(visitante):
+        """
+        Configura los datos del partido jugado del equipo visitante
+
+        Aniade los goles al equipo, y a los jugadores
+        :param visitante: equipo visitante
+        :type visitante: Equipo
+		:return: Numero de goles marcados
+		:rtype: Integer
+        """
         goles_visitante = -1
         while goles_visitante < 0:
             goles_visitante = input("Inserte los goles marcados del equipo visitante: ")
@@ -182,6 +331,11 @@ class Liga:
         return goles_visitante
 
     def jugar_partidos_auto(self):
+        """
+        Realiza las operaciones para que se jueguen los partidos de forma automatica
+
+        Se juegan los partidos
+        """
         for p in self.partidos:
             if not p.get_jugado():
                 g1 = random.randint(0, 5)
@@ -220,6 +374,11 @@ class Liga:
                 p.set_jugado(True)
 
     def consultar_mejor_estadio(self):
+        """
+        Consulta el estadio con mayor capacidad
+
+        Realiza una busqueda entre todos los estadios de cada equipo, mostrando el que más capacidad dispone
+        """
         capacidad_estadio = 0
         mayor_estadio = None
         for equipo in self.equipos:
@@ -233,6 +392,11 @@ class Liga:
             print ("El estadio con mayor capacidad es: " + mayor_estadio.get_nombre())
 
     def pichichi_liga(self):
+        """
+        Consulta el pichichi de la liga
+
+        Hace uso del metodo recorrer_equipos para buscar el pichichi de la liga
+        """
         pichichi = None
         if len(self.equipos) > 0:
             self.recorrer_equipos(pichichi)
@@ -245,6 +409,15 @@ class Liga:
             print ("La liga no tiene equipos aun.")
 
     def recorrer_equipos(self, pichichi):
+        """
+        Recorre el listado de equipos
+
+        Busca en el listado de equipos el pichichi de la liga
+        :param nombre: nombre del equipo a buscar
+        :type pichichi: String
+		:return: pichichi
+		:rtype: Jugador
+        """
         goles = 0
         for equipo in self.equipos:
             jugador = equipo.pichichi_equipo()
@@ -254,13 +427,30 @@ class Liga:
         return pichichi
 
     def listar_pichichis_equipos(self):
+        """
+        Aparece un listado con los pichichis de los equipos
+
+        Recorre todos los equipos, mostrando los pichichis de cada equipo
+        """
         for e in self.get_equipos():
             if e.pichichi_equipo() is not None:
                 e.pichichi_equipo().mostrar_jugador()
 
     def mostrar_liga(self):
+        """
+        Muestra los datos de la liga
+
+        Mestra todos los datos de la liga, haciendo uso de la funcion str
+        """
         cad = str(self)
         print (cad)
 
     def __str__(self):
+        """
+        Muestra los datos de la liga
+
+        Muestra los atributos de la liga
+		:return: Cadena formada por los datos de la liga
+		:rtype: String
+        """
         return "LIGA: \n\tNombre: " + self.nombre + "\n\tAnio: " + str(self.anio) + "\n\tPais: " + self.pais
